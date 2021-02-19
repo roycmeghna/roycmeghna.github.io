@@ -1,0 +1,702 @@
+    * {box-sizing: border-box}
+    
+       /* *****************************************************************************************************************8 */
+    /* Style the body */
+    .body {
+        background-color: white;
+      font-family:  "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    
+    .centre_align {
+    text-align: center;
+    }
+    
+    .right_align {
+    text-align: right;
+    }
+    
+    .left_align {
+    text-align: left;
+    }   
+        
+       /* *****************************************************************************************************************8 */
+    
+    
+    /* NAVIGATION BAR STYLS */
+    #navbar {
+    /* margin-bottom: 50px !important;
+      overflow: hidden;
+      /* rgb(113, 92, 233); */
+      /* position: fixed;
+      top: 0; */
+      /* bottom: 40; */
+      /* width: 100%;
+      z-index: 9999;
+      transition: top 0.3s;  */
+      overflow: hidden;
+      background-color: rgb(113, 92, 233);
+      position: fixed;
+      /* top: -50px; */
+      width: 100%;
+      z-index: 9999;
+      transition: top 0.5s;
+      padding: 0px 0px;
+      text-align: right;
+    }
+    
+
+    
+    #navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: right;
+      padding: 10px 10px;
+      text-decoration: none;
+       font-size: 17px;
+    }
+    
+    #navbar a:hover {
+    background-color:  rgb(40, 35, 82); 
+         transition: transform 0.5s;    
+      transform-origin: right;
+    }
+  /* ************************************************************************************************* */
+  /* CIRCULAR IMAGE OF ME  */
+
+  .circle_img{
+    width:200px;
+    border-radius: 50%;
+    border:2px solid black;
+  }
+ 
+  
+
+    /* *****************************************************************************************************************8 */
+    /* DOWNLOAD BUTTON */
+    
+    .btn-primary {
+        
+        font-size: medium;
+        border-radius:50px 50px 50px 50px;
+        color: #fff;
+        background-color: rgb(113, 92, 233);
+        border-color: rgb(113, 92, 233);
+      cursor:pointer; }
+
+        .btn-primary:hover {
+          color: #fff;
+          background-color: #0069d9;
+          border-color: #0062cc; }
+    
+
+    
+/* ********************************TWO COLUMNS*********************************************************************************8 */
+    
+    /* Column container */
+    .row {  
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+    }
+    
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+        padding: 10px;
+        /* margin-top: 30px; */
+      -ms-flex: 30%; /* IE10 */
+      flex: 30%;
+      background-color: #f1f1f1;
+      
+    }
+    
+    /* Main column */
+    .main {   
+        padding: 16px;
+      /* margin-top: 30px; */
+      -ms-flex: 70%; /* IE10 */
+      flex: 70%;
+      background-color: white;
+    }
+    
+       /* *****************************************************************************************************************8 */
+    
+    /* Footer */
+    .footer {
+       /* position: fixed;  */
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: rgb(113, 92, 233);
+       color: white;
+       text-align: right;
+    }
+    
+    /* *****************************************************************************************************************8 */
+    
+    /* PROGRESS BAR IN SKILLS */
+    
+    .container_skills {
+      width: 100%;
+      background-color: #ddd;
+    }
+    
+    .skills {
+      text-align: right;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+    }
+    
+    
+    /* 2 COLUMNS in skills*/
+    
+    /* Create two equal columns that floats next to each other */
+    .column1 {
+          float: left;
+          width: 50%;
+          padding: 10px;
+          
+        }
+        
+    /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+    
+
+/* SKILL BAR and skill text style */
+
+  .progress-wrap {
+    width: 100%;
+    margin-bottom: 30px; }
+    .progress-wrap h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 500; }
+    
+
+    /* ************************************************************************************************************ */
+    /* COLLAPSIBLE FOR EDUCATION DETAILS */
+    .collapsible {
+      background-color: rgb(113, 92, 233);
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color:  rgb(40, 35, 82);
+    }
+    
+    .collapsible:after {
+      content: '\002B'; /*ASCII FOR plus sign */
+      color: rgb(241, 241, 247);
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+      
+    
+    }
+    
+    .active:after {
+      content: "\2212";  /*ASCII FOR minus sign */
+    }
+    
+    .content1 {
+      padding: 10px 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: rgba(255, 255, 255, 0.671);  
+    }
+    
+    
+       /* *****************************************************************************************************************8 */
+    
+    
+    /* TIMELINE FOR EXPERIENCE DETAILS */
+    /* The actual timeline (the vertical ruler) */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 18px;
+    }
+    
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: rgb(113, 92, 233);
+      top: 0;
+      bottom: 0;
+      left: 6%;
+      /* left: 50%;
+      margin-left: -3px; */
+    }
+    
+    /* Container around content */
+    .container2 {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 100%; 
+         }
+    
+    /* The circles on the timeline */
+    .container2::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: white;
+      border: 4px solid #1f1557;
+      top: 15px;
+    right: 40px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    
+    /* Place the container to the right */
+    .right1 {
+      left: 5%;
+    }
+    
+    
+    /* Add arrows to the right container (pointing left) */
+    .right1::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid#1f1557;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #1f1557 transparent transparent;
+      /* border: 4px solid #1f1557;
+      border-width: 10px 10px 10px 0; */
+    }
+    
+    /* Fix the circle for containers on the right side */
+    .right1::after {
+      left: -16px;
+    }
+    
+    /* The actual content */
+    .content2 {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 2px;
+      padding-bottom :20px;
+      background-color: white;
+      border: 2px solid #1f1557;
+      /* background-color: rgb(113, 92, 233); */
+      position: relative;
+      border-radius: 6px;
+    }
+
+       /* *****************************************************************************************************************8 */
+    
+    /* STYLE FOR PROJECTS */
+    .column_proj {
+      float: left;
+      width: 33.3%;
+      height: 50%;
+      margin-bottom: 16px;
+      padding: 8px 8px;
+    }
+    
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+
+      }
+    
+    .container_proj {
+      padding: 0 16px;
+   
+      height: 280px;
+      }
+    
+    .container_proj::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .content_proj {
+      color: grey;
+      text-align:center;
+      font-size: 13px;
+    }
+    .title_proj {
+        text-align:center;
+        padding-top: 20px;
+        font-weight: bold;
+        color: black;
+        font-size:18px;
+      }
+
+    .button_proj {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    .button_proj:hover {
+      background-color: #555;
+    }
+    
+
+
+    .br-medium { 
+      display: block; 
+      margin-bottom: 2.5em; 
+  } 
+
+    @media screen and (max-width: 650px) {
+      .column_proj {
+        width: 100%;
+        display: block;
+      }
+    }
+    
+
+ /* *********************************************************************************************************************** */
+/* Buttons for extra curriculars */
+
+.button_act {
+    border: 2px solid #110458;
+    background-color: rgb(235, 228, 228);  
+    color: black;
+    padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  margin: 10px 1px;
+  width: 15%;
+  transition-duration: 0.4s;
+  border-radius:50px 50px 50px 50px;
+  }
+  
+  .button_act:hover {
+    background-color: rgb(206, 194, 194);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+/* ******************************************************************************************************************** */
+/* COLUMNS FOR PHOTOS */
+
+/* style of the box of each photo */
+.box_pic {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 2px;
+  align-self: center; 
+   
+}
+
+
+.scale-down {
+  margin-left: auto;
+  margin-right: auto;}
+
+.container_pic {
+  padding: 5px 5px;
+  opacity:0.7;
+}
+
+.container_pic::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.container_pic:hover {
+  opacity: 1;
+}
+
+/* 5 pics per column */
+.column_pic {
+  float: left;
+  width: 20%;
+  /* height: 50%; */
+  margin-bottom: 10px;
+  padding: 5px 5px;
+}
+
+/* LIGHTBOX FOR PHOTOS IN EXTRA CURRICULAR */
+
+.gallery-lightboxes .image-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0ms ease-in-out;
+}
+.gallery-lightboxes .image-lightbox:target {
+  opacity: 1;
+  visibility: visible;
+}
+.gallery-lightboxes .image-lightbox:target .image-lightbox-wrapper {
+  opacity: 1;
+  transform: scale(1, 1) translateY(0);
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper {
+  transform: scale(0.95, 0.95) translateY(-30px);
+  /* transition: opacity 500ms ease-in-out, transform 500ms ease-in-out; */
+  opacity: 0;
+  margin: 1em auto;
+  max-width: 75%;
+  padding: 0.5em;
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper .close {
+  width: 1.5em;
+  height: 1.5em;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white inset, 0 0 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: -1em;
+  top: -1em;
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper .close:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -5px;
+  transform: rotate(-45deg);
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper .close:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -5px;
+  transform: rotate(45deg);
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper .arrow-left {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  bottom: 0;
+  left: 0;
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper .arrow-left:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-bottom: 0;
+  border-right: 0;
+  border-radius: 4px 0 0 0;
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  cursor: pointer;
+  transform: rotate(-45deg) translateY(-50%);
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper .arrow-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper .arrow-right:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0 4px 0 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  cursor: pointer;
+  transform: rotate(45deg) translateY(-50%);
+}
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper img {
+  margin: 0 auto;
+  max-height: 70vh;
+}
+
+.image-title{
+  color: rgb(4, 4, 82);
+  text-align:center;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top:10px;
+  margin-bottom:5px;
+
+}
+/* *****************************************************************************************************************8 */
+    /* ICONS FOR CONTACT SECTION */
+
+    
+
+    .fa {
+      padding: 16px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    
+    .fa-instagram {
+      background: #e201b1;
+      color: white;
+    }
+    
+    .fa-github {
+      background: #000000;
+      color: white;
+    }
+    
+    .fa-envelope {
+      background: #dd4b39;
+      color: white;
+    }
+
+/* ********************************************************* TEXT ********************************************************8 */
+/* SIDE SECTION */
+.heading-side{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+    color: #06218f;
+    line-height: normal;
+}
+.heading-side-name {
+  color:#06218f;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 5px;
+  padding-top:4px;
+  padding-bottom:16px;
+}
+
+/* PAGE HEADINGS */
+.heading-section{
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 20px ;
+    color: #06218f;
+}
+
+
+
+/* SKILLS subheading */
+.subheading{
+  padding-top:10px;
+  padding-left: 16px;
+  margin-left: 16px;
+
+}
+
+/* WORK EXP  */
+.designation{
+    padding-top: 0px;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    color: #1f218d;
+
+}
+
+/* Company Name */
+.company {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
+}
+
+
+/* DATE */
+.date {
+    text-align: right;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    color: #606269; }
+
+
+
+/* Paragraph content */
+    .para {
+      padding-left: 10px;
+      padding-right: 10px;
+        font-size: 14px;
+        color: #606269; }
+
+ 
+
+  /* ********************************************************************* ***************************/
