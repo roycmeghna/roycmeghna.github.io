@@ -1,8 +1,9 @@
-    * {box-sizing: border-box}
+  * {box-sizing: border-box}
     
        /* *****************************************************************************************************************8 */
     /* Style the body */
     .body {
+      margin:0;
         background-color: white;
       font-family:  "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     }
@@ -20,47 +21,88 @@
     }   
         
        /* *****************************************************************************************************************8 */
-    
+
+
+
+
     
     /* NAVIGATION BAR STYLS */
-    #navbar {
-    /* margin-bottom: 50px !important;
-      overflow: hidden;
-      /* rgb(113, 92, 233); */
-      /* position: fixed;
-      top: 0; */
-      /* bottom: 40; */
-      /* width: 100%;
-      z-index: 9999;
-      transition: top 0.3s;  */
+    .navbar {
       overflow: hidden;
       background-color: rgb(113, 92, 233);
-      position: fixed;
+      position: fixed; 
       /* top: -50px; */
       width: 100%;
       z-index: 9999;
-      transition: top 0.5s;
-      padding: 0px 0px;
-      text-align: right;
+      /* transition: top 0.5s; */
+      /* padding: 0px 0px;
+      text-align: right; */
     }
     
 
     
-    #navbar a {
+    .navbar a {
       float: left;
       display: block;
       color: white;
-      text-align: right;
+      text-align: center;
       padding: 10px 10px;
       text-decoration: none;
        font-size: 17px;
     }
     
-    #navbar a:hover {
+    .navbar a:hover {
     background-color:  rgb(40, 35, 82); 
          transition: transform 0.5s;    
       transform-origin: right;
     }
+
+    .navbar a.active {
+      background-color:  rgb(40, 35, 82); ;
+      color: white;
+    }
+    
+    .navbar .icon {
+      display: none;
+    }
+
+    
+      /* FOR SMALLER SCREENS */
+
+      @media screen and (max-width: 800px) {
+        .navbar a {display: none;}
+        .navbar a.icon {
+          float: right;
+          display: block;
+        }
+        .navbar.responsive {position: fixed;}
+        .navbar.responsive .icon {
+          position: fixed;
+          right: 0;
+          top: 0;
+        }
+        .navbar.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .navbar.responsive {position: fixed;}
+        .navbar.responsive .icon {
+          position: fixed;
+          right: 0;
+          top: 0;
+        }
+        .navbar.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+      }
+
   /* ************************************************************************************************* */
   /* CIRCULAR IMAGE OF ME  */
 
@@ -308,27 +350,36 @@
       border-radius: 6px;
     }
 
+
+      /* FOR SMALLER SCREENS */
+
+      @media screen and (max-width: 650px) 
+      {
+      
+      }
+    
+
        /* *****************************************************************************************************************8 */
     
     /* STYLE FOR PROJECTS */
     .column_proj {
-      float: left;
-      width: 33.3%;
-      height: 50%;
+      float: left;      
+      /* height: 50%; */
       margin-bottom: 16px;
       padding: 8px 8px;
     }
-    
+
+  
     .card {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      margin: 8px;
+      /* margin: 8px; */
 
       }
     
     .container_proj {
-      padding: 0 16px;
-   
-      height: 280px;
+      padding: 0 16px;  
+      text-align: center;  
+     /* height:  280px;  */
       }
     
     .container_proj::after, .row::after {
@@ -341,6 +392,7 @@
       color: grey;
       text-align:center;
       font-size: 13px;
+      width:100%
     }
     .title_proj {
         text-align:center;
@@ -359,27 +411,54 @@
       background-color: #000;
       text-align: center;
       cursor: pointer;
-      width: 100%;
-    }
+      width: 100%; }
     
     .button_proj:hover {
       background-color: #555;
     }
     
-
-
     .br-medium { 
       display: block; 
       margin-bottom: 2.5em; 
   } 
 
-    @media screen and (max-width: 650px) {
-      .column_proj {
-        width: 100%;
-        display: block;
-      }
-    }
-    
+ 
+      /* FOR SMALLER SCREENS */
+
+      @media (min-width: 576px) {
+        .container_proj {
+          max-width: 576px;
+         }
+          .column_proj {
+           width:100%;
+          
+          }
+       }
+      @media (min-width: 768px) {
+        .container_proj {
+          max-width: 768px; } 
+          .column_proj {
+            width:100%;
+            
+           }}
+      @media (min-width: 992px) {
+        .container_proj {
+          max-width: 992px; } 
+          .column_proj {
+            width:50%;           
+           }}
+      @media (min-width: 1200px) {
+        .container_proj {
+          max-width :1200px;
+         }
+         .column_proj {
+          width:50%;           
+         }
+        }
+
+     
+  
+
 
  /* *********************************************************************************************************************** */
 /* Buttons for extra curriculars */
@@ -583,7 +662,7 @@
 
     
 
-    .fa {
+    .fa1 {
       padding: 16px;
       font-size: 30px;
       width: 50px;
@@ -700,3 +779,6 @@
  
 
   /* ********************************************************************* ***************************/
+  #more {display: none;}
+
+

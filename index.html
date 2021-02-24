@@ -5,14 +5,14 @@
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <title>Meghna Roy Chowdhury</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport"  content="width=device-width, initial-scale=1">
+<!-- content="width=device-width, initial-scale=1, shrink-to-fit=no" -->
 <link rel="stylesheet" href="main_style.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css">
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
 <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet"> -->
 
@@ -30,7 +30,7 @@
 		<div class="header_text">Welcome to my webpage!!!</div>
 	</div> -->
 
-<div id="navbar">
+<div  class="navbar" id="myTopnav">
 
 	<!-- <a href="#download-cv" ><span>Home</span></a> -->
 	<a href="#about-section" ><span class="para" style="color:white;">Introduction</pan class="para" style="color:white;"></a>
@@ -40,6 +40,9 @@
     <a href="#projects-section" ><span class="para" style="color:white;">Projects</span></a>
 	<a href="#activities-section" ><span class="para" style="color:white;">Extra Curriculars</span></a>
 	<a href="#contact-section" ><span class="para" style="color:white;">Contact Me</span></a>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction1()" display="MENU">
+		<i class="fa fa-bars"></i>
+	  </a>
    
 </div>
 
@@ -61,14 +64,14 @@
 			<br>
 			<br>
 			<div class="centre_align">
-				<a href="https://www.facebook.com/meghna4698" class="fa fa-facebook "  target="blank" ></a>
-				<a href="https://www.instagram.com/meghna_rc/" class="fa fa-instagram"  target="blank"></a>
-				<a href="https://www.linkedin.com/in/meghnaroychowdhury/" class="fa fa-linkedin"  target="blank"></a>
-				<a href="#" class="fa fa-github"></a>
-				<a href="mailto:royc.meghna@gmail.com" class="fa fa-envelope"  target="blank"></a>
+				<a href="https://www.facebook.com/meghna4698" class="fa fa1 fa-facebook "  target="blank" ></a>
+				<a href="https://www.instagram.com/meghna_rc/" class="fa fa1 fa-instagram"  target="blank"></a>
+				<a href="https://www.linkedin.com/in/meghnaroychowdhury/" class="fa fa1 fa-linkedin"  target="blank"></a>
+				<a href="#" class="fa fa1 fa-github"></a>
+				<a href="mailto:royc.meghna@gmail.com" class="fa fa1 fa-envelope"  target="blank"></a>
 			</div>
 		<br>
-		<a href="CV/MEGHNA_CV.pdf" download="Meghna_CV" target="blank" class="left_align"><button class="btn-primary" style="padding: 16px 16px;">  Click here to download my CV</button></a>
+		<a href="MEGHNA_CV.pdf" download="Meghna_CV" target="blank" class="left_align"><button class="btn-primary" style="padding: 16px 16px;">  Click here to download my CV</button></a>
 		</div> 
 	</section> 
 	</div>
@@ -93,7 +96,7 @@
 			<p class="para centre_align">
 			Apart from that, I love community work and love to spend time at old age homes and orphanages.
 			I also want to travel to Amazon rainforest, get a scuba diving certification and go skydiving!
-			My hobbies include <a href="#activities-section">photography</a> ,playing badminton and swimming. 
+			My hobbies include <a href="#activities-section">photography</a>, playing badminton and swimming. 
 			</p>
 			<p class="para centre_align">
 			I live in Mumbai, and I'm presently working in the Research and Innovation department of Analytics and Insights at Tata Consultancy Services Ltd.
@@ -356,7 +359,7 @@
 
 		<p class="para centre_align"> I've had wonderful opportunities to learn and work on real time projects 
 			as an intern and full time employee. Here's a brief description about my work experience. Please refer to my
-			<a href="CV/MEGHNA_CV.pdf" download="Meghna_CV" target="blank" class="left_align">CV</a> for more details.</p>
+			<a href="MEGHNA_CV.pdf" download="Meghna_CV" target="blank" class="left_align">CV</a> for more details.</p>
      <br>
 		<div class ="row">
 
@@ -532,10 +535,10 @@
 				</div>
 			  </div>
 			  </div>
-			  <br>
-			</div>
+			  
+			<!-- </div> -->
 
-			<div class="row">
+			<!-- <div class="row"> -->
 		
 
 				<div class="column_proj">
@@ -546,7 +549,7 @@
 						<br>
 					  <p class="content_proj">This project consisted of an inexpensive method for manipulating
 						audio file- noise removal, echo addition and  audio compression. Software used- MATLAB.</p>
-						
+						<br>
 					  <p><button class="button_proj"><a href="https://github.com/roycmeghna/Audio-Manipulation" target="_blank">Github Link</a></button></p>
 					</div>
 				  </div>
@@ -572,8 +575,10 @@
 					  
 					  <div class="container_proj">
 						<div class="title_proj">Infant Monitoring System</div>
+						<br>
 						<p class="content_proj"> Indication of infant’s temperature, presence in the cot and a check of whether the infant is crying or not;
 							 and hence alerts the nurse/doctor during an emergency</p>
+							 <br>
 						<p><button class="button_proj"><a href="https://github.com/roycmeghna/Infant-Monitoring-System" target="_blank">Github Link</a></button></p>
 					  </div>
 					</div>
@@ -651,6 +656,17 @@
 			</div>
 			</div>
 
+
+
+		</div>
+  
+		<span id="dots"></span>
+	        <!-- Define the text that would be  
+            hidden by default and only shown  
+            when clicked on the button -->
+      
+			<span id="more">
+			<div class="row">
 			<div class="column_pic ">
 				<div class="container_pic box_pic">
 			  <a href="#lightbox-image-5">
@@ -729,8 +745,13 @@
 			</a>
 			</div>
 			</div>
-
 		</div>
+			</span>
+			<!-- Trigger toggleText() when the  
+        button is clicked -->
+		<button onclick="myFunction()" id="myBtn">Show more</button>
+
+		
 
 		
 		<div class="gallery-lightboxes">
@@ -900,11 +921,11 @@
 		<p class="para centre_align">You can email me at <a href="mailto:royc.meghna@gmail.com" target="blank">royc.meghna@gmail.com</a> or connect with me on social media.
 		The links are given below.</p>
 		<div class="centre_align">
-			<a href="https://www.facebook.com/meghna4698" class="fa fa-facebook"  target="blank" ></a>
-			<a href="https://www.instagram.com/meghna_rc/" class="fa fa-instagram"  target="blank" ></a>
-			<a href="https://www.linkedin.com/in/meghnaroychowdhury/" class="fa fa-linkedin"  target="blank" ></a>
-			<a href="#" class="fa fa-github" ></a>
-			<!-- <a href="mailto:royc.meghna@gmail.com" class="fa gmail"  target="blank"></a> -->
+			<a href="https://www.facebook.com/meghna4698" class="fa fa1 fa-facebook"  target="blank" ></a>
+			<a href="https://www.instagram.com/meghna_rc/" class="fa fa1 fa-instagram"  target="blank" ></a>
+			<a href="https://www.linkedin.com/in/meghnaroychowdhury/" class="fa fa1 fa-linkedin"  target="blank" ></a>
+			<a href="#" class="fa fa1 fa-github" ></a>
+			<!-- <a href="mailto:royc.meghna@gmail.com" class="fa fa1 gmail"  target="blank"></a> -->
 		</div>
 
 		<p class="para centre_align">You can even a schedule a talk with me if you wish to!</p>
@@ -968,6 +989,38 @@
 	  }
 	}
 	</script> -->
+
+	<script>
+		function myFunction1() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "navbar") {
+			  x.style.display="MENU"
+			x.className += " responsive";
+		  } else {
+			x.className = "navbar";
+		  }
+		}
+		</script>
+
+
+<!-- SHOW MORE AND SHIW LESS IN ETRA CURRICULARS SECTION -->
+<script>
+	function myFunction() {
+	  var dots = document.getElementById("dots");
+	  var moreText = document.getElementById("more");
+	  var btnText = document.getElementById("myBtn");
+	
+	  if (dots.style.display === "none") {
+		dots.style.display = "inline";
+		btnText.innerHTML = "Show more"; 
+		moreText.style.display = "none";
+	  } else {
+		dots.style.display = "none";
+		btnText.innerHTML = "Show less"; 
+		moreText.style.display = "inline";
+	  }
+	}
+	</script>
 
 
 
