@@ -86,9 +86,9 @@
           display: block;
           text-align: left;
         }
-      }
+      } 
       
-      @media screen and (max-width: 600px) {
+       @media screen and (max-width: 600px) {
         .navbar.responsive {position: fixed;}
         .navbar.responsive .icon {
           position: fixed;
@@ -102,6 +102,12 @@
         }
 
       }
+
+
+
+
+  
+
 
   /* ************************************************************************************************* */
   /* CIRCULAR IMAGE OF ME  */
@@ -137,10 +143,10 @@
     
     /* Column container */
     .row {  
-      display: -ms-flexbox; /* IE10 */
+      /* display: -ms-flexbox; 
       display: flex;
-      -ms-flex-wrap: wrap; /* IE10 */
-      flex-wrap: wrap;
+      -ms-flex-wrap: wrap; 
+      flex-wrap: wrap; */
     }
     
     /* Create two unequal columns that sits next to each other */
@@ -163,8 +169,12 @@
 
      /* FOR SMALLER SCREENS */
 
-     @media (min-width: 576px) {
+
+     /* MOBILE */
+     @media (min-width: 576px) 
+     {
       .side {
+        width:100%;
         -ms-flex: 0%; 
       flex: 0%;
        }
@@ -174,6 +184,8 @@
         
         }
      }
+
+/* TABLETS AND STUFF */
     @media (min-width: 768px) {
       .side {
         -ms-flex: 0%; 
@@ -183,9 +195,22 @@
           -ms-flex: 100%; 
       flex: 100%;
           
-         }}
-    @media (min-width: 992px) {
+         }
+        
+        }
+
+        /* BIGGER SCREENS */
+    @media (min-width: 992px)
+     {
+      .row {  
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+      }
+
       .side {
+      
         -ms-flex: 30%; 
       flex: 30%;
      } 
@@ -193,14 +218,28 @@
           -ms-flex: 70%; 
       flex: 70%;          
          }}
-    @media (min-width: 1200px) {
-      .side {
+
+
+
+
+/* BIGGEST SCREENS */
+    @media (min-width: 1200px) 
+    {
+      .row {  
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+      }
+
+      .side {        
         -ms-flex: 30%; 
-      flex: 30%;
+        flex: 30%;
        }
+
        .main {
         -ms-flex: 70%; 
-      flex: 70%;          
+         flex: 70%;          
        }
       }
     
@@ -392,13 +431,7 @@
     }
 
 
-      /* FOR SMALLER SCREENS */
-
-      @media screen and (max-width: 650px) 
-      {
-      
-      }
-    
+  
 
        /* *****************************************************************************************************************8 */
     
@@ -466,31 +499,38 @@
  
       /* FOR SMALLER SCREENS */
 
-      @media (min-width: 576px) {
+      @media (min-width: 350px) {
         .container_proj {
-          max-width: 576px;
+          width: 100%;
          }
           .column_proj {
            width:100%;
           
           }
        }
+
+
       @media (min-width: 768px) {
         .container_proj {
-          max-width: 768px; } 
+          width: 100%; } 
           .column_proj {
             width:100%;
             
-           }}
+           }
+          }
+
+
       @media (min-width: 992px) {
         .container_proj {
-          max-width: 992px; } 
+          max-width: 100%; } 
           .column_proj {
             width:100%;           
            }}
+
+
       @media (min-width: 1200px) {
         .container_proj {
-          max-width :1200px;
+          max-width :100%;
          }
          .column_proj {
           width:50%;           
@@ -562,9 +602,13 @@
   padding: 5px 5px;
 }
 
+
+
+
 /* FOR SMALLER SCREENS */
 
-@media (min-width: 576px) {
+/* phone - 3 images per row */
+@media (min-width: 350px ) {
   .container_pic {
     max-width: 576px;
    }
@@ -575,26 +619,32 @@
       width:33.33%;;           
      }
  }
+
+ /* tablets - 3 images per row */
 @media (min-width: 768px) {
   .container_pic {
     max-width: 768px; } 
     .column_pic {
-      width:33.33%;;   
+      width:25%;;   
      }
      .button_act{
       width:33.33%;;           
      }
     }
-@media (min-width: 992px) {
+
+    /* bigger screens - 4 images per row */
+@media (min-width: 808px) {
   .container_pic {
     max-width: 992px; } 
     .column_pic {
-      width:25%;           
+      width:20%;           
      }
      .button_act{
-      width:33.33%;           
+      width:20%;           
      }
     }
+
+    /* biggest- 5 per row */
 @media (min-width: 1200px) {
   .container_pic {
     max-width :1200px;
@@ -607,6 +657,8 @@
    }
   }
 
+
+  /* ************************************************************ */
 
 /* LIGHTBOX FOR PHOTOS IN EXTRA CURRICULAR */
 
@@ -730,6 +782,7 @@
 .gallery-lightboxes .image-lightbox .image-lightbox-wrapper img {
   margin: 0 auto;
   max-height: 70vh;
+  max-width: 100%;
 }
 
 .image-title{
@@ -742,6 +795,11 @@
   margin-bottom:5px;
 
 }
+
+
+
+
+
 /* *****************************************************************************************************************8 */
     /* ICONS FOR CONTACT SECTION */
 
