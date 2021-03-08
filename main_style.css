@@ -278,7 +278,7 @@
     /* Create two equal columns that floats next to each other */
     .column1 {
           float: left;
-          width: 50%;
+          /* width: 50%; */
           padding: 10px;
           
         }
@@ -301,6 +301,46 @@
       margin-bottom: 10px;
       font-weight: 500; }
     
+
+
+
+      /* FOR SMALLER SCREENS */
+
+/* phone - 1 col */
+@media (min-width: 350px ) {
+   .column1 {
+     width:100%;    
+    }
+
+ }
+
+ /* tablets  1col */
+@media (min-width: 768px) {
+
+    .column1 {
+      width:100%;;   
+     }
+
+    }
+
+    /* bigger screens - 2 cols */
+@media (min-width: 808px) {
+
+    .column1 {
+      width:50%;           
+     }
+
+    }
+
+    /* biggest- 2 cols */
+@media (min-width: 1200px) {
+
+   .column_pic {
+    width:50%; 
+   }          
+
+  }
+
 
     /* ************************************************************************************************************ */
     /* COLLAPSIBLE FOR EDUCATION DETAILS */
