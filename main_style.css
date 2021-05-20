@@ -53,13 +53,13 @@ text-align: left;
   
   /* FOR SMALLER SCREENS */
   
-    @media (min-width:500px) {
+    /* @media (min-width:300px) {
     .exp_margin
   {margin-left: 50px;
     margin-right: 50px}
   
      }
-  
+   */
   
   @media (min-width: 992px) {
     .exp_margin
