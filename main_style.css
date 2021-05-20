@@ -27,6 +27,8 @@ text-align: left;
   }
 
 
+  /* MARGINS */
+
 .margin{
   margin-left: 50px;
   margin-right: 50px;
@@ -36,7 +38,42 @@ text-align: left;
   margin-left: 100px;
   margin-right: 100px;}
 
+  .exp_margin{
+    margin-left:auto;
+    margin-right:auto
+  }
 
+  .margin_prog
+  {
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  
+  
+  /* FOR SMALLER SCREENS */
+  
+    @media (min-width:300px) {
+    .exp_margin
+  {margin-left: 50px;
+    margin-right: 50px}
+  
+     }
+  
+  
+  @media (min-width: 992px) {
+    .exp_margin
+  {margin-left: 70px;
+    margin-right: 70px}
+  }
+  
+  
+  @media (min-width: 1200px) {
+    .exp_margin
+  {margin-left: 100px;
+    margin-right: 100px}
+  
+   }
 
 /* *****************************************************************************************************************8 */
 
@@ -163,7 +200,7 @@ display: none;
  
 } 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 300px) {
  .navbar.responsive {position: fixed;}
 
  .logo_navbar{
@@ -290,7 +327,7 @@ flex: 100%;
 
 
 /* MOBILE */
-@media (min-width: 576px) 
+@media (min-width:300px) 
 {
 .side {
  width:100%;
@@ -474,6 +511,8 @@ font-weight: bold;
   padding: 12px 16px;
   font-size: 16px;
   cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .btn_skill:hover{
@@ -695,37 +734,6 @@ border-radius: 6px;
  opacity: 0.7;
 }
 
-
-.exp_margin{
-  margin-left:auto;
-  margin-right:auto
-}
-
-
-
-/* FOR SMALLER SCREENS */
-
-  @media (min-width: 768px) {
-  .exp_margin
-{margin-left: 50px;
-  margin-right: 50px}
-
-   }
-
-
-@media (min-width: 992px) {
-  .exp_margin
-{margin-left: 70px;
-  margin-right: 70px}
-}
-
-
-@media (min-width: 1200px) {
-  .exp_margin
-{margin-left: 100px;
-  margin-right: 100px}
-
- }
 
 
 
@@ -1252,8 +1260,8 @@ color: black; }
 
 /* Work exp content */
 .para_work {
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top:10px;
@@ -1282,7 +1290,7 @@ padding-right: 10px;
     /* line-height: 10px; */
     font-size: 25px;
      }
-  }
+    }
   
   /* tablets - 3 images per row */
   @media (min-width: 768px) {
