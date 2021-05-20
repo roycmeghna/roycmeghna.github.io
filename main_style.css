@@ -53,7 +53,7 @@ text-align: left;
   
   /* FOR SMALLER SCREENS */
   
-    @media (min-width:300px) {
+    @media (min-width:500px) {
     .exp_margin
   {margin-left: 50px;
     margin-right: 50px}
@@ -511,8 +511,6 @@ font-weight: bold;
   padding: 12px 16px;
   font-size: 16px;
   cursor: pointer;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .btn_skill:hover{
