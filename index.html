@@ -18,21 +18,99 @@
 
 <body>
 
-    <nav class="navbar" id="myTopnav"> <a href="#about-section" class="logo-link"><img src="images/nav_logo1.png" alt="Meghna Roy Chowdhury Logo" class="logo_navbar"></a> <ul class="navbar-links" id="navbarLinks"> <li><a href="#about-section"><i class="fas fa-house-user"></i>Home</a></li> <li><a href="#skills-section"><i class="fas fa-code"></i>Skills</a></li> <li><a href="#publication-section"><i class="fas fa-book-open"></i>Publications</a></li> <li><a href="#exp-section"><i class="fas fa-history"></i>Experience</a></li> <li><a href="#projects-section"><i class="fas fa-lightbulb"></i>Projects</a></li> <li><a href="#edu-section"><i class="fas fa-user-graduate"></i>Education</a></li> <li><a href="#activities-section"><i class="fas fa-camera-retro"></i>Activities</a></li> <li><a href="#contact-section"><i class="fas fa-paper-plane"></i>Contact</a></li> </ul> <button class="icon" onclick="myFunction1()" aria-label="Toggle navigation menu"><div class="container_menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></button> </nav>
+    <nav class="navbar" id="myTopnav">
+        <!-- Logo -->
+        <a href="#about-section" class="logo-link">
+          <img src="images/nav_logo1.png" alt="Meghna Roy Chowdhury Logo" class="logo_navbar">
+        </a>
+      
+        <!-- Navigation Links -->
+        <ul class="navbar-links" id="navbarLinks">
+          <li><a href="#about-section"><i class="fas fa-house-user"></i> Home</a></li>
+          <li><a href="#skills-section"><i class="fas fa-code"></i> Skills</a></li>
+          <li><a href="#publication-section"><i class="fas fa-book-open"></i>Projects & Publications</a></li>
+          <li><a href="#exp-section"><i class="fas fa-history"></i> Experience</a></li>
+          <!-- <li><a href="#projects-section"><i class="fas fa-lightbulb"></i> Projects</a></li> -->
+          <li><a href="#edu-section"><i class="fas fa-user-graduate"></i> Education</a></li>
+          <li><a href="#activities-section"><i class="fas fa-camera-retro"></i> Activities</a></li>
+          <li><a href="#contact-section"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      
+        <!-- Mobile Menu Toggle -->
+        <button class="icon" onclick="myFunction1()" aria-label="Toggle navigation menu">
+          <div class="container_menu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
+      </nav>
 
+      
     <section id="about-section">
         <div class="row1">
             <aside class="side">
                 <img src="images/IMG_4742.jpeg" alt="Meghna Roy Chowdhury" class="circle_img">
                 <div class="speech-bubble" ><span class="typing-text">Hi there! Welcome! 👋</span></div>
-                <div class="social-icons centre_align" style="margin-top: var(--spacing-md);"> <a href="https://www.linkedin.com/in/meghnaroychowdhury/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a> <a href="https://github.com/roycmeghna" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a> <a href= "https://scholar.google.co.in/citations?user=YwhkKf4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar Profile"><i class="fas fa-graduation-cap"></i></a> <a href="mailto:royc.meghna@gmail.com" aria-label="Email Meghna"><i class="fas fa-envelope"></i></a> <a href="https://www.instagram.com/meghna_rc/" target="_blank" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a> </div> <br>
-                <a href="CV/Meghna_Resume_BioML.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-download"></i> Download CV</a>
+                <div class="social-icons centre_align" style="margin-top: var(--spacing-md);"> 
+                    <a href="https://www.linkedin.com/in/meghnaroychowdhury/" target="_blank" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i></a> 
+                        
+                    <a href="https://github.com/roycmeghna" target="_blank" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i></a>
+                    
+                        <a href= "https://scholar.google.co.in/citations?user=YwhkKf4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar Profile">
+                        <i class="fas fa-graduation-cap"></i></a>
+                        
+                    <a href="mailto:royc.meghna@gmail.com" aria-label="Email Meghna">
+                        <i class="fas fa-envelope"></i></a> 
+                        
+                    <a href="https://www.instagram.com/meghna_rc/" target="_blank" aria-label="Instagram Profile">
+                        <i class="fab fa-instagram"></i></a> 
+                </div>
+                    
+                <br>
+                <a href="CV/Meghna_Resume_BioML.pdf" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-download"></i> Download CV</a>
+
             </aside>
-            <main class="main"> <h1 class="intro-heading">Meghna Roy Chowdhury</h1> <p class="intro-subheading">PhD Candidate, Electrical & Computer Engineering @ Purdue University</p> <p class="motto centre_align">"Arise, Awake & Stop Not, till your goal is reached!"</p> <p>Hi there! I'm a PhD student driven by curiosity and a passion for using technology to solve real-world problems. My focus is on <b>Embedded Systems</b> and <b>Machine Learning</b>, particularly exploring their applications in healthcare and security.</p> <p>Currently researching at <a href="https://engineering.purdue.edu/~shreyas/SparcLab/" target="_blank">SPARC Lab</a>, I blend hardware and software skills to build innovative solutions. I enjoy the challenge of optimizing systems and uncovering insights from data.</p> <div class="quick-facts"> <p><span class="emoji">📍</span> Based in West Lafayette, IN (Boiler Up!) <span class="emoji">🚂</span></p> <p><span class="emoji">🔋</span> Fascinated by low-power computing & clever algorithms</p> <p><span class="emoji">📷</span> Photographer | <span class="emoji">⛰️</span> Boulderer | <span class="emoji">🧠</span>Health AI Enthusiast</p> </div> </main>
+            <main class="main"> <h1 class="intro-heading">Meghna Roy Chowdhury</h1>
+                 <p class="intro-subheading">PhD Student, Electrical & Computer Engineering @ Purdue University</p> 
+                 <p class="motto centre_align">"Arise, Awake & Stop Not, till your goal is reached!"</p>
+                 
+                 <!-- <p>Hi there! I'm a PhD student driven by curiosity and a passion for using technology to solve real-world problems. 
+                    My focus is on <b>Embedded Systems</b> and <b>Machine Learning</b>, particularly exploring their applications 
+                    in healthcare and security.</p> <p>Currently researching at
+                         <a href="https://engineering.purdue.edu/~shreyas/SparcLab/" target="_blank">SPARC Lab</a>
+                         , I blend hardware and software skills to build innovative solutions. 
+                         I enjoy the challenge of optimizing systems and uncovering insights from data.</p> -->
+
+                <p>Hello there! I'm Meghna, a PhD student in ECE at Purdue University, focusing on the exciting domain of 
+                <strong>low-power wearable tech & AI in Healthcare</strong>.</p>
+                
+                <p>My research involves system-level applications combining low-power sensing, communication, and analysis of various biopotential signals. I utilize techniques from Signal Processing, Machine Learning, Deep Learning, and Computer Vision, and also work on data collection and building predictive models.</p>
+     <p>Currently researching at <a href="https://engineering.purdue.edu/~shreyas/SparcLab/" target="_blank">SPARC Lab</a>, 
+        I enjoy blending hardware and software skills to create impactful solutions.</p>
+
+     <p><strong>To sum it up:</strong> I am a passionate, hands-on, and always-ready-to-learn-and-apply-new-tech kind of individual, seeking opportunities to contribute my best in the domain of low-power wearables tech & AI in Healthcare.</p>
+
+
+
+                         
+                <div class="quick-facts"> 
+                    <p><span class="emoji">📍</span> Based in West Lafayette, IN (Boiler Up!) <span class="emoji">🚂</span></p> 
+                    <p><span class="emoji">🤯</span> Fascinated by low-power computing & clever algorithms</p>
+                     <p> <span class="emoji">🧠</span>Health AI Enthusiast | <span class="emoji">📷</span> Amateur Photographer | <span class="emoji">🍫</span> Chocolate Lover</p> 
+                    
+                </div> 
+            </main>
         </div>
     </section>
 
     <div class="main1">
+
+
+    <!------------------- Skills --------------------------------->
 
         <section id="skills-section"> 
             <div class="section-container centre_align">
@@ -40,17 +118,438 @@
                  
                  <p class="skills-intro">A collection of languages, tools, and concepts I work with.</p> 
                  
-                 <div class="skills-categories">
-                     <div class="skills-category-block">
-                        <h4><i class="fas fa-code"></i>Programming & Languages</h4><div class="skills-badge-container"><span class="skill-badge"><i class="fab fa-python"></i>Python</span><span class="skill-badge">NumPy</span><span class="skill-badge">Pandas</span><span class="skill-badge">Scikit-learn</span><span class="skill-badge">TensorFlow/Keras</span><span class="skill-badge"><i class="fas fa-file-code"></i>C / C++</span><span class="skill-badge"><i class="fas fa-microchip"></i>Embedded C</span><span class="skill-badge"><i class="fas fa-square-root-alt"></i>MATLAB</span><span class="skill-badge"><i class="fas fa-scroll"></i>Verilog</span><span class="skill-badge"><i class="fas fa-cogs"></i>Assembly (8051)</span><span class="skill-badge"><i class="fab fa-html5"></i>HTML</span><span class="skill-badge"><i class="fab fa-css3-alt"></i>CSS</span><span class="skill-badge"><i class="fab fa-js-square"></i>JavaScript</span><span class="skill-badge"><i class="fas fa-database"></i>SQL (Basic)</span></div></div> <div class="skills-category-block"><h4><i class="fas fa-cogs"></i>Hardware & Embedded</h4><div class="skills-badge-container"><span class="skill-badge"><i class="fas fa-microchip"></i>Microcontrollers</span><span class="skill-badge">8051</span><span class="skill-badge">Arduino</span><span class="skill-badge">NodeMCU</span><span class="skill-badge">PSoC</span><span class="skill-badge"><i class="fas fa-dice-d6"></i>FPGA (Artix-7)</span><span class="skill-badge"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</span><span class="skill-badge"><i class="fas fa-broadcast-tower"></i>Sensors & Interfacing</span><span class="skill-badge"><i class="fas fa-leaf"></i>Energy Harvesting</span><span class="skill-badge"><i class="fas fa-wifi"></i>Human Body Comm.</span><span class="skill-badge"><i class="fas fa-satellite-dish"></i>SDR (HackRF, USRP)</span></div></div> <div class="skills-category-block"><h4><i class="fas fa-laptop-code"></i>Software & Tools</h4><div class="skills-badge-container"><span class="skill-badge"><i class="fas fa-cog"></i>Vivado</span><span class="skill-badge"><i class="fas fa-wrench"></i>Keil µVision</span><span class="skill-badge"><i class="fas fa-drafting-compass"></i>Proteus</span><span class="skill-badge"><i class="fas fa-wave-square"></i>MATLAB & Simulink</span><span class="skill-badge"><i class="fab fa-python"></i>Jupyter</span><span class="skill-badge"><i class="fab fa-git-alt"></i>Git / GitHub</span><span class="skill-badge"><i class="fas fa-project-diagram"></i>GNU Radio</span><span class="skill-badge"><i class="fas fa-wind"></i>Apache Airflow</span><span class="skill-badge"><i class="fab fa-linux"></i>Linux / Bash</span><span class="skill-badge"><i class="fas fa-paint-brush"></i>Photoshop (Basic)</span></div></div> <div class="skills-category-block"><h4><i class="fas fa-brain"></i>Concepts & Domains</h4><div class="skills-badge-container"><span class="skill-badge"><i class="fas fa-robot"></i>Machine Learning</span><span class="skill-badge">Deep Learning</span><span class="skill-badge"><i class="fas fa-chart-line"></i>Signal Processing</span><span class="skill-badge"><i class="fas fa-server"></i>Embedded Systems</span><span class="skill-badge"><i class="fas fa-network-wired"></i>IoT</span><span class="skill-badge"><i class="fas fa-user-secret"></i>Hardware Security</span><span class="skill-badge"><i class="fas fa-digital-tachograph"></i>Digital Logic</span><span class="skill-badge">VLSI Design</span><span class="skill-badge"><i class="fas fa-exchange-alt"></i>Computer Networks</span><span class="skill-badge"><i class="fas fa-stream"></i>Data Structures</span><span class="skill-badge">Algorithms</span></div></div> <div class="skills-category-block"><h4><i class="fas fa-user-friends"></i>Soft Skills</h4><div class="skills-badge-container"><span class="skill-badge"><i class="far fa-comments"></i>Communication</span><span class="skill-badge"><i class="fas fa-users"></i>Collaboration</span><span class="skill-badge"><i class="fas fa-puzzle-piece"></i>Problem Solving</span><span class="skill-badge"><i class="far fa-lightbulb"></i>Adaptability</span><span class="skill-badge"><i class="fas fa-seedling"></i>Growth Mindset</span><span class="skill-badge"><i class="far fa-gem"></i>Accountability</span><span class="skill-badge"><i class="fas fa-tasks"></i>Time Management</span><span class="skill-badge"><i class="fas fa-search"></i>Analytical Thinking</span></div></div> </div> </div> </section>
+                
+                        
+                            <div class="skills-categories">
+                          
+                              <!-- Programming & Languages -->
+                              <div class="skills-category-block">
+                                <h4><i class="fas fa-code"></i> Software and Coding </h4>
+                                <div class="skills-badge-container">
+                                  <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
+                                  <span class="skill-badge"><i class="fas fa-file-code"></i> C / C++</span>
+                                  <span class="skill-badge"><i class="fas fa-python"></i> Micropython</span>
+                                  <span class="skill-badge"><i class="fas fa-microchip"></i> Embedded C</span>
+                                  <span class="skill-badge"><i class="fas fa-square-root-alt"></i> MATLAB</span>
+                                  <span class="skill-badge"><i class="fas fa-wave-square"></i> Ansys HFSS</span>
+                                  <span class="skill-badge"><i class="fas fa-scroll"></i> Verilog</span>
+                                  
+                                  <!-- <span class="skill-badge"><i class="fas fa-cogs"></i> Assembly (8051)</span> -->
+                                  <span class="skill-badge"><i class="fab fa-html5"></i> HTML/CSS/JS</span>
+                                  <!-- <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+                                  <span class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</span> -->
+                                  <!-- <span class="skill-badge"><i class="fas fa-database"></i> SQL (Basic)</span> -->
+                                  <span class="skill-badge"><i class="fas fa-ra"></i> GNU Radio</span>
+                                </div>
+                              </div>
+                          
+                              <!-- Hardware & Embedded -->
+                              <div class="skills-category-block">
+                                <h4><i class="fas fa-cogs"></i> Hardware & Embedded</h4>
+                                <div class="skills-badge-container">
+                                  <!-- <span class="skill-badge"><i class="fas fa-microchip"></i> Microcontrollers</span>
+                                  <span class="skill-badge">8051</span> -->
+                                  <span class="skill-badge"><i class="fas fa-microchip"></i>Microcontrollers (Arduino/NodeMCU/PSoC)</span>
+                                  <span class="skill-badge"><i class="fas fa-dice-d6"></i> FPGA (Artix-7)</span>
+                                  <span class="skill-badge"><i class="fab fa-raspberry-pi"></i> Raspberry Pi</span>
+                                  <!-- <span class="skill-badge"><i class="fas fa-broadcast-tower"></i> Sensors & Interfacing</span> -->
+                                  <span class="skill-badge"><i class="fas fa-satellite-dish"></i> SDR (HackRF, USRP)</span>
+                                </div>
+                              </div>
+                          
+                         
+                              <!-- <div class="skills-category-block">
+                                <h4><i class="fas fa-laptop-code"></i> Software & Tools</h4>
+                                <div class="skills-badge-container">
+                                  <span class="skill-badge"><i class="fas fa-cog"></i> Vivado</span>
+                                  <span class="skill-badge"><i class="fas fa-wrench"></i> Keil µVision</span>
+                                  <span class="skill-badge"><i class="fas fa-drafting-compass"></i> Proteus</span>
+                                  <span class="skill-badge"><i class="fas fa-wave-square"></i> MATLAB & Simulink</span>
+                                  <span class="skill-badge"><i class="fab fa-python"></i> Jupyter</span>
+                                  <span class="skill-badge"><i class="fas fa-project-diagram"></i> GNU Radio</span>
+                                  <span class="skill-badge"><i class="fas fa-wind"></i> Apache Airflow</span>
+                                  <span class="skill-badge"><i class="fab fa-linux"></i> Linux / Bash</span>
+                                  <span class="skill-badge"><i class="fas fa-paint-brush"></i> Photoshop (Basic)</span>
+                                </div>
+                              </div> -->
+                          
+                              <!-- Concepts & Domains -->
+                              <div class="skills-category-block">
+                                <h4><i class="fas fa-brain"></i>Subject Knowledge</h4>
+                                <div class="skills-badge-container">
+                                  <span class="skill-badge"><i class="fas fa-code"></i> Machine Learning & Deep Learning</span>
+                                  <span class="skill-badge"><i class="fas fa-chart-line"></i> Signal Processing</span>
+                                  <span class="skill-badge"><i class="fas fa-server"></i> Embedded Systems</span>
+                                  <span class="skill-badge"><i class="fas fa-robot"></i> IoT & IoB</span>
+                                  <span class="skill-badge"><i class="fas fa-heartbeat"></i>Biopotential Signals (ECG/EMG/EEG/PPG)</span>
+                                  <!-- <span class="skill-badge"><i class="fas fa-user-secret"></i> Hardware Security</span>
+                                  <span class="skill-badge"><i class="fas fa-digital-tachograph"></i> Digital Logic</span>
+                                  <span class="skill-badge">VLSI Design</span>
+                                  <span class="skill-badge"><i class="fas fa-exchange-alt"></i> Computer Networks</span>
+                                  <span class="skill-badge"><i class="fas fa-stream"></i> Data Structures</span> -->
+       
+                                </div>
+                              </div>
+                          
+                              <!-- Soft Skills -->
+                              <div class="skills-category-block">
+                                <h4><i class="fas fa-user-friends"></i> Soft Skills (i know it's not a technical thing, but eh) </h4>
+                                <div class="skills-badge-container">
+                                  <span class="skill-badge"><i class="fas fa-users"></i> Great Collaborater</span>
+                                  <span class="skill-badge"><i class="fas fa-puzzle-piece"></i> Problem Solver</span>
+                                  <span class="skill-badge"><i class="far fa-lightbulb"></i> Adaptable</span>
+                                  <span class="skill-badge"><i class="far fa-gem"></i> Accountable</span>
+                                  <span class="skill-badge"><i class="fas fa-tasks"></i> Good Time Manager</span>
+                                  <span class="skill-badge"><i class="fas fa-search"></i> Analytical Thinker</span>
+                                </div>
+                              </div>
+                          
+                            </div>
+                          </section>
 
-        <section id="publication-section"> <div class="section-container centre_align"> <h2>Publications <span class="emoji-heading">🪶</span></h2> <p>Sharing my research findings. More on <a href= "https://scholar.google.co.in/citations?user=YwhkKf4AAAAJ&hl=en" target="_blank">Google Scholar</a>.</p><br> <div class="publication-list left_align"><ol><li><b>Chowdhury, M. R.</b>, Madanu, R., Abbod, M. F., Fan, S. Z., & Shieh, J. S. (2021). Deep learning via ECG and PPG signals for prediction of depth of anesthesia. <i>Biomedical Signal Processing and Control, 68</i>, 102663. <a href= "https://doi.org/10.1016/j.bspc.2021.102663" target="_blank">[DOI]</a></li><li>Bari, M. F.,<b> Chowdhury, M. R.</b>, Chatterjee, B., & Sen, S. (2022). Detection of Rogue Devices using Unintended Near and Far-field Emanations with Spectral and Temporal Signatures. In <i>International Microwave Symposium (IMS) 2022</i>. <a href= "https://ieeexplore.ieee.org/abstract/document/9865347" target="_blank">[IEEE]</a></li><li>Bari, M. F., <b>Chowdhury, M. R.</b>, & Sen, S. (2023). Long Range Detection of Emanation from HDMI Cables Using CNN and Transfer Learning. In <i>Design, Automation & Test in Europe Conference & Exhibition (DATE) 2023</i>. <a href= "https://ieeexplore.ieee.org/abstract/document/10137263" target="_blank">[IEEE]</a></li></ol></div> </div> </section>
+                          
+        <!--  ---------- TECH STUFF -------------- -->
 
-<!-- ------------------------ -->
+        
+     
+        <section id="publication-section">
+
+            <div class="section-container centre_align">
+              <h2><span class="emoji-heading">👩‍💻</span>Projects and Publications </h2>
+              
+            </div>
+
+     
+            <!-- Projects -->
+
+           
+                <div class="section-container centre_align">
+                    <h4><i class="fas fa-brain"></i>Featured Projects</h4>
+                    <p>Bringing ideas to life with code and circuits. Click 'Learn More' for details. More on <a href="https://github.com/roycmeghna" target="_blank">GitHub</a>.</p>
+                    <br>
+
+                    <div class="projects-grid">
+
+                        <div class="card_proj">
+                            <div class="project-image-placeholder"><img src="/projects/ihope.png" alt="I-HOPE Project Visual"></div>
+                            <div class="container_proj">
+                                <h3 class="title_proj"><i class="fas fa-brain"></i> I-HOPE</h3>
+                                <p class="content_proj">Predicting college student mental health with high accuracy (91%) using interpretable AI to understand complex behavioral data.</p>
+                                <button class="btn btn-primary project-button modal-trigger" data-modal-target="#modal-project-ihope">Learn More</button>
+                            </div>
+                        </div>
+                    
+                        <div class="card_proj">
+                            <div class="project-image-placeholder"><img src="/projects/ihope.png" alt="I-HOPE Project Visual"></div>
+                            <div class="container_proj">
+                                <h3 class="title_proj"><i class="fas fa-share-alt"></i> DistNN</h3>
+                                <p class="content_proj">Enabling powerful, real-time AI on wearables with extreme energy efficiency (~1000x > GPU) via distributed neural networks.</p>
+                                <button class="btn btn-primary project-button modal-trigger" data-modal-target="#modal-project-distnn">Learn More</button>
+                            </div>
+                        </div>
+                    
+                        <div class="card_proj">
+                            <div class="project-image-placeholder"><img src="/projects/ihope.png" alt="I-HOPE Project Visual"></div>
+                            <div class="container_proj">
+                                <h3 class="title_proj"><i class="fas fa-seedling"></i> SSL-SE-EEG</h3>
+                                <p class="content_proj">Achieving state-of-the-art EEG analysis accuracy (91% on MindBigData) with less labeled data using a novel Self-Supervised Learning framework.</p>
+                                <button class="btn btn-primary project-button modal-trigger" data-modal-target="#modal-project-ssl">Learn More</button>
+                            </div>
+                        </div>
+                    
+                        <div class="card_proj">
+                            <div class="project-image-placeholder"><img src="/projects/ihope.png" alt="I-HOPE Project Visual"></div>
+                            <div class="container_proj">
+                                <h3 class="title_proj"><i class="fas fa-tshirt"></i> FlexECG (HBC)</h3>
+                                 <p class="content_proj">An ultra-low power (20µW) flexible ECG patch utilizing body heat and Human Body Communication for seamless monitoring.</p>
+                                <button class="btn btn-primary project-button modal-trigger" data-modal-target="#modal-project-hbc">Learn More</button>
+                            </div>
+                        </div>
+                    
+                        <div class="card_proj">
+                            <div class="project-image-placeholder"><img src="/projects/ihope.png" alt="I-HOPE Project Visual"></div>
+                            <div class="container_proj">
+                                <h3 class="title_proj"><i class="fas fa-chart-line"></i> Depth of Anesthesia</h3>
+                                <p class="content_proj">Predicting surgical anesthesia depth using Deep Learning on ECG/PPG signals for enhanced real-time patient safety (82% Acc).</p>
+                                <button class="btn btn-primary project-button modal-trigger" data-modal-target="#modal-project-doa">Learn More</button>
+                            </div>
+                        </div>
+                    
+                        </div>
+                    
+
+            
+                        
+                </div>
+
+
+                <!-- more details about projects -->
+
+
+                 
+            </section> 
+            
+            
+            <!-- ihope -->
+            
+            <div class="modal" id="modal-project-ihope">
+
+                <div class="modal-overlay modal-close-trigger"></div> 
+                
+                <div class="modal-content">
+                    <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
+                    <h2>Interpretable hierarchical Machine Learning for Mental Health</h2>
+
+                    <div class="modal-body">
+                        <!-- <img src="images/project-ihope-visual.png" alt="I-HOPE Project Concept" style="max-width: 400px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Decoding Mental Health from Daily Life</h4> -->
+                        <p>Understanding and predicting mental health is incredibly complex. Our daily digital footprints create vast amounts of behavioral data, but it's noisy, high-dimensional, and varies wildly between people, making standard models struggle.</p>
+                   
+                        <h4>Our Solution: Interpretable AI with I-HOPE</h4>
+                        <p>We developed I-HOPE, featuring a novel hierarchical model that translates complex raw behavioral data into understandable interaction patterns. By applying smart feature reduction, we simplified the data without losing vital predictive power, creating personalized and interpretable insights.</p>
+                   
+                        <h4>Impact & Results: ✨</h4>
+                        <ul>
+                            <li>Achieved <strong>91% prediction accuracy</strong> for student mental health outcomes – a huge leap from the 60% baseline!</li>
+                            <li>Successfully bridged the gap between raw user behavior and meaningful mental health indicators.</li>
+                            <li>Enabled personalized predictions through interpretable modeling.</li>
+                        </ul>
+                   
+                        <p><strong>Tech Highlights:</strong> Python (TensorFlow, Pandas, NumPy, Scikit-learn, SHAP)</p>
+                        <p><a href="[LINK_TO_CHASE_PAPER_WHEN_AVAILABLE]" target="_blank" class="btn btn-secondary">View Publication (IEEE/ACM CHASE 2025 - Accepted)</a></p>
+                    </div>
+
+                    <!-- <div class="modal-body">
+                        <img src="images/project-ihope.jpg" alt="I-HOPE Project Visual" style="max-width: 400px; margin: 0 auto var(--spacing-md) auto; border-radius: var(--border-radius);"> <p>Developed and evaluated various interpretable machine learning models (like Logistic Regression, Decision Trees, Explainable Boosting Machines) to predict patient mortality in the Intensive Care Unit (ICU) using the PhysioNet Challenge 2012 dataset.</p>
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Data preprocessing and feature engineering for time-series clinical data.</li>
+                            <li>Implementation and comparison of multiple ML models.</li>
+                            <li>Focus on interpretability using techniques like SHAP or LIME to understand model predictions.</li>
+                            <li>Performance evaluation using relevant metrics (AUC-ROC, Precision-Recall, etc.).</li>
+                        </ul>
+                        <p><strong>Tech Stack:</strong> Python, Pandas, Scikit-learn, Matplotlib, SHAP/LIME.</p>
+                         <p><a href="[LINK_TO_CODE_OR_PAPER_IF_ANY]" target="_blank" class="btn btn-secondary">View Code/Details</a></p> </div>
+                </div> -->
+            </div>
+            </div>
+
+                    <!-- dist nn -->
+            <div class="modal" id="modal-project-distnn">
+                <div class="modal-overlay modal-close-trigger"></div>
+                <div class="modal-content">
+                    <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
+                    <h2>Distributed Neural Networks for IoB</h2>
+
+                    <div class="modal-body">
+                        <!-- <img src="images/project-distnn-visual.png" alt="DistNN Concept Diagram" style="max-width: 450px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Smart Wearables Drain Batteries Fast!</h4> -->
+                        <p>Wearables are getting smarter, running complex AI tasks. But this drains power, leading to frustratingly short battery life. How can we run powerful AI without constant charging?</p>
+                   
+                        <h4>Our Solution: DistNN - Sharing the AI Load!</h4>
+                        <p>We created DistNN, a game-changing framework that splits neural network tasks between the tiny wearable device and a more powerful nearby hub (like your phone). We found the *optimal* split point to drastically cut the wearable's energy use and designed custom low-precision hardware for ultra-efficiency.</p>
+                   
+                        <h4>Impact & Results: 🚀</h4>
+                        <ul>
+                            <li>Achieved <strong>~1000x</strong> higher energy efficiency compared to running the AI on a GPU!</li>
+                            <li>Consumed <strong>11x less power</strong> on average than recent state-of-the-art AI chips for wearables.</li>
+                            <li>Maintained real-time performance (30 fps) and high accuracy (0.9 SSIM for image reconstruction).</li>
+                            <li>Redefines possibilities for powerful, practical AI on future wearable tech.</li>
+                        </ul>
+                   
+                        <p><strong>Tech Highlights:</strong> Distributed Neural Networks, Custom Figure of Merit (FoM), Low-Precision Fixed-Point Arithmetic, CNNs, Autoencoders.</p>
+                        <p><a href="[YOUR_LINK_HERE_BSN_2024]" target="_blank" class="btn btn-secondary">View Publication (IEEE BSN 2024)</a></p> 
+                    </div>
+
+                    <!-- <div class="modal-body">
+                        <img src="images/project-distnn.png" alt="DistNN Project Visual" style="max-width: 400px; margin: 0 auto var(--spacing-md) auto; border-radius: var(--border-radius);"> <p>Explored strategies for distributing neural network computations across ultra-low-power wearable devices and potentially an edge device or gateway. The goal was to enable complex analysis (like activity recognition or health monitoring) directly on resource-constrained wearables while minimizing power consumption and latency.</p>
+                        <h4>Key Aspects:</h4>
+                        <ul>
+                            <li>Investigated model partitioning techniques (layer-wise, parallel).</li>
+                            <li>Analyzed communication overhead vs. computation savings.</li>
+                            <li>Simulated or implemented prototypes on low-power microcontrollers.</li>
+                            <li>Published findings at IEEE BSN 2024.</li>
+                        </ul>
+                         <p><strong>Tech Stack:</strong> Python (TensorFlow Lite for Microcontrollers), Embedded C, Low-power MCUs.</p>
+                         <p><a href="[LINK_TO_BSN_PAPER]" target="_blank" class="btn btn-secondary">View Publication</a></p> </div> -->
+                </div> 
+            </div>
+
+            <!-- ssl-se-eeg -->
+            
+            <div class="modal" id="modal-project-ssl">
+                <div class="modal-overlay modal-close-trigger"></div>
+                <div class="modal-content">
+                    <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
+                    <h2>Self-Supervised Learning with Squeeze and Excitation Networks for EEG</h2>
+
+                    <div class="modal-body">
+                        <!-- <img src="images/project-ssl-eeg-visual.png" alt="SSL EEG Concept Diagram" style="max-width: 450px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: EEG Data is Noisy, Complex & Expensive to Label</h4> -->
+                        <p>Analyzing brain signals (EEG) is crucial for Brain-Computer Interfaces (BCIs) and diagnosing neurological conditions. But real-world EEG is messy, often lacks labels, and processing it efficiently on low-power devices is tough.</p>
+                   
+                        <h4>Our Solution: SSL-SE-EEG - Smarter EEG Analysis, Less Data Needed!</h4>
+                        <p>We developed SSL-SE-EEG, a novel framework that combines clever Self-Supervised Learning (SSL) to learn from unlabeled EEG data with efficient Squeeze-and-Excitation Networks (SE-Nets). We also transform messy EEG signals into structured 2D images, making them easier for deep learning models to understand.</p>
+                   
+                        <h4>Impact & Results: 🧠💡</h4>
+                        <ul>
+                            <li>Achieved <strong>state-of-the-art accuracy</strong> on multiple benchmark EEG datasets (e.g., 91% on MindBigData, 85% on TUH-AB seizure).</li>
+                            <li>Significantly reduces the need for expensive labeled data through SSL.</li>
+                            <li>Enhanced robustness against noise artifacts common in real-world EEG.</li>
+                            <li>Maintained <strong>minimal power overhead</strong>, making it ideal for real-time, low-power BCI applications.</li>
+                        </ul>
+                   
+                        <p><strong>Tech Highlights:</strong> Self-Supervised Learning (SSL), Squeeze-and-Excitation Networks (SE-Nets), EEG Signal Processing (as Images), Python (PyTorch/TensorFlow), MNE-Python.</p>
+                         <p><a href="[LINK_TO_ISCAS_PAPER_WHEN_AVAILABLE]" target="_blank" class="btn btn-secondary">Related Publication (IEEE ISCAS 2025 - Accepted)</a></p>
+                   </div>
+
+                     <!-- <div class="modal-body">
+                        <img src="images/project-ssl-eeg.png" alt="SSL EEG Project Visual" style="max-width: 400px; margin: 0 auto var(--spacing-md) auto; border-radius: var(--border-radius);"> <p>Investigated various self-supervised learning (SSL) pre-training strategies (like contrastive learning, masked prediction) specifically tailored for EEG signals. The aim was to learn robust feature representations from unlabeled EEG data to improve performance on downstream tasks like seizure detection or sleep stage classification, especially when labeled data is scarce.</p>
+                        <h4>Key Aspects:</h4>
+                        <ul>
+                            <li>Adapted existing SSL methods (e.g., SimCLR, BYOL, MAE) for time-series EEG data.</li>
+                            <li>Designed pretext tasks relevant to EEG characteristics.</li>
+                            <li>Evaluated learned representations on benchmark datasets and downstream tasks.</li>
+                            <li>Analyzed the impact of different pre-training data sizes and augmentation techniques.</li>
+                        </ul>
+                         <p><strong>Tech Stack:</strong> Python, PyTorch/TensorFlow, MNE-Python (for EEG processing), Scikit-learn.</p>
+                         </div> -->
+                </div> 
+            </div>
+
+
+            <!-- flexnn -->
+            
+            <div class="modal" id="modal-project-hbc">
+                <div class="modal-overlay modal-close-trigger"></div>
+                <div class="modal-content">
+                    <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
+                    <h2>Lowe Power Wearable ECG via Human Body Communication</h2>
+                     <!-- <div class="modal-body">
+                         <img src="images/project-flexecg.jpg" alt="FlexECG Project Visual" style="max-width: 400px; margin: 0 auto var(--spacing-md) auto; border-radius: var(--border-radius);"> <p>Developed a flexible, low-power wearable device for ECG monitoring. This system utilizes energy harvesting from body heat and transmits the acquired ECG data wirelessly using Human Body Communication (HBC), minimizing the need for traditional batteries and radio transmitters.</p>
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Custom low-power analog front-end for ECG acquisition.</li>
+                            <li>Integration of thermoelectric generators (TEGs) for energy harvesting.</li>
+                            <li>Design and implementation of an HBC transceiver.</li>
+                            <li>Power management strategies for perpetual or near-perpetual operation.</li>
+                            <li>Signal processing for noise reduction and feature extraction from HBC-transmitted ECG.</li>
+                        </ul>
+                         <p><strong>Tech Stack:</strong> Embedded C, PSoC Microcontroller, Energy Harvesting ICs, Analog Circuit Design, HBC principles, MATLAB/Python (for analysis).</p>
+                         </div> -->
+
+                         <div class="modal-body">
+                            <!-- <img src="images/project-flexecg-visual.jpg" alt="FlexECG Wearable Concept" style="max-width: 400px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Making Heart Monitoring Effortless</h4> -->
+                            <p>Continuous ECG monitoring is vital, but traditional wearables can be bulky and require frequent charging. How can we make it truly seamless and low-power?</p>
+                       
+                            <h4>Our Solution: FlexECG - Powering ECG Through Your Body!</h4>
+                            <p>We created FlexECG, a flexible patch that harvests energy from body heat and uses the human body itself as a communication channel (HBC) to transmit ECG data. This radically reduces power needs compared to traditional wireless methods.</p>
+                       
+                            <h4>Impact & Results:⚡</h4>
+                            <ul>
+                                <li>Developed efficient HBC transmission/decoding code for ECG signals.</li>
+                                <li>Achieved incredibly low power consumption (down to <strong>20µW</strong>!).</li>
+                                <li>Demonstrated robustness through experiments with multiple human subjects.</li>
+                                <li>System power consumption is <strong>4x lower</strong> than comparable state-of-the-art solutions.</li>
+                            </ul>
+                       
+                            <p><strong>Tech Highlights:</strong> PSoC Microcontroller, Human Body Communication (HBC), Energy Harvesting (TEGs), Analog Front-End Design, MATLAB, Python, PSoC Creator.</p>
+                            </div>
+
+                </div>
+            </div>
+            
+            <!-- doa -->
+
+            
+            <div class="modal" id="modal-project-doa">
+                <div class="modal-overlay modal-close-trigger"></div>
+                <div class="modal-content">
+                    <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
+                    <h2>AI for Safer Surgery: Predicting Anesthesia Depth</h2>
+                    <div class="modal-body">
+                        <!-- <img src="images/project-doa-visual.png" alt="Anesthesia Monitoring Concept" style="max-width: 400px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Keeping Patients Safely Anesthetized</h4> -->
+                        <p>During surgery, precisely monitoring how deeply a patient is anesthetized is critical for their safety and comfort. Traditional methods can have limitations. Could AI offer a smarter, non-invasive way using readily available signals?</p>
+
+                        <h4>Our Solution: Listening to the Heart with Deep Learning</h4>
+                        <p>We explored using common physiological signals, like the heart's electrical activity (ECG) and pulse waves (PPG), recorded continuously during real surgeries. By applying advanced Deep Learning models (CNNs and LSTMs), we aimed to create an accurate, real-time indicator of the patient's anesthetic depth.</p>
+
+                        <h4>Impact & Results: 🩺🤖</h4>
+                        <ul>
+                            <li>Successfully processed complex ECG/PPG signals from surgical patients using MATLAB.</li>
+                            <li>Developed and trained various deep learning architectures in Python (TensorFlow/Keras).</li>
+                            <li>Achieved approximately <strong>82% accuracy*</strong> in predicting clinical anesthesia depth using just ECG features.</li>
+                            <li>Validated and shared the methodology through publication in the <i>Biomedical Signal Processing and Control</i> journal.</li>
+                            <li>Demonstrates potential for AI to assist anesthesiologists with a data-driven, non-invasive tool.</li>
+                        </ul>
+
+                        <p><strong>Tech Highlights:</strong> Deep Learning (CNN, LSTM), Python (TensorFlow/Keras), Signal Processing, MATLAB, ECG/PPG Analysis.</p>
+                        <p><a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank" class="btn btn-secondary">View Publication</a></p>
+                    </div>
+                </div>
+            </div>
+
+
+                    <!-- Publications -->
+
+                        <div class="section-container centre_align">
+                           <br>
+                           <br>
+
+                      
+                        <h4><i class="fas fa-brain"></i>Publications</h4>
+                        
+
+                        <p>
+                            Here are some of my published research findings. More on
+                            <a href="https://scholar.google.co.in/citations?user=YwhkKf4AAAAJ&hl=en" target="_blank">Google Scholar</a>.
+                          </p>
+                          <br>
+                      
+                          <div class="publication-list left_align">
+                            <ol>
+                                
+                            
+                                <li>
+                                    <b>Chowdhury, M. R.</b>, Xuan, W., Sen, S., Zhao, Y. & Ding, Y. (2025). 'Predicting and Understanding College Student Mental Health with Interpretable Machine Learning'. In <i>IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE)</i>.
+                                    <a href="https://arxiv.org/pdf/2503.08002" target="_blank">[Link]</a>
+                                </li>
+
+                                <li>
+                                        <b>Chowdhury, M. R.</b>, & Sen, S. (2025). 'Measurement and Analysis of System Parameter Effects on Noise in EEG Systems'. In <i>IEEE International Symposium on Circuits and Systems (ISCAS)</i>. (Accepted)
+                                </li>
+                            
+                                <li>
+                                    <b>Chowdhury, M. R.</b>, Ghosh, A., Bari, M. F., & Sen, S. (2024). 'Leveraging Ultra-Low-Power Wearables Using Distributed Neural Networks'. In <i>IEEE Body Sensor Networks Conference (BSN)</i>.
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10780699" target="_blank">[Link]</a> </li>
+                            
+                                <li>
+                                    Bari, M. F., <b>Chowdhury, M. R.</b>, & Sen, S. (2023). Long Range Detection of Emanation from HDMI Cables Using CNN and Transfer Learning. In <i>Design, Automation & Test in Europe Conference & Exhibition (DATE) 2023</i>.
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10137263" target="_blank">[Link]</a>
+                                </li>
+                            
+                                <li>
+                                    Bari, M. F., <b>Chowdhury, M. R.</b>, Chatterjee, B., & Sen, S. (2022). Detection of Rogue Devices using Unintended Near and Far-field Emanations with Spectral and Temporal Signatures. In <i>IEEE MTT-S International Microwave Symposium (IMS) 2022</i>.
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9865347" target="_blank">[Link]</a>
+                                </li>
+                            
+                                <li>
+                                    <b>Chowdhury, M. R.</b>, Madanu, R., Abbod, M. F., Fan, S. Z., & Shieh, J. S. (2021). Deep learning via ECG and PPG signals for prediction of depth of anesthesia. <i>Biomedical Signal Processing and Control, 68</i>, 102663.
+                                    <a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank">[Link]</a>
+                                </li>
+                            </ol>
+
+                            
+                          </div>
+                        </div>
+
+
+                      </section>
+                      
+
+
+<!-- ------------EXPERIENCE ------------ -->
 
         <section id="exp-section"> 
             <div class="section-container centre_align">
-                 <h2>Experience Timeline <span class="emoji-heading">🗺️</span></h2>
+                 <h2><span class="emoji-heading">⏳</span>Experience Timeline </h2>
                  
                  <p>My journey through research labs and industry roles.</p>
 
@@ -64,6 +563,7 @@
                         </i>SPARCLAB, Purdue University</h4>
                          <p>Researching low-power embedded systems, HBC, and hardware security.</p> 
                          <div class="more-details" style="display: none;">
+
                             <h5>Projects:</h5>
                             <ul>
                                 <li>Human Body Communication for biopotentials (power optimization, signal processing).</li>
@@ -85,18 +585,46 @@
                                 <i class="fas fa-building icon-inline"></i>TATA CONSULTANCY SERVICES (TCS)
                             </h4>
                             <p>Developed ML solutions for structured & unstructured data.</p>
-                            <div class="more-details" style="display: none;">
-                                <h5>Projects:</h5>
+                            <div class="more-details" style="display: none;"> <div class="project-detail"> <h6><i class="fas fa-box-open icon-inline"></i>Analytics in a Box</h6> <ul>
+                                <li>Developed an end-to-end automated ML system for structured data (classification/regression).</li>
+                                <li>Included data augmentation, AutoML selection, and adaptive learning features.</li>
+                                <li><strong>Tech:</strong> GAN, AutoML, Python, HTML/CSS</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="project-detail">
+                            <h6><i class="fas fa-search-plus icon-inline"></i>Cogni Extract</h6>
+                             <ul>
+                                 <li>Built an ML solution using NLP (spaCy) and CRF models to automatically extract information from unstructured documents.</li>
+                                 <li>Automated manual data extraction processes.</li>
+                                 <li><strong>Tech:</strong> MLOps (Airflow), NLP, Python, Scikit-learn (CRF)</li>
+                             </ul>
+                        </div>
+                    </div>
+
+                                <!-- <h5>Key Projects:</h5>
                                 <ul>
-                                    <li>"Analytics in a Box": AutoML, GANs, Adaptive ML.</li>
-                                    <li>"Cogni Extract": NLP for document information extraction.</li>
-                                </ul>
-                                <h5>Tech:</h5>
-                                Python, AutoML, Airflow, NLP (spaCy), Scikit-learn.
-                            </div>
+                                    <li><b>Analytics in a Box:</b> 
+                                        Developed an end-to-end automated ML system for structured data (classification/regression) 
+                                        featuring data augmentation, AutoML selection, and adaptive learning. 
+                                        <b>(Tech: GAN, AutoML, Python, HTML/CSS)</b></li>
+                                    <li><b>Cogni Extract:</b> Built an ML solution using NLP (spaCy) 
+                                        and CRF models to automatically extract information from unstructured documents, 
+                                        automating manual processes. 
+                                        <b>(Tech: MLOps/Airflow, NLP, Python, Scikit-learn)</b></li>
+                                </ul> 
+                                </div>-->
+
+
+            
+
+                            
                             <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
                         </div>
                     </div>
+
+
+
 
                     <div class="timeline-item right">
                         <div class="timeline-marker">
@@ -108,16 +636,46 @@
                             <h4 class="company">
                                 <i class="fas fa-university icon-inline"></i>YUAN ZE UNIVERSITY, TAIWAN
                             </h4>
-                            <p>Applied deep learning to predict Depth of Anesthesia from ECG/PPG signals.</p>
-                            <div class="more-details" style="display: none;">
-                                <h5>Focus:</h5>
-                                Signal processing & time-series analysis using CNNs/LSTMs. Resulted in a BSPC journal publication.
-                                <h5>Tech:</h5>
-                                Python (TF/Keras), MATLAB.
-                            </div>
+                            <!-- <p>Applied deep learning to predict Depth of Anesthesia from ECG/PPG signals.</p> -->
+                            <p>Focus: Signal processing & time-series analysis using CNNs/LSTMs for ECG and PPG.</p>
+                            <!-- <div class="more-details" style="display: none;">
+
+                                <h5>Depth of Anesthesia Prediction (Guided by Prof. Jiann-Shin Shieh)</h5>
+                                
+<ul>
+    <li>Developed deep learning models (using Python) to predict Depth of Anesthesia from ECG & PPG signals.</li>
+    <li>Performed signal processing on biopotential data using MATLAB.</li>
+    <li>Achieved ~82% prediction accuracy using ECG data.</li>
+    <li>Work resulted in a <a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank">BSPC journal publication</a>.</li>
+    <h5> <b> Tech:Python (TF/Keras), MATLAB  </b></h5>
+</ul>
+
+
+                            </div> -->
+
+<div class="more-details" style="display: none;">
+    <h6><i class="fas fa-heartbeat icon-inline"></i>Depth of Anesthesia Prediction</h6>
+
+    <ul>
+        <li>Developed deep learning models (Python - TF/Keras) for DoA prediction using ECG & PPG signals.</li>
+        <li>Performed signal processing on biopotential data (MATLAB).</li>
+        <li>Achieved ~82% prediction accuracy using ECG.</li>
+        <li>Work resulted in a <a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank">BSPC journal publication</a>.</li>
+        <li><strong> Tech:Python (TF/Keras), MATLAB  </strong></li>
+        <li><strong>Guidance:</strong> Prof. Jiann-Shin Shieh.</li>
+    </ul>
+    
+</div>
+
+                               
                             <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
                         </div>
                     </div>
+
+
+
+
+
                     <div class="timeline-item left">
                         <div class="timeline-marker">
                             <img src="images/tcs_logo.jpg" alt="TCS Logo">
@@ -128,16 +686,40 @@
                             <h4 class="company">
                                 <i class="fas fa-building icon-inline"></i>TATA CONSULTANCY SERVICES (TCS)
                             </h4>
-                            <p>Worked on ML models for EV battery life prediction and range estimation.</p>
+                            <!-- <p>Worked on ML models for EV battery life prediction and range estimation.</p> -->
+                            <p>Focus: Predictive modeling for IoT applications in EV battery life prediction and range estimation.</p>
+
+
                             <div class="more-details" style="display: none;">
-                                <h5>Focus:</h5>
-                                Predictive modeling for IoT applications in transportation.
-                                <h5>Tech:</h5>
-                                Python, Scikit-learn.
+                                <h6><i class="fas fa-car-battery icon-inline"></i>IoT in Transportation & Logistics (EV Battery Life)</h6>
+                                <ul>
+                                    <li>Researched IoT applications/frameworks in T&L, focusing on Electric Vehicles.</li>
+                                    <li>Developed models to predict Remaining Useful Life (RUL) of EV Li-ion batteries, range, and charging times.</li>
+                                    <li>Performed feature extraction and evaluated various ML regression models (RF, DT, KNN, NN, LR).</li>
+                                    <li>Identified Random Forest and Decision Tree as top-performing models for the dataset.</li>
+                                    <li><strong>Tech:Python, Scikit-learn</strong> </li>
+                                </ul>
                             </div>
+
+
+                            <!-- <div class="more-details" style="display: none;">
+
+                                <h5>IoT in Transportation & Logistics:</h5>
+<ul>
+    <li>Researched IoT applications and frameworks in the T&L industry, focusing on Electric Vehicles (EVs).</li>
+    <li>Developed models to predict Remaining Useful Life (RUL) of EV Li-ion batteries, range, and charging times.</li>
+    <li>Performed feature extraction and evaluated various ML regression models (RF, DT, KNN, NN, LR) for RUL prediction using Python.</li>
+    <li>Identified Random Forest and Decision Tree as top-performing models for the dataset.</li>                              
+</ul>
+<h5> <b>Tech:Python, Scikit-learn.</b></h5>
+
+                            </div>-->
+
                             <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
                         </div>
-                    </div>
+                    </div> 
+
+
                 
                     <div class="timeline-item right">
                         <div class="timeline-marker">
@@ -149,17 +731,38 @@
                             <h4 class="company">
                                 <i class="fas fa-university icon-inline"></i>IIT KHARAGPUR
                             </h4>
-                            <p>Implemented a True Random Number Generator (TRNG) on an FPGA.</p>
+                            <p>Focus: Hardware security primitives, FPGA implementation and testing.</p>
+
+
                             <div class="more-details" style="display: none;">
-                                <h5>Focus:</h5>
-                                Hardware security primitives, FPGA implementation and testing.
-                                <h5>Tech:</h5>
-                                Verilog, Xilinx Vivado, Artix-7 FPGA.
-                            </div>
+                                <h6><i class="fas fa-shield-alt icon-inline"></i>FPGA-based True Random Number Generator (TRNG)</h6>
+                               <ul>
+                                   <li>Implemented a TRNG on a Xilinx Artix-7 FPGA (Nexys 4 DDR) using Ring Oscillators as the entropy source.</li>
+                                   <li>Utilized Carry4 primitives, bit extractors, BRAM, and UART communication.</li>
+                                   <li>Validated the generator's randomness using NIST statistical test suite.</li>
+                                   <li><strong>Hardware:</strong> Artix-7 FPGA</li>
+                                   <li><strong>Software:</strong> Verilog, Vivado 2018.3</li>
+                                   <li><strong>Guidance:</strong> Prof. Rajat Subhra Chakraborty.</li>
+                               </ul>
+                           </div>
+
+
+                            <!-- <div class="more-details" style="display: none;">
+
+                                <h5>FPGA-based True Random Number Generator (TRNG) guided by Prof. Rajat Subhra Chakraborty.</h5>
+<ul>
+    <li>Implemented a TRNG on a Xilinx Artix-7 FPGA (Nexys 4 DDR) using Ring Oscillators as the entropy source.</li>
+    <li>Utilized Carry4 primitives, bit extractors, BRAM, and UART communication.</li>
+    <li>Validated the generator's randomness using NIST statistical test suite.</li>
+</ul>
+<h5><b>Tech: Verilog, Xilinx Vivado, Artix-7 FPGA</b></h5>
+
+                            </div> -->
                             <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
                         </div>
                     </div>
                 
+
                     <div class="timeline-item left">
                         <div class="timeline-marker">
                             <img src="images/iitb.png" alt="IIT Bombay Logo">
@@ -170,13 +773,32 @@
                             <h4 class="company">
                                 <i class="fas fa-university icon-inline"></i>IIT BOMBAY
                             </h4>
-                            <p>Developed an IoT-based real-time weigh scale using an 8051 microcontroller.</p>
+                            <!-- <p>Developed an IoT-based real-time weigh scale using an 8051 microcontroller.</p> -->
+                            <p>Focus: Embedded programming, sensor interfacing, cloud communication.</p>
+
                             <div class="more-details" style="display: none;">
-                                <h5>Focus:</h5>
-                                Embedded programming, sensor interfacing, cloud communication.
-                                <h5>Tech:</h5>
-                                Embedded C, Keil µVision, 8051, ThingSpeak.
+                                <h6><i class="fas fa-balance-scale icon-inline"></i>IoT-Based Weigh Scale</h6>
+                                <ul>
+                                    <li>Developed a real-time, IoT-enabled weigh scale prototype using an IIT Bombay-produced AT89C51A microcontroller.</li>
+                                    <li>Programmed the microcontroller using Embedded C.</li>
+                                    <li>Interfaced sensors and transmitted weight data to the cloud (ThingSpeak).</li>
+                                    <li><strong>Tools:</strong> Keil µVision, ThingSpeak</li>
+                                     <li><strong>Guidance:</strong> Prof. Virendra Singh.</li>
+                                </ul>
                             </div>
+
+                            <!-- <div class="more-details" style="display: none;">
+
+                                <h5>IoT-Based Weigh Scale guided by Prof. Virendra Singh:</h5>
+<ul>
+    <li>Developed a real-time, IoT-enabled weigh scale prototype using an IIT Bombay-produced AT89C51A microcontroller.</li>
+    <li>Programmed the microcontroller using Embedded C (Keil µVision).</li>
+    <li>Interfaced sensors and transmitted weight data to the ThingSpeak cloud platform.</li>
+</ul>
+<h5><b> Tech: Embedded C, Keil µVision, 8051, ThingSpeak.</b></h5>
+                                
+
+                            </div> -->
                             <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
                         </div>
                     </div>
@@ -193,15 +815,10 @@
                         </div><div class="timeline-content"> <span class="date">Aug 2020 – Aug 2021</span> 
                             <h3 class="designation">Developer - R&I (Analytics & Insights)</h3> <h4 class="company"><i class="fas fa-building icon-inline"></i>TATA CONSULTANCY SERVICES (TCS)</h4> <p>Developed ML solutions for structured & unstructured data.</p> <div class="more-details" style="display: none;"><h5>Projects:</h5><ul><li>"Analytics in a Box": AutoML, GANs, Adaptive ML.</li><li>"Cogni Extract": NLP for document information extraction.</li></ul><h5>Tech:</h5> Python, AutoML, Airflow, NLP (spaCy), Scikit-learn.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> <div class="timeline-item right"><div class="timeline-marker"><img src="images/logo-yzu.png" alt="YZU Logo"></div><div class="timeline-content"> <span class="date">May 2020 – Jul 2020</span> <h3 class="designation">Research Intern</h3> <h4 class="company"><i class="fas fa-university icon-inline"></i>YUAN ZE UNIVERSITY, TAIWAN</h4> <p>Applied deep learning to predict Depth of Anesthesia from ECG/PPG signals.</p> <div class="more-details" style="display: none;"><h5>Focus:</h5> Signal processing & time-series analysis using CNNs/LSTMs. Resulted in a BSPC journal publication.<h5>Tech:</h5> Python (TF/Keras), MATLAB.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> <div class="timeline-item left"><div class="timeline-marker"><img src="images/logo-tcs.png" alt="TCS Logo"></div><div class="timeline-content"> <span class="date">Jan 2020 – Apr 2020</span> <h3 class="designation">Machine Learning Intern</h3> <h4 class="company"><i class="fas fa-building icon-inline"></i>TATA CONSULTANCY SERVICES (TCS)</h4> <p>Worked on ML models for EV battery life prediction and range estimation.</p> <div class="more-details" style="display: none;"><h5>Focus:</h5> Predictive modeling for IoT applications in transportation.<h5>Tech:</h5> Python, Scikit-learn.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> <div class="timeline-item right"><div class="timeline-marker"><img src="images/logo-iitkgp.png" alt="IIT KGP Logo"></div><div class="timeline-content"> <span class="date">May 2019 – Jun 2019</span> <h3 class="designation">Research Intern (SEAL Lab, CSE)</h3> <h4 class="company"><i class="fas fa-university icon-inline"></i>IIT KHARAGPUR</h4> <p>Implemented a True Random Number Generator (TRNG) on an FPGA.</p> <div class="more-details" style="display: none;"><h5>Focus:</h5> Hardware security primitives, FPGA implementation and testing.<h5>Tech:</h5> Verilog, Xilinx Vivado, Artix-7 FPGA.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> <div class="timeline-item left"><div class="timeline-marker"><img src="images/logo-iitb.png" alt="IIT Bombay Logo"></div><div class="timeline-content"> <span class="date">May 2018 – Jul 2018</span> <h3 class="designation">Summer Intern (EE Department)</h3> <h4 class="company"><i class="fas fa-university icon-inline"></i>IIT BOMBAY</h4> <p>Developed an IoT-based real-time weigh scale using an 8051 microcontroller.</p> <div class="more-details" style="display: none;"><h5>Focus:</h5> Embedded programming, sensor interfacing, cloud communication.<h5>Tech:</h5> Embedded C, Keil µVision, 8051, ThingSpeak.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> </div> </div> </section> -->
 
-                    <!--  ------------------------ -->
-        <section id="projects-section"> <div class="section-container centre_align"> <h2>Featured Projects <i class="fas fa-project-diagram"></i></h2> <p>Bringing ideas to life with code and circuits. More on <a href="https://github.com/roycmeghna" target="_blank">GitHub</a>.</p><br> <div class="projects-grid"> <div class="card_proj"><div class="project-image-placeholder"><i class="fas fa-heartbeat"></i><span>Add Image/Diagram</span></div><div class="container_proj"> <h3 class="title_proj"><i class="fas fa-brain"></i>Depth of Anesthesia</h3> <p class="content_proj">Used deep learning (CNN/LSTM) on ECG/PPG signals. Published in BSPC Journal (2021).</p> <a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank" class="btn btn-primary project-button">View Publication</a> </div></div> <div class="card_proj"><div class="project-image-placeholder"><i class="fas fa-sign-language"></i><span>Add Image/Glove Photo</span></div><div class="container_proj"> <h3 class="title_proj"><i class="fas fa-hand-paper"></i>Gesture Vocaliser</h3> <p class="content_proj">Arduino glove translating sign language gestures to text/speech using flex sensors & IMU.</p> <a href="https://drive.google.com/drive/folders/16tuNT9YnN_yLPkko1ICjsx-YYgbJktFO?usp=sharing" target="_blank" class="btn btn-primary project-button">See Video</a> </div></div> <div class="card_proj"><div class="project-image-placeholder"><i class="fas fa-baby"></i><span>Add Image/Diagram</span></div><div class="container_proj"> <h3 class="title_proj"><i class="fas fa-wifi"></i>IoT Infant Monitor</h3> <p class="content_proj">8051-based system monitoring infant vitals (temp, sound, presence) with IoT alerts.</p> <a href="https://github.com/roycmeghna/Infant-Monitoring-System" target="_blank" class="btn btn-primary project-button">View on GitHub</a> </div></div> <div class="card_proj"><div class="project-image-placeholder"><i class="fas fa-chalkboard-teacher"></i><span>Add Image/App Screenshot</span></div><div class="container_proj"> <h3 class="title_proj"><i class="fas fa-door-open"></i>Faculty Availability</h3> <p class="content_proj">NodeMCU & PIR sensors indicating faculty cabin presence via the Blynk mobile app.</p> <a href="https://github.com/roycmeghna/Faculty-Availability-System" target="_blank" class="btn btn-primary project-button">View on GitHub</a> </div></div> <div class="card_proj"><div class="project-image-placeholder"><i class="fas fa-volume-up"></i><span>Add Image/Waveform</span></div><div class="container_proj"> <h3 class="title_proj"><i class="fas fa-wave-square"></i>Audio Processing</h3> <p class="content_proj">MATLAB project for noise removal, echo addition, and audio compression.</p> <a href="https://github.com/roycmeghna/Audio-Manipulation" target="_blank" class="btn btn-primary project-button">View on GitHub</a> </div></div> <div class="card_proj"><div class="project-image-placeholder"><i class="fas fa-robot"></i><span>Add Image/Robot Photo</span></div><div class="container_proj"> <h3 class="title_proj"><i class="fas fa-ruler-combined"></i>Sensor Fusion Robot</h3> <p class="content_proj">Arduino robot integrating multiple sensors, logging data via Raspberry Pi.</p> <a href="https://github.com/roycmeghna/Make-a-thon_PRAG_Robotics" target="_blank" class="btn btn-primary project-button">View on GitHub</a> </div></div> </div> </div> </section>
-
-
-
-        <!-- ---------------- -->
+        <!-- -------EDUCATION--------- -->
         <section id="edu-section">
             <div class="section-container centre_align">
-                 <h2>Education <span class="emoji-heading">🎓</span></h2>
+                 <h2><span class="emoji-heading">🎓</span>Education </h2>
                  <p>My academic journey so far.</p>
                  <div class="education-timeline-horizontal-container">
                     <ul class="education-timeline-horizontal">
@@ -251,7 +868,7 @@
 
          <section id="activities-section">
             <div class="section-container centre_align">
-              <h2>Beyond the Lab <span class="emoji-heading">💪</span></h2>
+              <h2><span class="emoji-heading">💪</span>Beyond the Lab </h2>
               <p>When I step away from the screen and soldering iron...</p>
           
               <div class="activities-container">
@@ -514,7 +1131,8 @@
         <section id="contact-section"> 
             <div class="section-container centre_align contact-info"> 
                 <h2>Get In Touch <span class="emoji-heading">✉️</span></h2> 
-                <p>Let's connect! Whether it's about research, collaboration, or just a chat about tech (or coffee!).</p>
+                <!-- <p>Let's connect! Whether it's about research, collaboration, or just a chat about tech (or coffee!).</p> -->
+                <p>Whether you have questions, ideas for collaboration in low-power tech or AI in healthcare, or just want to chat about research (or photography!), please feel free to reach out!</p>
                 
                 <p>Email: <a href="mailto:royc.meghna@gmail.com">royc.meghna@gmail.com</a></p> 
 
@@ -546,7 +1164,7 @@
 
 
         <!-- FOOTER -->
-    </div> <footer class="footer"> &copy; <script>document.write(new Date().getFullYear());</script> Meghna Roy Chowdhury. Crafted with <span class="emoji">❤️</span> & <span class="emoji">💻</span>. </footer>
+    </div> <footer class="footer"> &copy; <script>document.write(new Date().getFullYear());</script> Meghna Roy Chowdhury. Crafted with <span class="emoji">⌚️</span> & <span class="emoji">💻</span>. </footer>
 
 
 
@@ -659,6 +1277,68 @@
                  }
              });
          }
+
+
+
+
+         // --- Modal Window Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const modalTriggers = document.querySelectorAll('.modal-trigger');
+    const modalCloseTriggers = document.querySelectorAll('.modal-close-trigger'); // Includes overlay & close button
+
+    // Open Modal
+    modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const modalId = trigger.getAttribute('data-modal-target');
+            const modal = document.querySelector(modalId); // Use querySelector for ID
+            if (modal) {
+                openModal(modal);
+            } else {
+                console.error("Modal not found for target:", modalId);
+            }
+        });
+    });
+
+    // Close Modal (using overlay or close button)
+    modalCloseTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (event) => {
+            // Find the closest parent modal IF the click was on overlay/button itself
+            // Prevents closing when clicking inside modal content area that bubbles up
+             if (event.target === trigger) {
+                 const modal = trigger.closest('.modal');
+                 if (modal) {
+                     closeModal(modal);
+                 }
+             }
+        });
+    });
+
+    // Optional: Close modal with Escape key
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            const activeModal = document.querySelector('.modal.active');
+            if (activeModal) {
+                closeModal(activeModal);
+            }
+        }
+    });
+});
+
+function openModal(modal) {
+    if (modal == null) return;
+    modal.classList.add('active');
+    // Optional: Add class to body to prevent scrolling background
+    // document.body.classList.add('modal-open');
+}
+
+function closeModal(modal) {
+    if (modal == null) return;
+    modal.classList.remove('active');
+     // Optional: Remove class from body
+     // document.body.classList.remove('modal-open');
+}
+
+
 
     </script>
 
