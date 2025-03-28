@@ -233,9 +233,89 @@ section:nth-child(even) { background-color: var(--card-bg); } /* Adjusted: Even 
 .timeline-content .company i { font-size: 0.9em; margin-right: var(--spacing-xs); }
 .timeline-item.left .company i { margin-left: var(--spacing-xs); margin-right: 0; order: 1; }
 .timeline-content p { font-size: 0.9rem; margin-bottom: var(--spacing-sm); }
-.more-details { display: none; margin-top: var(--spacing-sm); font-size: 0.9rem; } /* Changed ID to class */
-.more-details h5 { font-size: 0.95rem; }
+/* .more-details { display: none; margin-top: var(--spacing-sm); font-size: 0.9rem; }  */
+/* .more-details h5 { font-size: 0.95rem; } */
 .more-details ul, .more-details ol { font-size: 0.9rem; }
+
+/* --- Styling for Expanded Timeline Details --- */
+
+.more-details {
+    margin-top: var(--spacing-md); /* Add space above the details block */
+    text-align: left; /* Ensure details text is left-aligned */
+}
+
+/* Optional: Heading like "Key Projects:" if you add it */
+.more-details h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Container for each sub-project/focus area */
+.more-details .project-detail {
+    margin-bottom: var(--spacing-lg); /* Space between sub-projects */
+}
+.more-details .project-detail:last-child {
+    margin-bottom: 0; /* No space after the last sub-project */
+}
+
+
+/* Sub-project Titles (like "Analytics in a Box") */
+.more-details h6 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary-color); /* Use secondary color */
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+}
+.more-details h6 i { /* Icon next to sub-project title */
+     font-size: 0.9em;
+     margin-right: var(--spacing-sm); /* More space for icon */
+     color: var(--highlight-color);
+     width: 1.2em; /* Give icon fixed width */
+     text-align: center;
+ }
+
+/* Bullet Point List */
+.more-details ul {
+    list-style: disc;
+    padding-left: calc(var(--spacing-lg) + 5px); /* Adjust indentation */
+    margin-top: var(--spacing-xs);
+    margin-bottom: 0;
+}
+
+/* Bullet Point Items */
+.more-details li {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+}
+.more-details li:last-child {
+     margin-bottom: 0; /* Remove space after last bullet point in a list */
+}
+
+
+/* Styling for "Tech:" label */
+.more-details li strong {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.85rem; /* Slightly smaller label */
+    margin-right: var(--spacing-xs);
+}
+
+/* Ensure button is spaced below */
+.details-toggle-button {
+     margin-top: var(--spacing-lg); /* More space above button */
+     width: auto; /* Allow button to size naturally */
+     display: inline-block; /* Ensure proper alignment */
+ }
+
+
 .details-toggle-button { background-color: var(--accent-color); color: var(--primary-color); border: none; padding: var(--spacing-xs) var(--spacing-sm); cursor: pointer; border-radius: var(--border-radius); margin-top: var(--spacing-sm); transition: background-color 0.3s ease; font-size: 0.8rem; font-weight: bold; }
 .details-toggle-button:hover { background-color: var(--secondary-color); color: var(--text-color-light); }
 @media screen and (max-width: 768px) { .timeline::after { left: calc(var(--timeline-logo-size) / 2 + 2px); } .timeline-item { width: 100%; padding-left: calc(var(--timeline-logo-size) + 25px); padding-right: var(--spacing-sm); text-align: left !important; } .timeline-item.left, .timeline-item.right { left: 0%; } .timeline-item.left .timeline-marker, .timeline-item.right .timeline-marker { left: 2px; } .timeline-item.left .company { justify-content: flex-start; } .timeline-item.left .company i { order: 0; margin-right: var(--spacing-xs); margin-left: 0; } .timeline-item::before { display: none; } }
@@ -394,3 +474,116 @@ section:nth-child(even) { background-color: var(--card-bg); } /* Adjusted: Even 
 /* --- Footer --- */
 .footer { background-color: #bad8e3; color: #666; text-align: center; padding: var(--spacing-lg) var(--spacing-md); margin-top: var(--spacing-xl); font-size: 0.9rem; }
 .footer .emoji { font-size: 1em; display: inline-block; }
+
+
+
+
+/* --- Modal Styles --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050; /* High z-index */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Delay hiding visibility */
+    display: flex; /* Use flexbox for centering */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s; /* Ensure visibility transition is immediate on show */
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    cursor: pointer; /* Indicate it's clickable to close */
+}
+
+.modal-content {
+    position: relative; /* To position close button */
+    background-color: var(--card-bg);
+    padding: var(--spacing-lg) var(--spacing-xl); /* More padding */
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1051; /* Above overlay */
+    max-width: 90%;
+    width: 700px; /* Adjust max width as needed */
+    max-height: 85vh; /* Limit height */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    transform: scale(0.95) translateY(-10px); /* Initial state for transition */
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1) translateY(0); /* Final state for transition */
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--secondary-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+.modal-close:hover,
+.modal-close:focus {
+    color: var(--primary-color);
+    opacity: 1;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+
+.modal-body h4 {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+.modal-body ul {
+    list-style: disc;
+    padding-left: var(--spacing-lg);
+}
+.modal-body li {
+     margin-bottom: var(--spacing-xs);
+     font-size: 0.95rem;
+}
+/* Optional button style within modal */
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-color-light);
+    margin-top: var(--spacing-md);
+}
+.btn-secondary:hover {
+     background-color: var(--accent-color);
+     border-color: var(--accent-color);
+     color: var(--primary-color);
+}
