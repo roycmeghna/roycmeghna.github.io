@@ -329,7 +329,10 @@ const experienceData = [
       'Predicted surgical anesthesia depth using Deep Learning on ECG/PPG signals',
       'Published in Biomedical Signal Processing and Control (BSPC) journal'
     ],
-    tags: ['Python', 'TensorFlow', 'Keras', 'MATLAB']
+    tags: ['Python', 'TensorFlow', 'Keras', 'MATLAB'],
+    docs: [
+      { label: 'Certificate', href: 'InternshipDocs/YZU_Cert_redacted.pdf' }
+    ]
   },
   {
     logo: 'images/tcs_logo.jpg',
@@ -345,7 +348,10 @@ const experienceData = [
       'Compared Random Forest, Decision Tree, KNN, Neural Networks, and Linear Regression — Random Forest came out on top',
       'Feature extraction and evaluation across average vs. exact condition inputs'
     ],
-    tags: ['Python', 'Scikit-learn', 'IoT']
+    tags: ['Python', 'Scikit-learn', 'IoT'],
+    docs: [
+      { label: 'Certificate', href: 'InternshipDocs/TCS_Cert.pdf' }
+    ]
   },
   {
     logo: 'images/iitkgp.png',
@@ -361,7 +367,11 @@ const experienceData = [
       'Validated randomness with NIST statistical test suite',
       'Visualized randomness on on-board LEDs with a 4s sampling window'
     ],
-    tags: ['Verilog', 'Vivado', 'FPGA', 'Xilinx Nexys4 DDR']
+    tags: ['Verilog', 'Vivado', 'FPGA', 'Xilinx Nexys4 DDR'],
+    docs: [
+      { label: 'Recommendation letter', href: 'InternshipDocs/IITKGP_Certificate.pdf' },
+      { label: 'Internship report', href: 'InternshipDocs/INTERNSHIPREPORT.pdf' }
+    ]
   },
   {
     logo: 'images/iitb.png',
@@ -376,7 +386,10 @@ const experienceData = [
       'Built IoT-based weigh scale with microcontroller and sensor interfacing',
       'Cloud connectivity via ThingSpeak'
     ],
-    tags: ['Embedded C', 'Keil µVision', 'ThingSpeak']
+    tags: ['Embedded C', 'Keil µVision', 'ThingSpeak'],
+    docs: [
+      { label: 'Certificate', href: 'InternshipDocs/IITCertificate.pdf' }
+    ]
   }
 ];
 
@@ -398,6 +411,12 @@ function openExpModal(index) {
 
   document.getElementById('expModalTags').innerHTML =
     exp.tags.map(t => '<span class="tag">' + t + '</span>').join('');
+
+  const docs = document.getElementById('expModalDocs');
+  docs.innerHTML = (exp.docs || []).map(d =>
+    '<a class="exp-doc" href="' + d.href + '" target="_blank" rel="noopener">'
+    + '<i class="fa-solid fa-file-pdf"></i> ' + d.label + '</a>').join('');
+  docs.hidden = !exp.docs;
 
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
