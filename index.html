@@ -1,1612 +1,1272 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghna Roy Chowdhury | PhD Student| ECE Researcher</title>
-    <link rel="stylesheet" href="css/main_style.css">
-    <link rel="icon" href="images/titleLogo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meghna Roy Chowdhury</title>
+  <meta name="description" content="PhD student in ECE at Purdue University, focusing on low-power wearable tech and AI in healthcare. Amateur photographer and lifelong learner.">
+  <meta name="author" content="Meghna Roy Chowdhury">
 
-    <!-- <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script> -->
-    <script src="https://kit.fontawesome.com/b4dce800de.js" crossorigin="anonymous"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <nav class="navbar" id="myTopnav">
-        <!-- Logo -->
-        <a href="#about-section" class="logo-link">
-            <img src="images/nav_logo1.png" alt="Meghna Roy Chowdhury Logo" class="logo_navbar">
-        </a>
+  <!-- ═══════════ PRELOADER ═══════════ -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <svg class="preloader-ecg" viewBox="0 0 200 60" preserveAspectRatio="none">
+        <path class="preloader-wave" d="M0,30 L30,30 L35,30 L40,25 L45,35 L50,30 L60,30 L65,20 L68,30 L70,5 L72,55 L74,20 L78,30 L90,30 L95,25 L105,35 L110,30 L140,30 L145,30 L150,25 L155,35 L160,30 L170,30 L175,20 L178,30 L180,5 L182,55 L184,20 L188,30 L200,30" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="preloader-text">Loading</span>
+    </div>
+  </div>
 
-        <!-- Navigation Links -->
-        <ul class="navbar-links" id="navbarLinks">
-            <li><a href="#about-section"><i class="fas fa-house-user"></i> Home</a></li>
-            <li><a href="#skills-section"><i class="fas fa-code"></i> Skills</a></li>
-            <li><a href="#publication-section"><i class="fas fa-book-open"></i>Projects & Publications</a></li>
-            <li><a href="#exp-section"><i class="fas fa-history"></i> Experience</a></li>
-            <!-- <li><a href="#projects-section"><i class="fas fa-lightbulb"></i> Projects</a></li> -->
-            <li><a href="#edu-section"><i class="fas fa-user-graduate"></i> Education</a></li>
-            <li><a href="#activities-section"><i class="fas fa-camera-retro"></i> Activities</a></li>
-            <li><a href="#contact-section"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+  <!-- ═══════════ SCROLL PROGRESS BAR ═══════════ -->
+  <div id="scroll-progress"></div>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="icon" onclick="myFunction1()" aria-label="Toggle navigation menu">
-            <div class="container_menu">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MRC<span class="logo-bracket">/&gt;</span>
+      </a>
+      <div class="nav-right">
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-lightbulb"></i>
         </button>
-    </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-section="about"><i class="fa-solid fa-user"></i><span>About</span></a></li>
+        <li><a href="#experience" data-section="experience"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a></li>
+        <li><a href="#skills" data-section="skills"><i class="fa-solid fa-microchip"></i><span>Skills</span></a></li>
+        <li><a href="#projects" data-section="projects"><i class="fa-solid fa-diagram-project"></i><span>Projects</span></a></li>
+        <li><a href="#education" data-section="education"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a></li>
+        <li><a href="#gallery" data-section="gallery"><i class="fa-solid fa-camera"></i><span>Gallery</span></a></li>
+        <li><a href="#contact" data-section="contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- ═══════════ BACK TO TOP ═══════════ -->
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-    <section id="about-section">
-        <div class="row1">
-            <aside class="side">
-                <img src="images/IMG_4742.jpeg" alt="Meghna Roy Chowdhury" class="circle_img">
-                <div class="speech-bubble"><span class="typing-text">Hi there! Welcome! 👋</span></div>
-                <div class="social-icons centre_align" style="margin-top: var(--spacing-md);">
-                    <a href="https://www.linkedin.com/in/meghnaroychowdhury/" target="_blank"
-                        aria-label="LinkedIn Profile">
-                        <i class="fab fa-linkedin"></i></a>
+  <!-- ═══════════ HERO SECTION ═══════════ -->
+  <section id="hero">
+    <!-- Floating geometric shapes -->
+    <div class="hero-shapes">
+      <div class="shape shape-hex shape-1"></div>
+      <div class="shape shape-circle shape-2"></div>
+      <div class="shape shape-triangle shape-3"></div>
+      <div class="shape shape-hex shape-4"></div>
+      <div class="shape shape-circle shape-5"></div>
+      <div class="shape shape-diamond shape-6"></div>
+    </div>
 
-                    <!-- <a href="https://github.com/roycmeghna" target="_blank" aria-label="GitHub Profile">
-                        <i class="fab fa-github"></i></a> -->
+    <!-- ECG Waveform Background -->
+    <svg class="hero-ecg" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ecg-line ecg-line-1" d="M-10,60 L100,60 L120,60 L130,50 L140,70 L150,60 L200,60 L220,40 L230,60 L240,10 L250,110 L260,35 L280,60 L360,60 L380,60 L390,50 L400,70 L410,60 L460,60 L480,40 L490,60 L500,10 L510,110 L520,35 L540,60 L620,60 L640,60 L650,50 L660,70 L670,60 L720,60 L740,40 L750,60 L760,10 L770,110 L780,35 L800,60 L880,60 L900,60 L910,50 L920,70 L930,60 L980,60 L1000,40 L1010,60 L1020,10 L1030,110 L1040,35 L1060,60 L1140,60 L1160,60 L1170,50 L1180,70 L1190,60 L1240,60 L1260,40 L1270,60 L1280,10 L1290,110 L1300,35 L1320,60 L1450,60" fill="none" stroke-width="2" stroke-linecap="round"/>
+      <path class="ecg-line ecg-line-2" d="M-10,60 L80,60 L100,60 L110,52 L120,68 L130,60 L180,60 L200,42 L210,60 L220,15 L230,105 L240,38 L260,60 L340,60 L360,60 L370,52 L380,68 L390,60 L440,60 L460,42 L470,60 L480,15 L490,105 L500,38 L520,60 L600,60 L620,60 L630,52 L640,68 L650,60 L700,60 L720,42 L730,60 L740,15 L750,105 L760,38 L780,60 L860,60 L880,60 L890,52 L900,68 L910,60 L960,60 L980,42 L990,60 L1000,15 L1010,105 L1020,38 L1040,60 L1120,60 L1140,60 L1150,52 L1160,68 L1170,60 L1220,60 L1240,42 L1250,60 L1260,15 L1270,105 L1280,38 L1300,60 L1450,60" fill="none" stroke-width="1.5" stroke-linecap="round"/>
+      <path class="ecg-line ecg-line-3" d="M-10,60 L120,60 L140,60 L150,48 L160,72 L170,60 L220,60 L240,38 L250,60 L260,8 L270,112 L280,32 L300,60 L380,60 L400,60 L410,48 L420,72 L430,60 L480,60 L500,38 L510,60 L520,8 L530,112 L540,32 L560,60 L640,60 L660,60 L670,48 L680,72 L690,60 L740,60 L760,38 L770,60 L780,8 L790,112 L800,32 L820,60 L900,60 L920,60 L930,48 L940,72 L950,60 L1000,60 L1020,38 L1030,60 L1040,8 L1050,112 L1060,32 L1080,60 L1160,60 L1180,60 L1190,48 L1200,72 L1210,60 L1260,60 L1280,38 L1290,60 L1300,8 L1310,112 L1320,32 L1340,60 L1450,60" fill="none" stroke-width="1" stroke-linecap="round"/>
+    </svg>
 
-                    <a href="https://scholar.google.co.in/citations?user=YwhkKf4AAAAJ&hl=en" target="_blank"
-                        aria-label="Google Scholar Profile">
-                        <i class="fa-brands fa-google-scholar"></i></a>
-
-
-                    <a href="mailto:royc.meghna@gmail.com" aria-label="Email Meghna">
-                        <i class="fas fa-envelope"></i></a>
-
-                    <!-- <a href="https://www.instagram.com/meghna.rc/" target="_blank" aria-label="Instagram Profile">
-                        <i class="fab fa-instagram"></i></a> -->
-                </div>
-
-                <br>
-                <a href="CV/Meghna_Resume.pdf" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-download"></i> Download CV</a>
-
-            </aside>
-            <main class="main">
-                <h1 class="intro-heading">Meghna Roy Chowdhury</h1>
-                <p class="intro-subheading">PhD Student, Electrical & Computer Engineering @ Purdue University</p>
-                <p class="motto centre_align">"Arise, Awake & Stop Not, till your goal is reached!"</p>
-
-                <!-- <p>Hi there! I'm a PhD student driven by curiosity and a passion for using technology to solve real-world problems. 
-                    My focus is on <b>Embedded Systems</b> and <b>Machine Learning</b>, particularly exploring their applications 
-                    in healthcare and security.</p> <p>Currently researching at
-                         <a href="https://engineering.purdue.edu/~shreyas/SparcLab/" target="_blank">SPARC Lab</a>
-                         , I blend hardware and software skills to build innovative solutions. 
-                         I enjoy the challenge of optimizing systems and uncovering insights from data.</p> -->
-
-                <p>Hello there! I'm Meghna, a PhD student in ECE at Purdue University, focusing on the exciting domain
-                    of
-                    <strong>low-power wearable tech & AI in Healthcare</strong>.
-                </p>
-
-                <p>My research involves system-level applications combining low-power sensing, communication, and
-                    analysis of various biopotential signals. I utilize techniques from Signal Processing, Machine
-                    Learning, Deep Learning, and Computer Vision, and also work on data collection and building
-                    predictive models.</p>
-                <p>Currently researching at <a href="https://engineering.purdue.edu/~shreyas/SparcLab/"
-                        target="_blank">SPARC Lab</a>,
-                    I enjoy blending hardware and software skills to create impactful solutions.</p>
-
-                <p><strong>To sum it up:</strong> I am a passionate, hands-on, and
-                    always-ready-to-learn-and-apply-new-tech kind of individual, seeking opportunities to contribute my
-                    best in the domain of low-power wearables tech & AI in Healthcare.</p>
-
-
-
-
-                <div class="quick-facts">
-                    <p><span class="emoji">📍</span> Based in West Lafayette, IN (Boiler Up!) <span
-                            class="emoji">🚂</span></p>
-                    <p><span class="emoji">🤯</span> Fascinated by low-power computing & algorithms</p>
-                    <p> <span class="emoji">🧠</span>Health AI Enthusiast | <span class="emoji">📷</span> Amateur
-                        Photographer</p>
-
-                </div>
-            </main>
+    <div class="hero-content">
+      <!-- Hexagonal Profile Photo -->
+      <div class="profile-hex-wrapper">
+        <div class="profile-hex-border"></div>
+        <div class="profile-hex">
+          <img src="images/IMG_4742.jpeg" alt="Meghna Roy Chowdhury">
         </div>
-    </section>
+      </div>
 
-    <div class="main1">
+      <!-- Speech Bubble -->
+      <div class="speech-bubble">
+        <span>Hello there! Welcome to my corner of the WWW!</span>
+      </div>
 
+      <!-- Name & Title -->
+      <h1 class="hero-name">
+        <span class="gradient-text">Meghna Roy Chowdhury</span>
+      </h1>
+      <div class="hero-subtitle">
+        <span class="subtitle-typed" id="typedSubtitle"></span>
+        <span class="typed-cursor">|</span>
+      </div>
 
-        <!------------------- Skills --------------------------------->
+      <!-- Motto -->
+      <blockquote class="hero-motto">
+        <p>&ldquo;Arise, Awake &amp; Stop Not, till your goal is reached!&rdquo;</p>
+        <cite>&mdash; Swami Vivekananda</cite>
+      </blockquote>
 
-        <section id="skills-section">
-            <div class="section-container centre_align">
-                <h2><span class="emoji-heading">🛠️</span> Technical Toolkit</h2>
+      <!-- Social Pills -->
+      <div class="social-pills">
+        <a href="https://www.linkedin.com/in/meghnaroychowdhury/" target="_blank" rel="noopener" class="pill pill-linkedin" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/roycmeghna" target="_blank" rel="noopener" class="pill pill-github" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i><span>GitHub</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=YwhkKf4AAAAJ" target="_blank" rel="noopener" class="pill pill-scholar" aria-label="Google Scholar">
+          <i class="fa-brands fa-google-scholar"></i><span>Scholar</span>
+        </a>
+        <a href="mailto:royc.meghna@gmail.com" class="pill pill-email" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i><span>Email</span>
+        </a>
+        <!-- <a href="https://www.instagram.com/meghna_rc/" target="_blank" rel="noopener" class="pill pill-instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i><span>Instagram</span>
+        </a> -->
+      </div>
 
-                <p class="skills-intro">A collection of languages, tools, and concepts I work with.</p>
+      <!-- Download CV -->
+      <a href="CV/Meghna_Resume2026.pdf" download class="btn-cv">
+        <i class="fa-solid fa-download"></i> Download CV
+      </a>
+    </div>
 
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
 
+  <!-- ═══════════ ABOUT SECTION ═══════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal-up">
+        <span class="title-icon"><i class="fa-solid fa-terminal"></i></span>
+        <span class="gradient-text">About Me</span>
+      </h2>
+      <p class="section-subtitle reveal-up">The short version. The long version is the rest of this page.</p>
 
-                <div class="skills-categories">
-
-                    <!-- Programming & Languages -->
-                    <div class="skills-category-block">
-                        <h4><i class="fas fa-code"></i> Software and Coding </h4>
-                        <div class="skills-badge-container">
-                            <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
-                            <span class="skill-badge"><i class="fas fa-file-code"></i> C / C++</span>
-                            <span class="skill-badge"><i class="fab fa-file-code"></i> Micropython</span>
-                            <span class="skill-badge"><i class="fas fa-microchip"></i> Embedded C</span>
-                            <span class="skill-badge"><i class="fas fa-square-root-alt"></i> MATLAB</span>
-                            <span class="skill-badge"><i class="fas fa-wave-square"></i> Ansys HFSS</span>
-                            <span class="skill-badge"><i class="fas fa-scroll"></i> Verilog</span>
-
-                            <!-- <span class="skill-badge"><i class="fas fa-cogs"></i> Assembly (8051)</span> -->
-                            <span class="skill-badge"><i class="fab fa-html5"></i> HTML/CSS/JS</span>
-                            <!-- <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS</span>
-                                  <span class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</span> -->
-                            <!-- <span class="skill-badge"><i class="fas fa-database"></i> SQL (Basic)</span> -->
-                            <!-- <span class="skill-badge"><i class="fas fa-ra"></i> GNU Radio</span> -->
-                        </div>
-                    </div>
-
-                    <!-- Hardware & Embedded -->
-                    <div class="skills-category-block">
-                        <h4><i class="fas fa-cogs"></i> Hardware & Embedded</h4>
-                        <div class="skills-badge-container">
-                            <!-- <span class="skill-badge"><i class="fas fa-microchip"></i> Microcontrollers</span>
-                                  <span class="skill-badge">8051</span> -->
-                            <span class="skill-badge"><i class="fas fa-microchip"></i>Microcontrollers
-                                (Arduino/NodeMCU/PSoC)</span>
-                            <span class="skill-badge"><i class="fas fa-dice-d6"></i> FPGA (Artix-7)</span>
-                            <span class="skill-badge"><i class="fab fa-raspberry-pi"></i> Raspberry Pi</span>
-                            <!-- <span class="skill-badge"><i class="fas fa-broadcast-tower"></i> Sensors & Interfacing</span> -->
-                            <span class="skill-badge"><i class="fa-solid fa-walkie-talkie"></i> SDR (HackRF,
-                                USRP)</span>
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="skills-category-block">
-                                <h4><i class="fas fa-laptop-code"></i> Software & Tools</h4>
-                                <div class="skills-badge-container">
-                                  <span class="skill-badge"><i class="fas fa-cog"></i> Vivado</span>
-                                  <span class="skill-badge"><i class="fas fa-wrench"></i> Keil µVision</span>
-                                  <span class="skill-badge"><i class="fas fa-drafting-compass"></i> Proteus</span>
-                                  <span class="skill-badge"><i class="fas fa-wave-square"></i> MATLAB & Simulink</span>
-                                  <span class="skill-badge"><i class="fab fa-python"></i> Jupyter</span>
-                                  <span class="skill-badge"><i class="fas fa-project-diagram"></i> GNU Radio</span>
-                                  <span class="skill-badge"><i class="fas fa-wind"></i> Apache Airflow</span>
-                                  <span class="skill-badge"><i class="fab fa-linux"></i> Linux / Bash</span>
-                                  <span class="skill-badge"><i class="fas fa-paint-brush"></i> Photoshop (Basic)</span>
-                                </div>
-                              </div> -->
-
-                    <!-- Concepts & Domains -->
-                    <div class="skills-category-block">
-                        <h4><i class="fas fa-book-open"></i>Subject Knowledge</h4>
-                        <div class="skills-badge-container">
-                            <span class="skill-badge"><i class="fas fa-code"></i> Machine Learing</span>
-                            <span class="skill-badge"><i class="fas fa-chart-line"></i> Signal Processing</span>
-                            <span class="skill-badge"><i class="fas fa-server"></i> Embedded Systems</span>
-                            <span class="skill-badge"><i class="fas fa-robot"></i> IoT & IoB</span>
-                            <span class="skill-badge"><i class="fas fa-heartbeat"></i>Biopotential Signals
-                                (ECG/EMG/EEG/PPG)</span>
-                            <!-- <span class="skill-badge"><i class="fas fa-user-secret"></i> Hardware Security</span>
-                                  <span class="skill-badge"><i class="fas fa-digital-tachograph"></i> Digital Logic</span>
-                                  <span class="skill-badge">VLSI Design</span>
-                                  <span class="skill-badge"><i class="fas fa-exchange-alt"></i> Computer Networks</span>
-                                  <span class="skill-badge"><i class="fas fa-stream"></i> Data Structures</span> -->
-
-                        </div>
-                    </div>
-
-                    <!-- Soft Skills -->
-                    <div class="skills-category-block">
-                        <h4><i class="fas fa-user-friends"></i> Soft Skills (i know it's not a technical thing, but
-                            still) </h4>
-                        <div class="skills-badge-container">
-                            <span class="skill-badge"><i class="fas fa-users"></i> Great Collaborater</span>
-                            <span class="skill-badge"><i class="fas fa-puzzle-piece"></i> Problem Solver</span>
-                            <span class="skill-badge"><i class="far fa-lightbulb"></i> Adaptable</span>
-                            <span class="skill-badge"><i class="far fa-gem"></i> Accountable</span>
-                            <span class="skill-badge"><i class="fas fa-tasks"></i> Good Time Manager</span>
-                            <span class="skill-badge"><i class="fas fa-search"></i> Analytical Thinker</span>
-                        </div>
-                    </div>
-
-                </div>
-        </section>
-
-
-        <!--  ---------- TECH STUFF -------------- -->
-
-
-
-        <section id="publication-section">
-
-            <div class="section-container centre_align">
-                <h2><span class="emoji-heading">👩‍💻</span>Projects and Publications </h2>
+      <div class="about-grid">
+        <!-- Terminal Window -->
+        <div class="terminal reveal-left">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">meghna@purdue:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command">whoami</span>
+            </div>
+            <div class="terminal-output">
+              <p>I’m Meghna, a PhD candidate in ECE at Purdue University, working in
+              <a href="https://engineering.purdue.edu/~shreyas/SparcLab/" target="_blank" rel="noopener">SPARC Lab</a>.</p>
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command">cat research_focus.txt</span>
+            </div>
+            <div class="terminal-output">
+              <p>My research focuses on making wearables smarter without making them
+              power-hungry. I work across the wearable system, from sensing ECG, EEG, and EMG
+              signals to low-power data transfer using human-body communication (HBC) and
+              efficient AI at the edge.</p>
+              <p>I am also interested in using AI to design and optimize circuits. Across these
+              areas, my goal is to build solutions that work within real hardware constraints such
+              as limited power, memory, and computation. I enjoy working across hardware and
+              software, whether I am measuring signals, processing noisy data, developing ML
+              models, or testing a complete wearable prototype.</p>
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command">cat in_a_nutshell.txt</span>
+            </div>
+            <div class="terminal-output">
+              <p>I use AI for healthcare and circuit design, with a focus on low-power wearables,
+              HBC, biopotential sensing, and on-device intelligence. I like building systems where
+              algorithms meet real hardware.</p>
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command">cat current_explorations.txt</span>
+            </div>
+            <div class="terminal-output">
+              Lately, I’ve been exploring small language models and agentic AI—not just what they can do, but what it would take to make them useful under real hardware and power constraints.
 
             </div>
-
-
-            <!-- Projects -->
-
-
-            <div class="section-container centre_align">
-                <h4><i class="fas fa-project-diagram"></i> Featured Projects </h4>
-                <p>Bringing ideas to life with code and hardware. More on <a href="https://github.com/roycmeghna"
-                        target="_blank">GitHub</a>.</p>
-                <br>
-
-                <div class="projects-grid">
-
-
-<!-- 
-                    <div class="card_proj">
-                        <div class="project-image-placeholder">
-                            <img src="projects/neurotype_diagram.png" alt="NeuroType Concept Diagram">
-                        </div>
-                        <div class="container_proj">
-                            <h3 class="title_proj"><i class="fas fa-keyboard"></i> NeuroType</h3>
-                            <p class="content_proj">Type sentences from muscle signals using Meta's large `emg2qwerty`
-                                dataset, achieving 4x better accuracy without user calibration!</p>
-                            <button class="btn btn-primary project-button modal-trigger"
-                                data-modal-target="#modal-project-neurotype">Learn More</button>
-                        </div>
-
-                    </div> -->
-
-
-                    <div class="card_proj">
-                        <div class="project-image-placeholder"><img src="projects/ihope.png"
-                                alt="I-HOPE Project Visual"></div>
-                        <div class="container_proj">
-                            <h3 class="title_proj"> I-HOPE</h3>
-                            <p class="content_proj">Predicting college student mental health
-                                using interpretable AI to understand complex behavioral data.</p>
-                            <button class="btn btn-primary project-button modal-trigger"
-                                data-modal-target="#modal-project-ihope">Learn More</button>
-                        </div>
-                    </div>
-
-                    <div class="card_proj">
-                        <div class="project-image-placeholder"><img src="projects/distnn.png"
-                                alt="I-HOPE Project Visual"></div>
-                        <div class="container_proj">
-                            <h3 class="title_proj"> DistNN</h3>
-                            <p class="content_proj">Enabling powerful, real-time AI on wearables with extreme energy
-                                efficiency (~1000x > GPU) via distributed neural networks.</p>
-                            <button class="btn btn-primary project-button modal-trigger"
-                                data-modal-target="#modal-project-distnn">Learn More</button>
-                        </div>
-                    </div>
-
-                    <div class="card_proj">
-                        <div class="project-image-placeholder"><img src="projects/sslse.jpeg"
-                                alt="I-HOPE Project Visual"></div>
-                        <div class="container_proj">
-                            <h3 class="title_proj"><i class="fas fa-seedling"></i> SSL-SE-EEG</h3>
-                            <p class="content_proj">Achieving state-of-the-art EEG analysis accuracy (91% on
-                                MindBigData) with less labeled data using a novel Self-Supervised Learning framework.
-                            </p>
-                            <button class="btn btn-primary project-button modal-trigger"
-                                data-modal-target="#modal-project-ssl">Learn More</button>
-                        </div>
-                    </div>
-
-                    <div class="card_proj">
-                        <div class="project-image-placeholder"><img src="projects/hbc.png" alt="I-HOPE Project Visual">
-                        </div>
-                        <div class="container_proj">
-                            <h3 class="title_proj"> FlexECG </h3>
-                            <p class="content_proj">An ultra-low power (20µW) flexible ECG patch utilizing body heat and
-                                Human Body Communication for seamless monitoring.</p>
-                            <button class="btn btn-primary project-button modal-trigger"
-                                data-modal-target="#modal-project-hbc">Learn More</button>
-                        </div>
-                    </div>
-
-
-                    <div class="card_proj">
-                        <div class="project-image-placeholder">
-                            <img src="projects/idd.png" alt="IDD Simulation Results">
-                        </div>
-                        <div class="container_proj">
-                            <h3 class="title_proj"><i class="fas fa-map-marker-alt"></i> Precise Drug Delivery</h3>
-                            <p class="content_proj">A novel electronic system using electric fields for accurate,
-                                potentially lower-cost Intrathecal Drug Delivery (IDD).</p>
-                            <button class="btn btn-primary project-button modal-trigger"
-                                data-modal-target="#modal-project-idd">Learn More</button>
-                        </div>
-                    </div>
-
-                    <div id="more-projects" style="display: none;">
-
-                        <div class="card_proj">
-                            <div class="project-image-placeholder"><img src="projects/doa.jpeg"
-                                    alt="I-HOPE Project Visual">
-                            </div>
-                            <div class="container_proj">
-                                <h3 class="title_proj">Depth of Anesthesia</h3>
-                                <p class="content_proj">Predicting surgical anesthesia depth using Deep Learning on
-                                    ECG/PPG
-                                    signals for enhanced real-time patient safety (82% Acc).</p>
-                                <button class="btn btn-primary project-button modal-trigger"
-                                    data-modal-target="#modal-project-doa">Learn More</button>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    
-                </div>
-
-                <br>
-                 <button onclick="toggleProjects()" class="btn btn-primary" id="projectToggleBtn">Show More Projects</button>
-
-        </section>
-
-        <!-- more details about projects -->
-
-        <!-- s-emg-->
-
-        <div class="modal" id="modal-project-neurotype">
-            <div class="modal-overlay modal-close-trigger"></div>
-            <div class="modal-content">
-                <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
-                <h2>NeuroType: EMG-Based Typing via Finger Classification & Transformer Decoding</h2>
-                <div class="modal-body">
-                    <h4>The Challenge: Typing Without Touching, For Anyone</h4>
-                    <p>Using muscle signals (sEMG) for silent, hands-free typing is a promising goal. However, EMG
-                        signals are noisy and vary hugely between users, making robust, user-independent systems a major
-                        challenge.</p>
-
-                    <h4>Our Solution: NeuroType - A Modular Pipeline on Large-Scale Data</h4>
-                    <p>We developed NeuroType, a system translating raw wrist sEMG into sentences without user-specific
-                        training. Crucially, this work leverages the large-scale `emg2qwerty` dataset
-                        released by Meta Reality Labs, featuring over 346 hours of typing data
-                        from 108 users. NeuroType mimics typing:</p>
-                    <ol>
-                        <li>Predict Fingers: Identifies finger activations using a BiLSTM+Attention model.</li>
-                        <li>Narrow Down Letters: Uses keyboard ergonomics to create likely letter pools.</li>
-                        <li>Generate Sentences: A Transformer (T5) language model constructs coherent sentences from
-                            the possibilities.</li>
-                    </ol>
-                    <p>This structured approach enables robust zero-shot generalization across users.</p>
-
-                    <h4>Impact & Results: 🚀⌨️</h4>
-                    <ul>
-                        <li>Achieved highly accurate sentence prediction: 1.6% Character Error Rate (CER) and 1.8%
-                            Word Error Rate (WER).</li>
-                        <li>Outperformed previous personalized baselines by over 4x – without
-                            needing calibration for new users!</li>
-                        <li>Performed the first detailed analysis showing structured EMG patterns related to finger use
-                            in the extensive `emg2qwerty` dataset.</li>
-                        <li>Advances practical, silent, hands-free text input for wearables, AR/VR, and assistive
-                            tech.</li>
-                    </ul>
-
-                    <p><strong>Tech Highlights:</strong> Surface EMG (sEMG), BiLSTM-Attention Networks, Transformers
-                        (T5), Ergonomic Priors, Zero-Shot Generalization, Python (TensorFlow, Hugging Face),
-                        `emg2qwerty` Dataset.</p>
-                    <p><a href="[LINK_TO_UBICOMP_PAPER_WHEN_AVAILABLE]" target="_blank" class="btn btn-secondary">View
-                            Publication (UbiComp/IMWUT)</a></p>
-                </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="cursor-blink">_</span>
             </div>
+          </div>
         </div>
 
-
-
-        <!-- ihope -->
-
-        <div class="modal" id="modal-project-ihope">
-
-            <div class="modal-overlay modal-close-trigger"></div>
-
-            <div class="modal-content">
-                <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
-                <h2>Interpretable hierarchical Machine Learning for Mental Health</h2>
-
-                <div class="modal-body">
-                    <!-- <img src="images/project-ihope-visual.png" alt="I-HOPE Project Concept" style="max-width: 400px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Decoding Mental Health from Daily Life</h4> -->
-                    <p>Understanding and predicting mental health is incredibly complex. Our daily digital footprints
-                        create vast amounts of behavioral data, but it's noisy, high-dimensional, and varies wildly
-                        between people, making standard models struggle.</p>
-
-                    <h4>Our Solution: Interpretable AI with I-HOPE</h4>
-                    <p>We developed I-HOPE, featuring a novel hierarchical model that translates complex raw behavioral
-                        data into understandable interaction patterns. By applying smart feature reduction, we
-                        simplified the data without losing vital predictive power, creating personalized and
-                        interpretable insights.</p>
-
-                    <h4>Impact & Results: ✨</h4>
-                    <ul>
-                        <li>Achieved <strong>91% prediction accuracy</strong> for student mental health outcomes – a
-                            leap from the 70% baseline!</li>
-                        <li>Successfully bridged the gap between raw user behavior and meaningful mental health
-                            indicators.</li>
-                        <li>Enabled personalized predictions through interpretable modeling.</li>
-                    </ul>
-
-                    <p><strong>Tech Highlights:</strong> Python (TensorFlow, Pandas, NumPy, Scikit-learn, SHAP)</p>
-                    <p><a href="https://github.com/roycmeghna/I-HOPE" target="_blank" class="btn btn-secondary">View
-                            Github</a></p>
-                </div>
-
-                <!-- <div class="modal-body">
-                        <img src="images/project-ihope.jpg" alt="I-HOPE Project Visual" style="max-width: 400px; margin: 0 auto var(--spacing-md) auto; border-radius: var(--border-radius);"> <p>Developed and evaluated various interpretable machine learning models (like Logistic Regression, Decision Trees, Explainable Boosting Machines) to predict patient mortality in the Intensive Care Unit (ICU) using the PhysioNet Challenge 2012 dataset.</p>
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Data preprocessing and feature engineering for time-series clinical data.</li>
-                            <li>Implementation and comparison of multiple ML models.</li>
-                            <li>Focus on interpretability using techniques like SHAP or LIME to understand model predictions.</li>
-                            <li>Performance evaluation using relevant metrics (AUC-ROC, Precision-Recall, etc.).</li>
-                        </ul>
-                        <p><strong>Tech Stack:</strong> Python, Pandas, Scikit-learn, Matplotlib, SHAP/LIME.</p>
-                         <p><a href="[LINK_TO_CODE_OR_PAPER_IF_ANY]" target="_blank" class="btn btn-secondary">View Code/Details</a></p> </div>
-                </div> -->
+        <!-- Quick Facts -->
+        <div class="quick-facts reveal-right">
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="fact-content">
+              <span class="fact-label">Location</span>
+              <span class="fact-value">West Lafayette, IN</span>
             </div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fa-solid fa-flask"></i></div>
+            <div class="fact-content">
+              <span class="fact-label">Research Lab</span>
+              <span class="fact-value">SPARC Lab, Purdue</span>
+            </div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fa-solid fa-microchip"></i></div>
+            <div class="fact-content">
+              <span class="fact-label">Focus Area</span>
+              <span class="fact-value">AI for Health, Circuit Design, Wearables </span>
+            </div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <div class="fact-content">
+              <span class="fact-label">Hobby</span>
+              <span class="fact-value">Photographry & Bouldering</span>
+            </div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="fact-content">
+              <span class="fact-label">Degree</span>
+              <span class="fact-value">PhD in ECE</span>
+            </div>
+          </div>
+                   <div class="fact-card">
+            <div class="fact-icon"><i class="fa-solid fa-home"></i></div>
+            <div class="fact-content">
+              <span class="fact-label">Homeground</span>
+              <span class="fact-value">India 🇮🇳</span>
+            </div>
+          </div>
+          <a class="fact-card fact-card-wide" href="#contact">
+            <div class="fact-icon"><i class="fa-solid fa-comments"></i></div>
+            <div class="fact-content">
+              <span class="fact-label">Let's talk</span>
+              <span class="fact-value">Always happy to chat about research, collaborations and opportunities</span>
+            </div>
+            <i class="fa-solid fa-arrow-right fact-arrow" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EXPERIENCE SECTION ═══════════ -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal-up">
+        <span class="title-icon"><i class="fa-solid fa-briefcase"></i></span>
+        <span class="gradient-text">Experience</span>
+      </h2>
+      <p class="section-subtitle reveal-up">Research and industry, 2018 to now. <span class="click-hint"><i class="fa-solid fa-hand-pointer"></i> Click on each to know more!</span></p>
+
+      <!-- Featured: Current Role -->
+      <div class="exp-featured reveal-up" onclick="openExpModal(1)">
+        <span class="exp-current-badge"><span class="pulse-dot"></span> Current</span>
+        <div class="exp-featured-inner">
+          <div class="exp-featured-logo">
+            <img src="images/sparc.png" alt="SPARC Lab">
+          </div>
+          <div class="exp-featured-info">
+            <h3>Graduate Research Assistant</h3>
+            <span class="exp-featured-company">SPARC Lab, Purdue University</span>
+            <span class="exp-featured-meta"><i class="fa-solid fa-calendar"></i> Aug 2021 &ndash; Present &middot; <i class="fa-solid fa-location-dot"></i> West Lafayette, IN</span>
+            <!-- OLD: Doctoral research on Health AI, low-power wearables, and ML in hardware security under Prof. Shreyas Sen. -->
+            <p class="exp-featured-summary">Applied ML for healthcare, circuits, and wearable systems, along with low-power hardware and signal processing.</p>
+            <div class="exp-featured-tags">
+              <span class="tag">PSoC</span><span class="tag">Energy Harvesting</span><span class="tag">SDR</span><span class="tag">GNU Radio</span><span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Past Experiences label -->
+      <p class="exp-past-label reveal-up">Previous Stops Along the Way</p>
+
+      <!-- Past Experience Grid -->
+      <div class="exp-grid">
+        <!-- Qualcomm -->
+        <div class="exp-chip reveal-up" onclick="openExpModal(0)" data-delay="0">
+          <div class="chip-accent accent-purple"></div>
+          <div class="chip-logo"><img src="images/Qualcomm.png" alt="Qualcomm"></div>
+          <h3 class="chip-role">ML Intern</h3>
+          <span class="chip-company">Qualcomm</span>
+          <span class="chip-date">Summer 2025 and 2026</span>
+          <span class="chip-tagline">analog/RF circuit optimization</span>
         </div>
 
-        <!-- dist nn -->
-        <div class="modal" id="modal-project-distnn">
-            <div class="modal-overlay modal-close-trigger"></div>
-            <div class="modal-content">
-                <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
-                <h2>Distributed Neural Networks for IoB</h2>
-
-                <div class="modal-body">
-                    <!-- <img src="images/project-distnn-visual.png" alt="DistNN Concept Diagram" style="max-width: 450px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Smart Wearables Drain Batteries Fast!</h4> -->
-                    <p>Wearables are getting smarter, running complex AI tasks. But this drains power, leading to
-                        frustratingly short battery life. How can we run powerful AI without constant charging?</p>
-
-                    <h4>Our Solution: DistNN - Sharing the AI Load!</h4>
-                    <p>We created DistNN, a game-changing framework that splits neural network tasks between the tiny
-                        wearable device and a more powerful nearby hub (like your phone). We found the *optimal* split
-                        point to drastically cut the wearable's energy use and designed custom low-precision hardware
-                        for ultra-efficiency.</p>
-
-                    <h4>Impact & Results: 🚀</h4>
-                    <ul>
-                        <li>Achieved <strong>~1000x</strong> higher energy efficiency compared to running the AI on a
-                            GPU!</li>
-                        <li>Consumed <strong>11x less power</strong> on average than recent state-of-the-art AI chips
-                            for wearables.</li>
-                        <li>Maintained real-time performance (30 fps) and high accuracy (0.9 SSIM for image
-                            reconstruction).</li>
-                        <li>Redefines possibilities for powerful, practical AI on future wearable tech.</li>
-                    </ul>
-
-                    <p><strong>Tech Highlights:</strong> Distributed Neural Networks, Custom Figure of Merit (FoM),
-                        Low-Precision Fixed-Point Arithmetic, CNNs, Autoencoders.</p>
-                    <!-- <p><a href="https://ieeexplore.ieee.org/abstract/document/10780699" target="_blank" class="btn btn-secondary">View Publication</a></p>  -->
-                </div>
-
-
-            </div>
+        <!-- TCS Developer -->
+        <div class="exp-chip reveal-up" onclick="openExpModal(2)" data-delay="50">
+          <div class="chip-accent accent-pink"></div>
+          <div class="chip-logo"><img src="images/tcs_logo.jpg" alt="TCS"></div>
+          <h3 class="chip-role">Developer</h3>
+          <span class="chip-company">TCS (R&amp;I)</span>
+          <span class="chip-date">2020 &ndash; 2021</span>
+          <span class="chip-tagline">automated ML &amp; NLP systems</span>
         </div>
 
-        <!-- ssl-se-eeg -->
-
-        <div class="modal" id="modal-project-ssl">
-            <div class="modal-overlay modal-close-trigger"></div>
-            <div class="modal-content">
-                <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
-                <h2>Self-Supervised Learning with Squeeze and Excitation Networks for EEG</h2>
-
-                <div class="modal-body">
-                    <!-- <img src="images/project-ssl-eeg-visual.png" alt="SSL EEG Concept Diagram" style="max-width: 450px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: EEG Data is Noisy, Complex & Expensive to Label</h4> -->
-                    <p>Analyzing brain signals (EEG) is crucial for Brain-Computer Interfaces (BCIs) and diagnosing
-                        neurological conditions. But real-world EEG is messy, often lacks labels, and processing it
-                        efficiently on low-power devices is tough.</p>
-
-                    <h4>Our Solution: SSL-SE-EEG - Smarter EEG Analysis, Less Data Needed!</h4>
-                    <p>We developed SSL-SE-EEG, a novel framework that combines clever Self-Supervised Learning (SSL) to
-                        learn from unlabeled EEG data with efficient Squeeze-and-Excitation Networks (SE-Nets). We also
-                        transform messy EEG signals into structured 2D images, making them easier for deep learning
-                        models to understand.</p>
-
-                    <h4>Impact & Results: 🧠💡</h4>
-                    <ul>
-                        <li>Achieved <strong>state-of-the-art accuracy</strong> on multiple benchmark EEG datasets
-                            (e.g., 91% on MindBigData, 85% on TUH-AB seizure).</li>
-                        <li>Significantly reduces the need for expensive labeled data through SSL.</li>
-                        <li>Enhanced robustness against noise artifacts common in real-world EEG.</li>
-                        <li>Maintained <strong>minimal power overhead</strong>, making it ideal for real-time, low-power
-                            BCI applications.</li>
-                    </ul>
-
-                    <p><strong>Tech Highlights:</strong> Self-Supervised Learning (SSL), Squeeze-and-Excitation Networks
-                        (SE-Nets), EEG Signal Processing (as Images), Python (PyTorch/TensorFlow), MNE-Python.</p>
-                    <!-- <p><a href="[LINK_TO_ISCAS_PAPER_WHEN_AVAILABLE]" target="_blank" class="btn btn-secondary">Related Publication (IEEE ISCAS 2025 - Accepted)</a></p> -->
-                </div>
-
-
-            </div>
+        <!-- Yuan Ze University -->
+        <div class="exp-chip reveal-up" onclick="openExpModal(3)" data-delay="100">
+          <div class="chip-accent accent-amber"></div>
+          <div class="chip-logo"><img src="images/yuan.jpg" alt="Yuan Ze University"></div>
+          <h3 class="chip-role">Research Intern</h3>
+          <span class="chip-company">Yuan Ze University</span>
+          <span class="chip-date">Summer 2020</span>
+          <span class="chip-tagline">anesthesia depth via ECG/PPG</span>
         </div>
 
-
-        <!-- flexnn -->
-
-        <div class="modal" id="modal-project-hbc">
-            <div class="modal-overlay modal-close-trigger"></div>
-            <div class="modal-content">
-                <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
-                <h2>Low Power Wearable ECG via Human Body Communication</h2>
-
-                <div class="modal-body">
-                    <!-- <img src="images/project-flexecg-visual.jpg" alt="FlexECG Wearable Concept" style="max-width: 400px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Making Heart Monitoring Effortless</h4> -->
-                    <p>Continuous ECG monitoring is vital, but traditional wearables can be bulky and require frequent
-                        charging. How can we make it truly seamless and low-power?</p>
-
-                    <h4>Our Solution: FlexECG - Powering ECG Through Your Body!</h4>
-                    <p>We created FlexECG, a flexible patch that harvests energy from body heat and uses the human body
-                        itself as a communication channel (HBC) to transmit ECG data. This radically reduces power needs
-                        compared to traditional wireless methods.</p>
-
-                    <h4>Impact & Results:⚡</h4>
-                    <ul>
-                        <li>Developed efficient HBC transmission/decoding code for ECG signals.</li>
-                        <li>Achieved incredibly low power consumption (down to <strong>20µW</strong>!).</li>
-                        <li>Demonstrated robustness through experiments with multiple human subjects.</li>
-                        <li>System power consumption is <strong>4x lower</strong> than comparable state-of-the-art
-                            solutions.</li>
-                    </ul>
-
-                    <p><strong>Tech Highlights:</strong> PSoC Microcontroller, Human Body Communication (HBC), Energy
-                        Harvesting (TEGs), Analog Front-End Design, MATLAB, Python, PSoC Creator.</p>
-                </div>
-
-            </div>
+        <!-- TCS ML Intern -->
+        <div class="exp-chip reveal-up" onclick="openExpModal(4)" data-delay="150">
+          <div class="chip-accent accent-blue"></div>
+          <div class="chip-logo"><img src="images/tcs_logo.jpg" alt="TCS"></div>
+          <h3 class="chip-role">ML Intern</h3>
+          <span class="chip-company">TCS</span>
+          <span class="chip-date">Early 2020</span>
+          <span class="chip-tagline">EV battery life prediction</span>
         </div>
 
-        <!-- idd -->
-
-        <div class="modal" id="modal-project-idd">
-            <div class="modal-overlay modal-close-trigger"></div>
-            <div class="modal-content">
-                <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
-                <h2>Electric Field-Based Intrathecal Drug Delivery (IDD)</h2>
-                <div class="modal-body">
-                    <!-- <img src="projects/idd-results.jpg" alt="IDD Simulation Results" style="max-width: 550px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Delivering Pain Relief Precisely</h4> -->
-                    <p>Intrathecal Drug Delivery (IDD) offers long-term chronic pain relief by administering drugs
-                        directly to the central nervous system. However, current methods often struggle to guarantee
-                        precise delivery into the target Cerebrospinal Fluid (CSF) layer or involve high costs.</p>
-
-                    <h4>Our Solution: Sensing Location with Electric Fields</h4>
-                    <p>This project introduces a pioneering electronic IDD system based on electric fields. We leverage
-                        the unique electrical properties of CSF – specifically, its higher conductivity compared to
-                        surrounding tissues at certain frequencies (tens of MHz). Our system uses a galvanic transmitter
-                        and a capacitive receiver operating at Electroquasistatic (EQS) frequencies to sense the
-                        environment.</p>
-
-                    <h4>Validation & Results: ⚡️</h4>
-                    <ul>
-                        <li>Simulations using Ansys HFSS on the realistic "Neva" human body model were conducted.</li>
-                        <li>Confirmed a <strong>difference (significant signal change)</strong> in electric field
-                            strength when the transmitter is correctly positioned within the CSF compared to adjacent
-                            layers (like fat or muscle).</li>
-                        <li>This demonstrates the potential to accurately verify catheter placement for precise drug
-                            delivery.</li>
-                        <li>To our knowledge, this is the <strong>first electric field-based approach</strong> proposed
-                            for enhancing IDD accuracy.</li>
-                    </ul>
-
-                    <p><strong>Tech Highlights:</strong> Ansys HFSS, Electromagnetics Simulation, Finite Element Method
-                        (FEM), Neva Body Model, Electroquasistatic (EQS) Fields, Bioimpedance/Conductivity Sensing.</p>
-                </div>
-            </div>
+        <!-- IIT Kharagpur -->
+        <div class="exp-chip reveal-up" onclick="openExpModal(5)" data-delay="200">
+          <div class="chip-accent accent-purple"></div>
+          <div class="chip-logo"><img src="images/iitkgp.png" alt="IIT Kharagpur"></div>
+          <h3 class="chip-role">Research Intern</h3>
+          <span class="chip-company">IIT Kharagpur</span>
+          <span class="chip-date">Summer 2019</span>
+          <span class="chip-tagline">FPGA-based TRNG design</span>
         </div>
 
-        <!-- doa -->
+        <!-- IIT Bombay -->
+        <div class="exp-chip reveal-up" onclick="openExpModal(6)" data-delay="250">
+          <div class="chip-accent accent-teal"></div>
+          <div class="chip-logo"><img src="images/iitb.png" alt="IIT Bombay"></div>
+          <h3 class="chip-role">Summer Intern</h3>
+          <span class="chip-company">IIT Bombay</span>
+          <span class="chip-date">Summer 2018</span>
+          <span class="chip-tagline">IoT weigh scale + cloud</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Experience Detail Modal -->
+  <div class="exp-modal-overlay" id="expModalOverlay">
+    <div class="exp-modal" onclick="event.stopPropagation()">
+      <button class="exp-modal-close" onclick="closeExpModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="exp-modal-accent" id="expModalAccent"></div>
+      <div class="exp-modal-body">
+        <div class="exp-modal-header">
+          <img class="exp-modal-logo" id="expModalLogo" src="" alt="">
+          <div>
+            <h3 id="expModalRole"></h3>
+            <span class="exp-modal-company" id="expModalCompany"></span>
+            <span class="exp-modal-meta" id="expModalMeta"></span>
+          </div>
+        </div>
+        <p class="exp-modal-summary" id="expModalSummary"></p>
+        <ul class="exp-modal-details" id="expModalDetails"></ul>
+        <div class="exp-modal-tags" id="expModalTags"></div>
+      </div>
+    </div>
+  </div>
 
-        <div class="modal" id="modal-project-doa">
-            <div class="modal-overlay modal-close-trigger"></div>
-            <div class="modal-content">
-                <button class="modal-close modal-close-trigger" aria-label="Close modal">&times;</button>
-                <h2>AI for Safer Surgery: Predicting Anesthesia Depth</h2>
-                <div class="modal-body">
-                    <!-- <img src="images/project-doa-visual.png" alt="Anesthesia Monitoring Concept" style="max-width: 400px; margin: 0 auto var(--spacing-lg) auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow);"> <h4>The Challenge: Keeping Patients Safely Anesthetized</h4> -->
-                    <p>During surgery, precisely monitoring how deeply a patient is anesthetized is critical for their
-                        safety and comfort. Traditional methods can have limitations. Could AI offer a smarter,
-                        non-invasive way using readily available signals?</p>
+  <!-- ═══════════ SKILLS SECTION ═══════════ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title reveal-up">
+        
+        <span class="title-icon"><i class="fa-solid fa-microchip"></i></span>
+        <span class="gradient-text">Technical Toolkit</span>
+      </h2>
+      <p class="section-subtitle reveal-up">The tools I reach for most.</p>
 
-                    <h4>Our Solution: Listening to the Heart with Deep Learning</h4>
-                    <p>We explored using common physiological signals, like the heart's electrical activity (ECG) and
-                        pulse waves (PPG), recorded continuously during real surgeries. By applying advanced Deep
-                        Learning models (CNNs and LSTMs), we aimed to create an accurate, real-time indicator of the
-                        patient's anesthetic depth.</p>
-
-                    <h4>Impact & Results: 🩺🤖</h4>
-                    <ul>
-                        <li>Successfully processed complex ECG/PPG signals from surgical patients using MATLAB.</li>
-                        <li>Developed and trained various deep learning architectures in Python (TensorFlow/Keras).</li>
-                        <li>Achieved approximately <strong>82% accuracy*</strong> in predicting clinical anesthesia
-                            depth using just ECG features.</li>
-                        <li>Validated and shared the methodology through publication in the <i>Biomedical Signal
-                                Processing and Control</i> journal.</li>
-                        <li>Demonstrates potential for AI to assist anesthesiologists with a data-driven, non-invasive
-                            tool.</li>
-                    </ul>
-
-                    <p><strong>Tech Highlights:</strong> Deep Learning (CNN, LSTM), Python (TensorFlow/Keras), Signal
-                        Processing, MATLAB, ECG/PPG Analysis.</p>
-                    <!-- <p><a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank" class="btn btn-secondary">View Publication</a></p> -->
-                </div>
+      <!-- System strip (hidden for now, kept for reference): how the work fits together, details on hover
+      <ol class="system-strip reveal-up" aria-label="How my work fits together">
+        <li class="system-stage stage-teal" tabindex="0">
+          <div class="stage-head">
+            <span class="skill-group-icon sg-teal"><i class="fa-solid fa-heart-pulse"></i></span>
+            <div>
+              <span class="stage-label">01 · Sense</span>
+              <h3 class="stage-title">Biopotential sensing</h3>
             </div>
+            <i class="fa-solid fa-chevron-down stage-more" aria-hidden="true"></i>
+          </div>
+          <div class="stage-detail">
+            <p class="stage-desc">ECG, EEG and EMG, captured at low power.</p>
+            <p class="stage-result">~35 µW ECG patch powered by body heat</p>
+            <p class="stage-tools">ADS1299 · PSoC</p>
+          </div>
+        </li>
+        <li class="stage-connector" aria-hidden="true">&rarr;</li>
+        <li class="system-stage stage-pink" tabindex="0">
+          <div class="stage-head">
+            <span class="skill-group-icon sg-pink"><i class="fa-solid fa-wave-square"></i></span>
+            <div>
+              <span class="stage-label">02 · Transmit</span>
+              <h3 class="stage-title">Human-body communication</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down stage-more" aria-hidden="true"></i>
+          </div>
+          <div class="stage-detail">
+            <p class="stage-desc">Data travels through the body, not the air.</p>
+            <p class="stage-result">4× less power than Bluetooth</p>
+            <p class="stage-tools">PSoC</p>
+          </div>
+        </li>
+        <li class="stage-connector" aria-hidden="true">&rarr;</li>
+        <li class="system-stage stage-amber" tabindex="0">
+          <div class="stage-head">
+            <span class="skill-group-icon sg-amber"><i class="fa-solid fa-microchip"></i></span>
+            <div>
+              <span class="stage-label">03 · Infer</span>
+              <h3 class="stage-title">Edge AI</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down stage-more" aria-hidden="true"></i>
+          </div>
+          <div class="stage-detail">
+            <p class="stage-desc">Models run on the wearable or split with a hub.</p>
+            <p class="stage-result">1000× more energy-efficient than GPUs</p>
+            <p class="stage-tools">PyTorch · fixed-point hardware</p>
+          </div>
+        </li>
+        <li class="stage-connector" aria-hidden="true">+</li>
+        <li class="system-stage stage-purple stage-parallel" tabindex="0">
+          <div class="stage-head">
+            <span class="skill-group-icon sg-purple"><i class="fa-solid fa-compass-drafting"></i></span>
+            <div>
+              <span class="stage-label">04 · Design</span>
+              <h3 class="stage-title">AI for circuit design</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down stage-more" aria-hidden="true"></i>
+          </div>
+          <div class="stage-detail">
+            <p class="stage-desc">ML that designs and optimizes circuits.</p>
+            <p class="stage-result">~32% over state of the art, patent filed</p>
+            <p class="stage-tools">PyTorch · scikit-learn</p>
+          </div>
+        </li>
+      </ol>
+      -->
+
+      <div class="skills-flow">
+        <!-- Languages & Software -->
+        <div class="skill-group reveal-up" data-delay="0">
+          <div class="skill-group-header">
+            <span class="skill-group-icon sg-purple"><i class="fa-solid fa-code"></i></span>
+            <h3>Languages &amp; Software <span class="skill-aside">(what I build with)</span></h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill sp-purple">Python</span>
+            <span class="skill-pill sp-purple">C/C++</span>
+            <span class="skill-pill sp-purple">Embedded C</span>
+            <span class="skill-pill sp-purple">MicroPython</span>
+            <span class="skill-pill sp-purple">MATLAB</span>
+            <span class="skill-pill sp-purple">NumPy / pandas</span>
+            <span class="skill-pill sp-purple">OpenCV / spaCy</span>
+            <span class="skill-pill sp-purple">HTML / CSS / JavaScript</span>
+          </div>
         </div>
 
-
-        <!-- Publications -->
-
-        <div class="section-container centre_align">
-            <br>
-            <br>
-
-
-            <h4><i class="fa-brands fa-researchgate"></i> Publications</h4>
-
-
-            <p>
-                Here are some of my published research findings. More on
-                <a href="https://scholar.google.co.in/citations?user=YwhkKf4AAAAJ&hl=en" target="_blank">Google
-                    Scholar</a>.
-            </p>
-            <br>
-
-            <div class="publication-list left_align">
-                <ol>
-
-
-                    <li>
-                        <b>Chowdhury, M. R.</b>, Xuan, W., Sen, S., Zhao, Y. & Ding, Y. (2025). 'Predicting and
-                        Understanding College Student Mental Health with Interpretable Machine Learning'. In <i>IEEE/ACM
-                            Conference on Connected Health: Applications, Systems and Engineering Technologies
-                            (CHASE)</i>.
-                        <a href="https://arxiv.org/pdf/2503.08002" target="_blank">[Link]</a>
-                    </li>
-
-                    <li>
-                        <b>Chowdhury, M. R.</b>, & Sen, S. (2025). 'Measurement and Analysis of System Parameter Effects
-                        on Noise in EEG Systems'. In <i>IEEE International Symposium on Circuits and Systems
-                            (ISCAS)</i>. (Accepted)
-                    </li>
-
-                    <li>
-                        <b>Chowdhury, M. R.</b>, Ghosh, A., Bari, M. F., & Sen, S. (2024). 'Leveraging Ultra-Low-Power
-                        Wearables Using Distributed Neural Networks'. In <i>IEEE Body Sensor Networks Conference
-                            (BSN)</i>.
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10780699" target="_blank">[Link]</a>
-                    </li>
-
-                    <li>
-                        Bari, M. F., <b>Chowdhury, M. R.</b>, & Sen, S. (2023). Long Range Detection of Emanation from
-                        HDMI Cables Using CNN and Transfer Learning. In <i>Design, Automation & Test in Europe
-                            Conference & Exhibition (DATE) 2023</i>.
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10137263" target="_blank">[Link]</a>
-                    </li>
-
-                    <li>
-                        Bari, M. F., <b>Chowdhury, M. R.</b>, Chatterjee, B., & Sen, S. (2022). Detection of Rogue
-                        Devices using Unintended Near and Far-field Emanations with Spectral and Temporal Signatures. In
-                        <i>IEEE MTT-S International Microwave Symposium (IMS) 2022</i>.
-                        <a href="https://ieeexplore.ieee.org/abstract/document/9865347" target="_blank">[Link]</a>
-                    </li>
-
-                    <li>
-                        <b>Chowdhury, M. R.</b>, Madanu, R., Abbod, M. F., Fan, S. Z., & Shieh, J. S. (2021). Deep
-                        learning via ECG and PPG signals for prediction of depth of anesthesia. <i>Biomedical Signal
-                            Processing and Control, 68</i>, 102663.
-                        <a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank">[Link]</a>
-                    </li>
-                </ol>
-
-
-            </div>
+        <!-- AI & Machine Learning -->
+        <div class="skill-group reveal-up" data-delay="100">
+          <div class="skill-group-header">
+            <span class="skill-group-icon sg-amber"><i class="fa-solid fa-brain"></i></span>
+            <h3>AI &amp; Machine Learning <span class="skill-aside">(how I make sense of the data)</span></h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill sp-amber">PyTorch</span>
+            <span class="skill-pill sp-amber">TensorFlow</span>
+            <span class="skill-pill sp-amber">scikit-learn</span>
+            <span class="skill-pill sp-amber">Hugging Face</span>
+            <span class="skill-pill sp-amber">Deep Learning</span>
+            <span class="skill-pill sp-amber">Self-Supervised Learning</span>
+            <span class="skill-pill sp-amber">Transformers &amp; Language Models</span>
+            <span class="skill-pill sp-amber">Explainable AI</span>
+          </div>
         </div>
 
-
-        </section>
-
-
-
-        <!-- ------------EXPERIENCE ------------ -->
-
-        <section id="exp-section">
-            <div class="section-container centre_align">
-                <h2><span class="emoji-heading">⏳</span> Experience Timeline </h2>
-
-                <p>My journey through research labs and industry roles.</p>
-
-
-                <div class="timeline">
-                    <div class="timeline-item right">
-                        <div class="timeline-marker"><img src="images/sparc.png" alt="Purdue Logo">
-                        </div>
-                        <div class="timeline-content"> <span class="date">Aug 2021 – Present</span>
-                            <h3 class="designation">Graduate Research Assistant</h3>
-                            <h4 class="company"><i class="fas fa-flask icon-inline">
-
-                                </i>SPARCLAB, Purdue University</h4>
-                            <p>Researching low-power embedded systems, HBC, and hardware security.</p>
-                            <div class="more-details" style="display: none;">
-
-                                <h5>Projects:</h5>
-                                <ul>
-                                    <li>Human Body Communication for biopotentials (power optimization, signal
-                                        processing).</li>
-                                    <li>Unintended RF emanation detection from devices.</li>
-                                </ul>
-                                <h5>Tech:</h5> PSoC, Energy Harvesting, SDR, GNU Radio, MATLAB, Python.
-                            </div>
-                            <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item left">
-                        <div class="timeline-marker">
-                            <img src="images/tcs_logo.jpg" alt="TCS Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <span class="date">Aug 2020 – Aug 2021</span>
-                            <h3 class="designation">Systems Engineer - R&I (Analytics & Insights)</h3>
-                            <h4 class="company">
-                                <i class="fas fa-building icon-inline"></i>TATA CONSULTANCY SERVICES (TCS)
-                            </h4>
-                            <p>Developed ML solutions for structured & unstructured data.</p>
-                            <div class="more-details" style="display: none;">
-                                <div class="project-detail">
-                                    <h6><i class="fas fa-box-open icon-inline"></i>Analytics in a Box</h6>
-                                    <ul>
-                                        <li>Developed an end-to-end automated ML system for structured data
-                                            (classification/regression).</li>
-                                        <li>Included data augmentation, AutoML selection, and adaptive learning
-                                            features.</li>
-                                        <li><strong>Tech:</strong> GAN, AutoML, Python, HTML/CSS</li>
-                                    </ul>
-                                </div>
-
-                                <div class="project-detail">
-                                    <h6><i class="fas fa-search-plus icon-inline"></i>Cogni Extract</h6>
-                                    <ul>
-                                        <li>Built an ML solution using NLP (spaCy) and CRF models to automatically
-                                            extract information from unstructured documents.</li>
-                                        <li>Automated manual data extraction processes.</li>
-                                        <li><strong>Tech:</strong> MLOps (Airflow), NLP, Python, Scikit-learn (CRF)</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- <h5>Key Projects:</h5>
-                                <ul>
-                                    <li><b>Analytics in a Box:</b> 
-                                        Developed an end-to-end automated ML system for structured data (classification/regression) 
-                                        featuring data augmentation, AutoML selection, and adaptive learning. 
-                                        <b>(Tech: GAN, AutoML, Python, HTML/CSS)</b></li>
-                                    <li><b>Cogni Extract:</b> Built an ML solution using NLP (spaCy) 
-                                        and CRF models to automatically extract information from unstructured documents, 
-                                        automating manual processes. 
-                                        <b>(Tech: MLOps/Airflow, NLP, Python, Scikit-learn)</b></li>
-                                </ul> 
-                                </div>-->
-
-
-
-
-
-                            <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="timeline-item right">
-                        <div class="timeline-marker">
-                            <img src="images/yuan.jpg" alt="YZU Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <span class="date">May 2020 - Jul 2020</span>
-                            <h3 class="designation">Research Intern</h3>
-                            <h4 class="company">
-                                <i class="fas fa-university icon-inline"></i>YUAN ZE UNIVERSITY, TAIWAN
-                            </h4>
-                            <!-- <p>Applied deep learning to predict Depth of Anesthesia from ECG/PPG signals.</p> -->
-                            <p>Focus: Signal processing & time-series analysis using CNNs/LSTMs for ECG and PPG.</p>
-                            <!-- <div class="more-details" style="display: none;">
-
-                                <h5>Depth of Anesthesia Prediction (Guided by Prof. Jiann-Shin Shieh)</h5>
-                                
-<ul>
-    <li>Developed deep learning models (using Python) to predict Depth of Anesthesia from ECG & PPG signals.</li>
-    <li>Performed signal processing on biopotential data using MATLAB.</li>
-    <li>Achieved ~82% prediction accuracy using ECG data.</li>
-    <li>Work resulted in a <a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank">BSPC journal publication</a>.</li>
-    <h5> <b> Tech:Python (TF/Keras), MATLAB  </b></h5>
-</ul>
-
-
-                            </div> -->
-
-                            <div class="more-details" style="display: none;">
-                                <h6><i class="fas fa-heartbeat icon-inline"></i>Depth of Anesthesia Prediction</h6>
-
-                                <ul>
-                                    <li>Developed deep learning models (Python - TF/Keras) for DoA prediction using ECG
-                                        & PPG signals.</li>
-                                    <li>Performed signal processing on biopotential data (MATLAB).</li>
-                                    <li>Achieved ~82% prediction accuracy using ECG.</li>
-                                    <li>Work resulted in a <a href="https://doi.org/10.1016/j.bspc.2021.102663"
-                                            target="_blank">BSPC journal publication</a>.</li>
-                                    <li><strong> Tech:Python (TF/Keras), MATLAB </strong></li>
-                                    <li><strong>Guidance:</strong> Prof. Jiann-Shin Shieh.</li>
-                                </ul>
-
-                            </div>
-
-
-                            <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
-                        </div>
-                    </div>
-
-
-
-
-
-                    <div class="timeline-item left">
-                        <div class="timeline-marker">
-                            <img src="images/tcs_logo.jpg" alt="TCS Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <span class="date">Jan 2020 – Apr 2020</span>
-                            <h3 class="designation">Machine Learning Intern</h3>
-                            <h4 class="company">
-                                <i class="fas fa-building icon-inline"></i>TATA CONSULTANCY SERVICES (TCS)
-                            </h4>
-                            <!-- <p>Worked on ML models for EV battery life prediction and range estimation.</p> -->
-                            <p>Focus: Predictive modeling for IoT applications in EV battery life prediction and range
-                                estimation.</p>
-
-
-                            <div class="more-details" style="display: none;">
-                                <h6><i class="fas fa-car-battery icon-inline"></i>IoT in Transportation & Logistics (EV
-                                    Battery Life)</h6>
-                                <ul>
-                                    <li>Researched IoT applications/frameworks in T&L, focusing on Electric Vehicles.
-                                    </li>
-                                    <li>Developed models to predict Remaining Useful Life (RUL) of EV Li-ion batteries,
-                                        range, and charging times.</li>
-                                    <li>Performed feature extraction and evaluated various ML regression models (RF, DT,
-                                        KNN, NN, LR).</li>
-                                    <li>Identified Random Forest and Decision Tree as top-performing models for the
-                                        dataset.</li>
-                                    <li><strong>Tech:Python, Scikit-learn</strong> </li>
-                                </ul>
-                            </div>
-
-
-                            <!-- <div class="more-details" style="display: none;">
-
-                                <h5>IoT in Transportation & Logistics:</h5>
-<ul>
-    <li>Researched IoT applications and frameworks in the T&L industry, focusing on Electric Vehicles (EVs).</li>
-    <li>Developed models to predict Remaining Useful Life (RUL) of EV Li-ion batteries, range, and charging times.</li>
-    <li>Performed feature extraction and evaluated various ML regression models (RF, DT, KNN, NN, LR) for RUL prediction using Python.</li>
-    <li>Identified Random Forest and Decision Tree as top-performing models for the dataset.</li>                              
-</ul>
-<h5> <b>Tech:Python, Scikit-learn.</b></h5>
-
-                            </div>-->
-
-                            <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
-                        </div>
-                    </div>
-
-
-
-                    <div class="timeline-item right">
-                        <div class="timeline-marker">
-                            <img src="images/iitkgp.png" alt="IIT KGP Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <span class="date">May 2019 – Jun 2019</span>
-                            <h3 class="designation">Research Intern (SEAL Lab, CSE)</h3>
-                            <h4 class="company">
-                                <i class="fas fa-university icon-inline"></i>IIT KHARAGPUR
-                            </h4>
-                            <p>Focus: Hardware security primitives, FPGA implementation and testing.</p>
-
-
-                            <div class="more-details" style="display: none;">
-                                <h6><i class="fas fa-shield-alt icon-inline"></i>FPGA-based True Random Number Generator
-                                    (TRNG)</h6>
-                                <ul>
-                                    <li>Implemented a TRNG on a Xilinx Artix-7 FPGA (Nexys 4 DDR) using Ring Oscillators
-                                        as the entropy source.</li>
-                                    <li>Utilized Carry4 primitives, bit extractors, BRAM, and UART communication.</li>
-                                    <li>Validated the generator's randomness using NIST statistical test suite.</li>
-                                    <li><strong>Hardware:</strong> Artix-7 FPGA</li>
-                                    <li><strong>Software:</strong> Verilog, Vivado 2018.3</li>
-                                    <li><strong>Guidance:</strong> Prof. Rajat Subhra Chakraborty.</li>
-                                </ul>
-                            </div>
-
-
-                            <!-- <div class="more-details" style="display: none;">
-
-                                <h5>FPGA-based True Random Number Generator (TRNG) guided by Prof. Rajat Subhra Chakraborty.</h5>
-<ul>
-    <li>Implemented a TRNG on a Xilinx Artix-7 FPGA (Nexys 4 DDR) using Ring Oscillators as the entropy source.</li>
-    <li>Utilized Carry4 primitives, bit extractors, BRAM, and UART communication.</li>
-    <li>Validated the generator's randomness using NIST statistical test suite.</li>
-</ul>
-<h5><b>Tech: Verilog, Xilinx Vivado, Artix-7 FPGA</b></h5>
-
-                            </div> -->
-                            <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
-                        </div>
-                    </div>
-
-
-                    <div class="timeline-item left">
-                        <div class="timeline-marker">
-                            <img src="images/iitb.png" alt="IIT Bombay Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <span class="date">May 2018 – Jul 2018</span>
-                            <h3 class="designation">Summer Intern (EE Department)</h3>
-                            <h4 class="company">
-                                <i class="fas fa-university icon-inline"></i>IIT BOMBAY
-                            </h4>
-                            <!-- <p>Developed an IoT-based real-time weigh scale using an 8051 microcontroller.</p> -->
-                            <p>Focus: Embedded programming, sensor interfacing, cloud communication.</p>
-
-                            <div class="more-details" style="display: none;">
-                                <h6><i class="fas fa-balance-scale icon-inline"></i>IoT-Based Weigh Scale</h6>
-                                <ul>
-                                    <li>Developed a real-time, IoT-enabled weigh scale prototype using an IIT
-                                        Bombay-produced AT89C51A microcontroller.</li>
-                                    <li>Programmed the microcontroller using Embedded C.</li>
-                                    <li>Interfaced sensors and transmitted weight data to the cloud (ThingSpeak).</li>
-                                    <li><strong>Tools:</strong> Keil µVision, ThingSpeak</li>
-                                    <li><strong>Guidance:</strong> Prof. Virendra Singh.</li>
-                                </ul>
-                            </div>
-
-                            <!-- <div class="more-details" style="display: none;">
-
-                                <h5>IoT-Based Weigh Scale guided by Prof. Virendra Singh:</h5>
-<ul>
-    <li>Developed a real-time, IoT-enabled weigh scale prototype using an IIT Bombay-produced AT89C51A microcontroller.</li>
-    <li>Programmed the microcontroller using Embedded C (Keil µVision).</li>
-    <li>Interfaced sensors and transmitted weight data to the ThingSpeak cloud platform.</li>
-</ul>
-<h5><b> Tech: Embedded C, Keil µVision, 8051, ThingSpeak.</b></h5>
-                                
-
-                            </div> -->
-                            <button class="details-toggle-button" onclick="myFunction6(event)">Details</button>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
-
-                <!-- <div class="timeline-item left">
-                        <div class="timeline-marker">
-                            <img src="images/tcs_logo.jpg" alt="TCS Logo">
-                        </div><div class="timeline-content"> <span class="date">Aug 2020 – Aug 2021</span> 
-                            <h3 class="designation">Systems Engineer - R&I (Analytics & Insights)</h3> <h4 class="company"><i class="fas fa-building icon-inline"></i>TATA CONSULTANCY SERVICES (TCS)</h4> <p>Developed ML solutions for structured & unstructured data.</p> <div class="more-details" style="display: none;"><h5>Projects:</h5><ul><li>"Analytics in a Box": AutoML, GANs, Adaptive ML.</li><li>"Cogni Extract": NLP for document information extraction.</li></ul><h5>Tech:</h5> Python, AutoML, Airflow, NLP (spaCy), Scikit-learn.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> <div class="timeline-item right"><div class="timeline-marker"><img src="images/logo-yzu.png" alt="YZU Logo"></div><div class="timeline-content"> <span class="date">May 2020 – Jul 2020</span> <h3 class="designation">Research Intern</h3> <h4 class="company"><i class="fas fa-university icon-inline"></i>YUAN ZE UNIVERSITY, TAIWAN</h4> <p>Applied deep learning to predict Depth of Anesthesia from ECG/PPG signals.</p> <div class="more-details" style="display: none;"><h5>Focus:</h5> Signal processing & time-series analysis using CNNs/LSTMs. Resulted in a BSPC journal publication.<h5>Tech:</h5> Python (TF/Keras), MATLAB.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> <div class="timeline-item left"><div class="timeline-marker"><img src="images/logo-tcs.png" alt="TCS Logo"></div><div class="timeline-content"> <span class="date">Jan 2020 – Apr 2020</span> <h3 class="designation">Machine Learning Intern</h3> <h4 class="company"><i class="fas fa-building icon-inline"></i>TATA CONSULTANCY SERVICES (TCS)</h4> <p>Worked on ML models for EV battery life prediction and range estimation.</p> <div class="more-details" style="display: none;"><h5>Focus:</h5> Predictive modeling for IoT applications in transportation.<h5>Tech:</h5> Python, Scikit-learn.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> <div class="timeline-item right"><div class="timeline-marker"><img src="images/logo-iitkgp.png" alt="IIT KGP Logo"></div><div class="timeline-content"> <span class="date">May 2019 – Jun 2019</span> <h3 class="designation">Research Intern (SEAL Lab, CSE)</h3> <h4 class="company"><i class="fas fa-university icon-inline"></i>IIT KHARAGPUR</h4> <p>Implemented a True Random Number Generator (TRNG) on an FPGA.</p> <div class="more-details" style="display: none;"><h5>Focus:</h5> Hardware security primitives, FPGA implementation and testing.<h5>Tech:</h5> Verilog, Xilinx Vivado, Artix-7 FPGA.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> <div class="timeline-item left"><div class="timeline-marker"><img src="images/logo-iitb.png" alt="IIT Bombay Logo"></div><div class="timeline-content"> <span class="date">May 2018 – Jul 2018</span> <h3 class="designation">Summer Intern (EE Department)</h3> <h4 class="company"><i class="fas fa-university icon-inline"></i>IIT BOMBAY</h4> <p>Developed an IoT-based real-time weigh scale using an 8051 microcontroller.</p> <div class="more-details" style="display: none;"><h5>Focus:</h5> Embedded programming, sensor interfacing, cloud communication.<h5>Tech:</h5> Embedded C, Keil µVision, 8051, ThingSpeak.</div> <button class="details-toggle-button" onclick="myFunction6(event)">Details</button> </div></div> </div> </div> </section> -->
-
-                <!-- -------EDUCATION--------- -->
-                <section id="edu-section">
-                    <div class="section-container centre_align">
-                        <h2><span class="emoji-heading">🎓</span> Education </h2>
-                        <p>My academic journey so far.</p>
-                        <div class="education-timeline-horizontal-container">
-                            <ul class="education-timeline-horizontal">
-                                <!-- Item 4: Grade X -->
-                                <li class="timeline-h-item" tabindex="0">
-                                    <div class="timeline-h-marker">
-                                        <img src="images/icse.png" alt="ICSE Logo"> <!-- UPDATE PATH & Add alt -->
-                                    </div>
-                                    <div class="timeline-h-date">2014</div>
-                                    <div class="timeline-h-title">Grade X (ICSE)</div>
-                                    <div class="timeline-h-details"> <strong>Ebenezer Intl. School</strong><br>
-                                        Bangalore, India<br> Score: 96% </div>
-                                </li>
-                                <!-- Item 3: Grade XII -->
-                                <li class="timeline-h-item" tabindex="0">
-                                    <div class="timeline-h-marker">
-                                        <img src="images/cbse.png" alt="CBSE Logo">
-                                        <!-- UPDATE PATH & Correct extension? -->
-                                    </div>
-                                    <div class="timeline-h-date">2016</div>
-                                    <div class="timeline-h-title">Grade XII (CBSE)</div>
-                                    <div class="timeline-h-details"> <strong>Jaipuriar School</strong><br> Mumbai,
-                                        India<br> Score: 92% </div>
-                                </li>
-                                <!-- Item 2: BTech -->
-                                <li class="timeline-h-item" tabindex="0">
-                                    <div class="timeline-h-marker">
-                                        <img src="images/vit.jpg" alt="VIT Logo"> <!-- UPDATE PATH -->
-                                    </div>
-                                    <div class="timeline-h-date">2016 - 2020</div>
-                                    <div class="timeline-h-title">B.Tech, ECE</div>
-                                    <div class="timeline-h-details"> <strong>VIT Vellore</strong><br> Electronics &
-                                        Comm. Eng.<br> Vellore, India<br> CGPA: 9.24 / 10.0 </div>
-                                </li>
-                                <!-- Item 1: PhD -->
-                                <li class="timeline-h-item" tabindex="0">
-                                    <div class="timeline-h-marker">
-                                        <img src="images/P_purdue.jpeg" alt="Purdue Logo">
-                                        <!-- UPDATE PATH & Correct extension? -->
-                                    </div>
-                                    <div class="timeline-h-date">2021 - Present</div>
-                                    <div class="timeline-h-title">PhD, ECE</div>
-                                    <div class="timeline-h-details"> <strong>Purdue University</strong><br> Electrical &
-                                        Computer Eng.<br> West Lafayette, IN </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-
-                <!-- activity -->
-
-                <section id="activities-section">
-                    <div class="section-container centre_align">
-                        <h2><span class="emoji-heading">💪</span> Beyond the Lab </h2>
-                        <p>When I step away from the screen and soldering iron...</p>
-
-                        <div class="activities-container">
-                            <div class="activity-item-card"><span
-                                    class="emoji-activity">📷</span><span>Photography</span></div>
-                            <div class="activity-item-card"><span class="emoji-activity">🏊</span><span>Swimming</span>
-                            </div>
-                            <div class="activity-item-card"><span class="emoji-activity">🚶</span><span>Hiking</span>
-                            </div>
-                            <div class="activity-item-card"><span
-                                    class="emoji-activity">🧗</span><span>Bouldering</span></div>
-                            <div class="activity-item-card"><span class="emoji-activity">🏸</span><span>Badminton</span>
-                            </div>
-                            <div class="activity-item-card"><span class="emoji-activity">✈️</span><span>Travel
-                                    Bug</span></div>
-                        </div>
-
-                        <div class="photo-gallery">
-                            <h4><i class="fas fa-images icon-inline"></i>A Glimpse Through My Lens</h4>
-                            <p>More on <a href="https://www.instagram.com/meghna.rc/" target="_blank">Instagram</a>.
-                                Click photos to enlarge.</p><br>
-
-                            <div class="photo-grid">
-                                <!-- First 12 photos -->
-                                <!-- You can add all <div class="container_pic">... here (0–11) -->
-                                <!-- Remaining inside #more -->
-                                <div class="container_pic"><a href="#lightbox-image-0"><img src="images/pic/0.jpg"
-                                            alt="Heart shape in sky"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-1"><img src="images/pic/1.jpg"
-                                            alt="Seagull eating"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-2"><img src="images/pic/2.jpg"
-                                            alt="Sunset silhouette"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-3"><img src="images/pic/3.jpg"
-                                            alt="Street motion blur"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-4"><img src="images/pic/4.jpg"
-                                            alt="Navi Mumbai skyline"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-5"><img src="images/pic/5.jpg"
-                                            alt="Crescent moon"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-6"><img src="images/pic/6.jpg"
-                                            alt="Flamingos"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-7"><img src="images/pic/7.jpg"
-                                            alt="Street scene reflection"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-8"><img src="images/pic/8.jpg"
-                                            alt="Howrah Bridge"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-9"><img src="images/pic/9.jpg"
-                                            alt="Landscape view"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-10"><img src="images/pic/10.jpg"
-                                            alt="Myna bird"></a></div>
-                                <div class="container_pic"><a href="#lightbox-image-11"><img src="images/pic/11.jpg"
-                                            alt="Painted Stork bird"></a></div>
-
-                                <div id="more" style="display: none;">
-                                    <!-- Photos 12–19 -->
-                                    <div class="container_pic"><a href="#lightbox-image-12"><img src="images/pic/12.jpg"
-                                                alt="Touch-me-not flower"></a></div>
-                                    <div class="container_pic"><a href="#lightbox-image-13"><img src="images/pic/13.jpg"
-                                                alt="Full moon (Holi)"></a></div>
-                                    <div class="container_pic"><a href="#lightbox-image-14"><img src="images/pic/14.jpg"
-                                                alt="Camouflaged bird"></a></div>
-                                    <div class="container_pic"><a href="#lightbox-image-15"><img src="images/pic/15.jpg"
-                                                alt="Pink flower bloom"></a></div>
-                                    <div class="container_pic"><a href="#lightbox-image-16"><img src="images/pic/16.jpg"
-                                                alt="Bulbul bird"></a></div>
-                                    <div class="container_pic"><a href="#lightbox-image-17"><img src="images/pic/17.jpg"
-                                                alt="Bird flying"></a></div>
-                                    <div class="container_pic"><a href="#lightbox-image-18"><img src="images/pic/18.jpg"
-                                                alt="Children playing"></a></div>
-                                    <div class="container_pic"><a href="#lightbox-image-19"><img src="images/pic/19.jpg"
-                                                alt="Yellow flower"></a></div>
-                                </div>
-                            </div>
-
-                            <br>
-                            <button onclick="myFunction()" class="btn btn-primary" id="myBtn">Show more Photos</button>
-                        </div>
-
-                        <div class="gallery-lightboxes">
-
-
-                            <div class="image-lightbox" id="lightbox-image-1">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/1.jpg" alt="This seagull seems to like Kurkure...">
-                                    <div class="image-title">This seagull seems to like Kurkure...</div>
-                                    <a href="#lightbox-image-0" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-2" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-2">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/2.jpg" alt="Sunset hour">
-                                    <div class="image-title">Sunset hour</div>
-                                    <a href="#lightbox-image-1" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-3" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-3">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/3.jpg" alt="Still or motion?">
-                                    <div class="image-title">Still or motion?</div>
-                                    <a href="#lightbox-image-2" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-4" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-4">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/4.jpg" alt="Navi Mumbai Skyline">
-                                    <div class="image-title">Navi Mumbai Skyline</div>
-                                    <a href="#lightbox-image-3" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-5" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-5">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/5.jpg" alt="Eid Moon">
-                                    <div class="image-title">Eid Moon</div>
-                                    <a href="#lightbox-image-4" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-6" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-6">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/6.jpg" alt="Flamingos">
-                                    <div class="image-title">Flamingos</div>
-                                    <a href="#lightbox-image-5" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-7" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-7">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/7.jpg" alt="Street sights">
-                                    <div class="image-title">Street sights</div>
-                                    <a href="#lightbox-image-6" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-8" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-8">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/8.jpg" alt="Howrah Bridge">
-                                    <div class="image-title">Howrah Bridge</div>
-                                    <a href="#lightbox-image-7" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-9" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-9">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/9.jpg" alt="Landscape">
-                                    <div class="image-title">Landscape</div>
-                                    <a href="#lightbox-image-8" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-10" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-10">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/10.jpg" alt="Myna">
-                                    <div class="image-title">Myna</div>
-                                    <a href="#lightbox-image-9" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-11" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-11">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/11.jpg" alt="Painted Stork">
-                                    <div class="image-title">Painted Stork</div>
-                                    <a href="#lightbox-image-10" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-12" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-12">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/12.jpg" alt="Fragile with finesse...Touch me not!">
-                                    <div class="image-title">Fragile with finesse...Touch me not!</div>
-                                    <a href="#lightbox-image-11" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-13" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-13">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/13.jpg" alt="Holi Moon">
-                                    <div class="image-title">Holi Moon</div>
-                                    <a href="#lightbox-image-12" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-14" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-14">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/14.jpg" alt="Can you spot me?">
-                                    <div class="image-title">Can you spot me?</div>
-                                    <a href="#lightbox-image-13" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-15" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-15">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/15.jpg" alt="Fully Bloomed">
-                                    <div class="image-title">Fully Bloomed</div>
-                                    <a href="#lightbox-image-14" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-16" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-16">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/16.jpg" alt="Bulbul">
-                                    <div class="image-title">Bulbul</div>
-                                    <a href="#lightbox-image-15" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-17" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-17">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/17.jpg" alt="Fly high">
-                                    <div class="image-title">Fly high</div>
-                                    <a href="#lightbox-image-16" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-18" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-18">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/18.jpg" alt="A day out">
-                                    <div class="image-title">A day out</div>
-                                    <a href="#lightbox-image-17" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-19" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                            <div class="image-lightbox" id="lightbox-image-19">
-                                <div class="image-lightbox-wrapper">
-                                    <a href="#activities-section" class="close" aria-label="Close">×</a>
-                                    <img src="images/pic/19.jpg" alt="Bright and beautiful">
-                                    <div class="image-title">Bright and beautiful</div>
-                                    <a href="#lightbox-image-18" class="arrow-left" aria-label="Previous">‹</a>
-                                    <a href="#lightbox-image-0" class="arrow-right" aria-label="Next">›</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-
-
-                <!-- <section id="activities-section"> 
-            <div class="section-container centre_align"> 
-                <h2>Beyond the Lab <span class="emoji-heading">💪</span></h2> 
-                <p>When I step away from the screen and soldering iron...</p> 
-                
-                <div class="activities-container"> 
-                    <div class="activity-item-card">
-                        <span class="emoji-activity">📷</span>
-                        <span>Photography</span></div> <div class="activity-item-card"><span class="emoji-activity">🏊</span><span>Swimming</span></div> <div class="activity-item-card"><span class="emoji-activity">🚶</span><span>Hiking</span></div> <div class="activity-item-card"><span class="emoji-activity">🧗</span><span>Bouldering</span></div> <div class="activity-item-card"><span class="emoji-activity">🏸</span><span>Badminton</span></div> <div class="activity-item-card"><span class="emoji-activity">✈️</span><span>Travel Bug</span></div> </div> <div class="photo-gallery"> <h4><i class="fas fa-images icon-inline"></i>A Glimpse Through My Lens</h4> <p>More on <a href="https://www.instagram.com/meghna.rc/" target="_blank">Instagram</a>. Click photos to enlarge.</p><br> <div class="photo-grid"> <div class="container_pic"><a href="#lightbox-image-0"><img src="images/pic/0.jpg" alt="Heart shape in sky"></a></div><div class="container_pic"><a href="#lightbox-image-1"><img src="images/pic/1.jpg" alt="Seagull eating"></a></div><div class="container_pic"><a href="#lightbox-image-2"><img src="images/pic/2.jpg" alt="Sunset silhouette"></a></div><div class="container_pic"><a href="#lightbox-image-3"><img src="images/pic/3.jpg" alt="Street motion blur"></a></div><div class="container_pic"><a href="#lightbox-image-4"><img src="images/pic/4.jpg" alt="Navi Mumbai skyline"></a></div><div class="container_pic"><a href="#lightbox-image-5"><img src="images/pic/5.jpg" alt="Crescent moon"></a></div><div class="container_pic"><a href="#lightbox-image-6"><img src="images/pic/6.jpg" alt="Flamingos"></a></div><div class="container_pic"><a href="#lightbox-image-7"><img src="images/pic/7.jpg" alt="Street scene reflection"></a></div><div class="container_pic"><a href="#lightbox-image-8"><img src="images/pic/8.jpg" alt="Howrah Bridge"></a></div><div class="container_pic"><a href="#lightbox-image-9"><img src="images/pic/9.jpg" alt="Landscape view"></a></div><div class="container_pic"><a href="#lightbox-image-10"><img src="images/pic/10.jpg" alt="Myna bird"></a></div><div class="container_pic"><a href="#lightbox-image-11"><img src="images/pic/11.jpg" alt="Painted Stork bird"></a></div> <div id="more" style="display: contents;"><div class="container_pic"><a href="#lightbox-image-12"><img src="images/pic/12.jpg" alt="Touch-me-not flower"></a></div><div class="container_pic"><a href="#lightbox-image-13"><img src="images/pic/13.jpg" alt="Full moon (Holi)"></a></div><div class="container_pic"><a href="#lightbox-image-14"><img src="images/pic/14.jpg" alt="Camouflaged bird"></a></div><div class="container_pic"><a href="#lightbox-image-15"><img src="images/pic/15.jpg" alt="Pink flower bloom"></a></div><div class="container_pic"><a href="#lightbox-image-16"><img src="images/pic/16.jpg" alt="Bulbul bird"></a></div><div class="container_pic"><a href="#lightbox-image-17"><img src="images/pic/17.jpg" alt="Bird flying"></a></div><div class="container_pic"><a href="#lightbox-image-18"><img src="images/pic/18.jpg" alt="Children playing"></a></div><div class="container_pic"><a href="#lightbox-image-19"><img src="images/pic/19.jpg" alt="Yellow flower"></a></div></div> </div><br> <button onclick="myFunction()" class="btn btn-primary" id="myBtn">Show more Photos</button> </div> <div class="gallery-lightboxes"> <div class="image-lightbox" id="lightbox-image-0"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/0.jpg" alt="Heart shape in sky"><div class="image-title">A perfect heart!</div><a href="#lightbox-image-19" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-1" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-1"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/1.jpg" alt="Seagull eating"><div class="image-title">This seagull seems to like Kurkure...</div><a href="#lightbox-image-0" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-2" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-2"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/2.jpg" alt="Sunset silhouette"><div class="image-title">Sunset hour</div><a href="#lightbox-image-1" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-3" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-3"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/3.jpg" alt="Street motion blur"><div class="image-title">Still or motion?</div><a href="#lightbox-image-2" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-4" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-4"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/4.jpg" alt="Navi Mumbai skyline"><div class="image-title">Navi Mumbai Skyline</div><a href="#lightbox-image-3" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-5" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-5"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/5.jpg" alt="Crescent moon"><div class="image-title">Eid Moon</div><a href="#lightbox-image-4" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-6" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-6"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/6.jpg" alt="Flamingos"><div class="image-title">Flamingos</div><a href="#lightbox-image-5" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-7" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-7"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/7.jpg" alt="Street scene reflection"><div class="image-title">Street sights</div><a href="#lightbox-image-6" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-8" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-8"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/8.jpg" alt="Howrah Bridge"><div class="image-title">Howrah Bridge</div><a href="#lightbox-image-7" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-9" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-9"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/9.jpg" alt="Landscape view"><div class="image-title">Landscape</div><a href="#lightbox-image-8" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-10" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-10"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/10.jpg" alt="Myna bird"><div class="image-title">Myna</div><a href="#lightbox-image-9" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-11" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-11"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/11.jpg" alt="Painted Stork bird"><div class="image-title">Painted Stork</div><a href="#lightbox-image-10" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-12" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-12"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/12.jpg" alt="Touch-me-not flower"><div class="image-title">Fragile with finnese...Touch me not!</div><a href="#lightbox-image-11" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-13" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-13"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/13.jpg" alt="Holi Moon"><div class="image-title">Holi Moon</div><a href="#lightbox-image-12" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-14" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-14"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/14.jpg" alt="Camouflaged bird"><div class="image-title">Can you spot me?</div><a href="#lightbox-image-13" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-15" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-15"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/15.jpg" alt="Pink flower bloom"><div class="image-title">Fully Bloomed</div><a href="#lightbox-image-14" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-16" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-16"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/16.jpg" alt="Bulbul bird"><div class="image-title">Bulbul</div><a href="#lightbox-image-15" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-17" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-17"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/17.jpg" alt="Bird flying"><div class="image-title">Fly high</div><a href="#lightbox-image-16" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-18" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-18"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/18.jpg" alt="Children playing"><div class="image-title">A day out</div><a href="#lightbox-image-17" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-19" class="arrow-right" aria-label="Next">›</a></div></div> <div class="image-lightbox" id="lightbox-image-19"><div class="image-lightbox-wrapper"><a href="#activities-section" class="close" aria-label="Close">×</a><img src="images/pic/19.jpg" alt="Yellow flower"><div class="image-title">Bright and beautiful</div><a href="#lightbox-image-18" class="arrow-left" aria-label="Previous">‹</a><a href="#lightbox-image-0" class="arrow-right" aria-label="Next">›</a></div></div> </div> </div> </section> -->
-
-
-                <!-- contact me -->
-                <section id="contact-section">
-                    <div class="section-container centre_align contact-info">
-                        <h2><span class="emoji-heading">🤝</span> Get In Touch </h2>
-                        <!-- <p>Let's connect! Whether it's about research, collaboration, or just a chat about tech (or coffee!).</p> -->
-                        <p>Whether you have questions, ideas for collaboration in low-power tech or AI in healthcare, or
-                            just want to chat about research (or photography!), please feel free to reach out!</p>
-
-                        <p>Email: <a href="mailto:royc.meghna@gmail.com">royc.meghna@gmail.com</a></p>
-
-                        <div class="social-icons contact-social-icons">
-                            <a href="https://www.linkedin.com/in/meghnaroychowdhury/" target="_blank"
-                                aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i></a>
-
-                            <!-- <a href="https://github.com/roycmeghna" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i></a> -->
-
-                            <!-- <a href="https://scholar.google.co.in/citations?user=YwhkKf4AAAAJ&hl=en" target="_blank"
-                                aria-label="Google Scholar">
-                                <i class="fa-brands fa-google-scholar"></i></a> -->
-
-                            <a href="mailto:royc.meghna@gmail.com" aria-label="Email">
-                                <i class="fas fa-envelope"></i></a>
-
-                            <a href="https://www.instagram.com/meghna.rc/" target="_blank" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i></a>
-                        </div>
-
-                        <p>Or schedule a quick virtual coffee chat:</p>
-                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
-                            async></script>
-                        <a href="#"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/meghna_rc/30-min'});return false;"
-                            class="btn btn-primary">
-                            <i class="fas fa-calendar-alt icon-inline" style="color: white;"></i> Schedule a 30-min Call
-                        </a>
-
-                    </div>
-
-                </section>
-
-
-                <!-- FOOTER -->
+        <!-- Embedded & Design Tools -->
+        <div class="skill-group reveal-up" data-delay="200">
+          <div class="skill-group-header">
+            <span class="skill-group-icon sg-pink"><i class="fa-solid fa-memory"></i></span>
+            <h3>Embedded &amp; Design Tools <span class="skill-aside">(what I prototype and measure with)</span></h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill sp-pink">PSoC</span>
+            <span class="skill-pill sp-pink">ARM MCUs</span>
+            <span class="skill-pill sp-pink">nRF / ESP32</span>
+            <span class="skill-pill sp-pink">ADS1299</span>
+            <span class="skill-pill sp-pink">FPGA (Artix-7)</span>
+            <span class="skill-pill sp-pink">Verilog / Vivado</span>
+            <span class="skill-pill sp-pink">ANSYS HFSS</span>
+            <span class="skill-pill sp-pink">PicoScope / Keysight</span>
+          </div>
+        </div>
+
+        <!-- Research Domains -->
+        <div class="skill-group reveal-up" data-delay="300">
+          <div class="skill-group-header">
+            <span class="skill-group-icon sg-teal"><i class="fa-solid fa-flask"></i></span>
+            <h3>Research Domains <span class="skill-aside">(the problems I study)</span></h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill sp-teal">Low-Power Wearables</span>
+            <span class="skill-pill sp-teal">Human-Body Communication</span>
+            <span class="skill-pill sp-teal">Edge AI</span>
+            <span class="skill-pill sp-teal">Biopotential Sensing</span>
+            <span class="skill-pill sp-teal">Signal Processing</span>
+            <span class="skill-pill sp-teal">AI for Circuit Design</span>
+            <span class="skill-pill sp-teal">Internet of Bodies</span>
+            <span class="skill-pill sp-teal">Hardware Security</span>
+          </div>
+        </div>
+
+        <!-- Removed from the toolkit, kept here for reference:
+        <span class="skill-pill sp-amber" data-story="TCS AutoML → anesthesia prediction → patent" data-level="4">Machine Learning</span>
+        <span class="skill-pill sp-amber" data-story="MyoText's encoder: 85% finger-classification accuracy" data-level="4">CNNs, BiLSTMs &amp; Attention</span>
+        <span class="skill-pill sp-amber" data-story="Image reconstruction + denoising in DistNN, SSIM 0.9" data-level="4">Autoencoders</span>
+        <span class="skill-pill sp-amber" data-story="DistNN: 1000× more energy-efficient than GPUs on wearables" data-level="4">Distributed Inference</span>
+        <span class="skill-pill sp-blue" data-story="First LED blink in undergrad → gateway to embedded life" data-level="4">Arduino</span>
+        <span class="skill-pill sp-blue" data-story="WiFi + MCU for the price of a coffee, many IoT builds" data-level="3">NodeMCU</span>
+        <span class="skill-pill sp-blue" data-story="Firmware for the HBC link on the ECG patch" data-level="4">PSoC Creator</span>
+        <span class="skill-pill sp-blue" data-story="TCS R&amp;I: automated prediction system + NLP pipelines" data-level="3">AutoML &amp; NLP</span>
+        <span class="skill-pill sp-pink" data-story="Lab server + data logger + prototype station" data-level="3">Raspberry Pi</span>
+        <span class="skill-pill sp-pink" data-story="RF emanation detection for hardware security" data-level="3">HackRF</span>
+        <span class="skill-pill sp-pink" data-story="Pro-grade SDR for RF research at SPARC" data-level="2">USRP</span>
+        <span class="skill-pill sp-teal" data-story="Designed ultra-low-power wearables from scratch" data-level="4">Embedded Systems</span>
+        <span class="skill-pill sp-teal" data-story="EV batteries at TCS → Human Body Comm at Purdue" data-level="4">IoT &amp; IoB</span>
+
+        <div class="skill-group reveal-up" data-delay="300">
+          <div class="skill-group-header">
+            <span class="skill-group-icon sg-amber"><i class="fa-solid fa-people-group"></i></span>
+            <h3>Soft Skills <span class="skill-aside">(the non-technical half)</span></h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill sp-amber" data-story="Qualcomm cross-team collab + SPARC Lab — and I bring snacks">Collaborator</span>
+            <span class="skill-pill sp-amber" data-story="3 AM hardware debug sessions — still here, still curious">Problem Solver</span>
+            <span class="skill-pill sp-amber" data-story="India → Taiwan → USA; FPGAs → ML → Health AI">Adaptable</span>
+            <span class="skill-pill sp-amber" data-story="Patent co-inventor — if I built it, I own it">Accountable</span>
+            <span class="skill-pill sp-amber" data-story="PhD + Qualcomm + photography + bouldering — still sane(ish)">Time Management</span>
+            <span class="skill-pill sp-amber" data-story="'Thorough analysis' not overthinking — my papers agree">Analytical</span>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROJECTS SECTION ═══════════ -->
+  <section id="projects" class="section section-alt-mint">
+    <div class="container">
+      <h2 class="section-title reveal-up">
+        <span class="title-icon"><i class="fa-solid fa-diagram-project"></i></span>
+        <span class="gradient-text">Projects &amp; Selected Publications</span>
+      </h2>
+      <p class="section-subtitle reveal-up">A few things I've built and published. <span class="click-hint"><i class="fa-solid fa-hand-pointer"></i> Hit &ldquo;Learn More&rdquo; for the deep dive!</span></p>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid">
+
+        <!-- MyoText -->
+        <div class="project-card reveal-up tilt-card" data-delay="0">
+          <div class="card-accent accent-purple"></div>
+          <span class="featured-badge">Featured</span>
+          <div class="project-img">
+            <img src="projects/myotext.png" alt="MyoText Concept Diagram">
+          </div>
+          <div class="project-body">
+            <h3>MyoText</h3>
+            <p>Type sentences from muscle signals using Meta's <code>emg2qwerty</code> dataset, achieving 4x better accuracy without user calibration.</p>
+            <div class="project-stats">
+              <span class="stat"><strong>1.6%</strong> CER</span>
+              <span class="stat"><strong>1.8%</strong> WER</span>
             </div>
-            <footer class="footer"> &copy;
-                <script>document.write(new Date().getFullYear());</script> Meghna Roy Chowdhury. Crafted with <span
-                    class="emoji">⌚️</span> & <span class="emoji">💻</span>.
-                     
-               <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=150&t=n&d=M0CCdlm-TJ5zt_iKKMdWBp70n1R6yBfFdHIq68JPsMY&co=0b59f0&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
-            
-            </footer>
+            <div class="card-tags">
+              <span class="tag">sEMG</span><span class="tag">BiLSTM</span><span class="tag">Transformers</span><span class="tag">T5</span>
+            </div>
+            <button class="btn-learn-more" data-modal="modal-neurotype">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
 
+        <!-- I-HOPE -->
+        <div class="project-card reveal-up tilt-card" data-delay="100">
+          <div class="card-accent accent-pink"></div>
+          <div class="project-img">
+            <img src="projects/ihope.png" alt="I-HOPE Project Visual">
+          </div>
+          <div class="project-body">
+            <h3>I-HOPE</h3>
+            <p>Predicting college student mental health using interpretable AI. Achieved 91% prediction accuracy (vs 70% baseline).</p>
+            <div class="project-stats">
+              <span class="stat"><strong>91%</strong> Accuracy</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">TensorFlow</span><span class="tag">SHAP</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
+            </div>
+            <button class="btn-learn-more" data-modal="modal-ihope">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
 
+        <!-- DistNN -->
+        <div class="project-card reveal-up tilt-card" data-delay="200">
+          <div class="card-accent accent-teal"></div>
+          <div class="project-img">
+            <img src="projects/distnn.png" alt="DistNN Architecture Diagram">
+          </div>
+          <div class="project-body">
+            <h3>DistNN</h3>
+            <p>Splitting neural nets between a wearable and a nearby hub, for roughly 1000x the energy efficiency of a GPU.</p>
+            <div class="project-stats">
+              <span class="stat"><strong>11x</strong> less power</span>
+              <span class="stat"><strong>~1000x</strong> efficiency</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">CNNs</span><span class="tag">Autoencoders</span><span class="tag">Fixed-Point</span>
+            </div>
+            <button class="btn-learn-more" data-modal="modal-distnn">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
 
+        <!-- SSL-SE-EEG -->
+        <div class="project-card reveal-up tilt-card" data-delay="0">
+          <div class="card-accent accent-amber"></div>
+          <div class="project-img">
+            <img src="projects/SSLSEEEG.png" alt="SSL-SE-EEG Diagram">
+          </div>
+          <div class="project-body">
+            <h3>SSL-SE-EEG</h3>
+            <p>Strong EEG accuracy with far less labeled data, using self-supervised learning and squeeze-and-excitation networks.</p>
+            <div class="project-stats">
+              <span class="stat"><strong>91%</strong> MindBigData</span>
+              <span class="stat"><strong>85%</strong> TUH-AB</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">SSL</span><span class="tag">SE-Networks</span><span class="tag">EEG</span>
+            </div>
+            <button class="btn-learn-more" data-modal="modal-ssl">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
 
+        <!-- FlexECG -->
+        <div class="project-card reveal-up tilt-card" data-delay="100">
+          <div class="card-accent accent-blue"></div>
+          <div class="project-img">
+            <img src="projects/hbc.png" alt="FlexECG System Diagram">
+          </div>
+          <div class="project-body">
+            <h3>FlexECG</h3>
+            <p>Ultra-low power (20&micro;W) flexible ECG patch using body heat and Human Body Communication.</p>
+            <div class="project-stats">
+              <span class="stat"><strong>20&micro;W</strong> power</span>
+              <span class="stat"><strong>4x</strong> lower</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">PSoC</span><span class="tag">HBC</span><span class="tag">TEGs</span><span class="tag">Energy Harvesting</span>
+            </div>
+            <button class="btn-learn-more" data-modal="modal-flexecg">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
 
-            <!-- JS -->
-            <script>
+        <!-- IDD -->
+        <div class="project-card reveal-up tilt-card" data-delay="200">
+          <div class="card-accent accent-purple"></div>
+          <div class="project-img">
+            <img src="projects/idd.png" alt="IDD Simulation Results">
+          </div>
+          <div class="project-body">
+            <h3>Precise Drug Delivery</h3>
+            <p>Novel electronic system using electric fields for accurate Intrathecal Drug Delivery, validated on Neva human body model.</p>
+            <div class="card-tags">
+              <span class="tag">Ansys HFSS</span><span class="tag">EM Simulation</span><span class="tag">Bioimpedance</span>
+            </div>
+            <button class="btn-learn-more" data-modal="modal-idd">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
 
-                // --- Responsive Navbar ---
-                function Menu_cross(x) { x.classList.toggle("change"); }
-                function myFunction1() {
-                    var x = document.getElementById("navbarLinks");
-                    var iconContainer = document.querySelector('.container_menu');
-                    if (x) {
-                        x.classList.toggle("responsive");
-                        if (iconContainer && !x.classList.contains("responsive")) { iconContainer.classList.remove('change'); }
-                    }
-                    const links = x.querySelectorAll('a');
-                    links.forEach(link => {
-                        link.addEventListener('click', () => {
-                            if (x.classList.contains('responsive')) {
-                                x.classList.remove('responsive');
-                                if (iconContainer) iconContainer.classList.remove('change');
-                            }
-                        }, { once: true });
-                    });
-                }
-                document.addEventListener('click', function (event) {
-                    const navbarLinks = document.getElementById('navbarLinks');
-                    const navbar = document.getElementById('myTopnav');
-                    const iconButton = navbar ? navbar.querySelector('.icon') : null;
-                    const isClickInsideNav = navbar ? navbar.contains(event.target) : false;
-                    if (navbarLinks && navbarLinks.classList.contains('responsive') && !isClickInsideNav) {
-                        navbarLinks.classList.remove('responsive');
-                        const menuIconContainer = document.querySelector('.container_menu');
-                        if (menuIconContainer) menuIconContainer.classList.remove('change');
-                    }
-                });
+      <!-- More Projects Toggle -->
+      <div class="more-projects-wrapper reveal-up">
+        <div class="more-projects" id="moreProjects" hidden>
+          <div class="projects-grid">
+            <div class="project-card tilt-card">
+              <div class="card-accent accent-pink"></div>
+              <div class="project-img">
+                <img src="projects/doa.jpeg" alt="Depth of Anesthesia">
+              </div>
+              <div class="project-body">
+                <h3>Depth of Anesthesia</h3>
+                <p>Predicting surgical anesthesia depth using Deep Learning on ECG and PPG signals. Achieved 82% accuracy. Published in BSPC journal.</p>
+                <div class="project-stats">
+                  <span class="stat"><strong>82%</strong> Accuracy</span>
+                </div>
+                <div class="card-tags">
+                  <span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">ECG</span><span class="tag">PPG</span>
+                </div>
+                <button class="btn-learn-more" data-modal="modal-doa">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-show-more" id="btnMoreProjects" onclick="toggleMoreProjects()">
+          Show More Projects <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
 
-                // --- Show More/Less Buttons (Vertical Experience Timeline) ---
-                function myFunction6(event) {
-                    var targetButton = event.target;
-                    var contentContainer = targetButton.closest(".timeline-content");
-                    if (!contentContainer) return;
-                    var moreText = contentContainer.querySelector(".more-details"); // Using class
-                    if (!moreText) return;
-                    if (moreText.style.display === "block") {
-                        moreText.style.display = "none";
-                        targetButton.innerHTML = "Details";
-                    } else {
-                        moreText.style.display = "block";
-                        targetButton.innerHTML = "Show less";
-                    }
-                }
+      <!-- ═══ PROJECT MODALS ═══ -->
 
-                // --- Show More/Less Buttons (Photo Gallery) ---
-                function myFunction() {
-                    var moreText = document.getElementById("more");
-                    var btnText = document.getElementById("myBtn");
-                    if (!moreText || !btnText) return;
-                    if (moreText.style.display === "contents") {
-                        moreText.style.display = "none";
-                        btnText.textContent = "Show more Photos";
-                    } else {
-                        moreText.style.display = "contents";
-                        btnText.textContent = "Show fewer Photos";
-                    }
-                }
+      <!-- Modal: MyoText -->
+      <div class="modal-overlay" id="modal-neurotype" hidden>
+        <div class="modal">
+          <button class="modal-close" onclick="closeModal(this)">&times;</button>
+          <div class="modal-accent accent-purple"></div>
+          <h3>MyoText: EMG-Based Typing via Finger Classification &amp; Transformer Decoding</h3>
+          <h4>The idea</h4>
+          <p>Typing from muscle signals (sEMG) could let people type without a keyboard at all. The catch: EMG is noisy and looks different on every person, so most systems have to be retrained for each new user.</p>
+          <h4>How MyoText works</h4>
+          <p>MyoText turns raw wrist sEMG into full sentences with no per-user training. It builds on Meta Reality Labs' <code>emg2qwerty</code> dataset (over 346 hours of typing from 108 people) and mimics how typing actually happens:</p>
+          <ol>
+            <li><strong>Predict the fingers</strong> that fired, with a BiLSTM + attention model.</li>
+            <li><strong>Narrow the letters</strong> using keyboard ergonomics.</li>
+            <li><strong>Rebuild the sentence</strong> with a T5 language model.</li>
+          </ol>
+          <p>Because it never sees a specific user during training, it works on new people straight out of the box.</p>
+          <h4>How it turned out</h4>
+          <ul>
+            <li><strong>1.6% character error rate</strong> and <strong>1.8% word error rate</strong>.</li>
+            <li>Over 4x better than earlier personalized baselines, with no calibration for new users.</li>
+            <li>First detailed look at the structured, finger-level EMG patterns hiding in <code>emg2qwerty</code>.</li>
+            <li>A step toward silent, hands-free text input for wearables, AR/VR, and assistive tech.</li>
+          </ul>
+          <div class="modal-tags">
+            <span class="tag">sEMG</span><span class="tag">BiLSTM-Attention</span><span class="tag">Transformers (T5)</span><span class="tag">Zero-Shot</span><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Hugging Face</span>
+          </div>
+          <div class="modal-links">
+            <a href="https://arxiv.org/pdf/2601.03098" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper Link</a>
+            <a href="https://github.com/roycmeghna/MyoText" target="_blank" rel="noopener" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
 
-                // --- Horizontal Education Timeline Toggle ---
-                document.addEventListener('DOMContentLoaded', () => {
-                    const timelineItems = document.querySelectorAll('.timeline-h-item');
+      <!-- Modal: I-HOPE -->
+      <div class="modal-overlay" id="modal-ihope" hidden>
+        <div class="modal">
+          <button class="modal-close" onclick="closeModal(this)">&times;</button>
+          <div class="modal-accent accent-pink"></div>
+          <h3>Interpretable Hierarchical Machine Learning for Mental Health</h3>
+          <h4>The problem</h4>
+          <p>Phones leave behind huge trails of behavioral data, which could say a lot about mental health. But that data is noisy, high-dimensional, and varies wildly from person to person, so ordinary models struggle with it.</p>
+          <h4>What I built</h4>
+          <p>I-HOPE is a hierarchical model that turns messy raw behavior into readable interaction patterns. Careful feature reduction trims the data without throwing away what predicts well, so the results stay both personal and interpretable.</p>
+          <h4>How it turned out</h4>
+          <ul>
+            <li><strong>91% accuracy</strong> on student mental-health outcomes, up from a 70% baseline.</li>
+            <li>A clear path from raw behavior to meaningful indicators, instead of a black box.</li>
+            <li>Per-student explanations for every prediction, using SHAP.</li>
+          </ul>
+          <div class="modal-tags">
+            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">SHAP</span>
+          </div>
+          <div class="modal-links">
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3721201.3721372" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper Link</a>
+            <a href="https://github.com/roycmeghna/I-HOPE" target="_blank" rel="noopener" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
 
-                    timelineItems.forEach(item => {
-                        // Click Listener
-                        item.addEventListener('click', function (event) {
-                            handleTimelineToggle(this, event);
-                        });
+      <!-- Modal: DistNN -->
+      <div class="modal-overlay" id="modal-distnn" hidden>
+        <div class="modal">
+          <button class="modal-close" onclick="closeModal(this)">&times;</button>
+          <div class="modal-accent accent-teal"></div>
+          <h3>Distributed Neural Networks for IoB</h3>
+          <h4>The problem</h4>
+          <p>Smarter wearables need more compute, and compute drains the battery fast. The question was how to run capable AI on a device that has almost no energy to spare.</p>
+          <h4>What I built</h4>
+          <p>DistNN splits a neural network between the tiny wearable and a more powerful nearby hub, like your phone, and finds the best point to make that cut. Custom low-precision hardware handles the wearable's share at very low cost.</p>
+          <h4>How it turned out</h4>
+          <ul>
+            <li>About <strong>1000x more energy-efficient</strong> than running the same AI on a GPU.</li>
+            <li>Roughly <strong>11x less power</strong> than recent state-of-the-art wearable AI chips.</li>
+            <li>Still real-time (30 fps) and accurate (0.9 SSIM on image reconstruction).</li>
+            <li>The wearable's share of the model runs at microwatt-level power.</li>
+          </ul>
+          <div class="modal-tags">
+            <span class="tag">Distributed NNs</span><span class="tag">Custom FoM</span><span class="tag">Low-Precision Fixed-Point</span><span class="tag">CNNs</span><span class="tag">Autoencoders</span>
+          </div>
+          <div class="modal-links">
+            <a href="https://ieeexplore.ieee.org/document/10780857" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper Link</a>
+          </div>
+        </div>
+      </div>
 
-                        // Keyboard Listener (Enter or Space)
-                        item.addEventListener('keydown', function (event) {
-                            if (event.key === 'Enter' || event.key === ' ') {
-                                event.preventDefault(); // Prevent default space scroll/activate
-                                handleTimelineToggle(this, event);
-                            }
-                        });
-                    });
+      <!-- Modal: SSL-SE-EEG -->
+      <div class="modal-overlay" id="modal-ssl" hidden>
+        <div class="modal">
+          <button class="modal-close" onclick="closeModal(this)">&times;</button>
+          <div class="modal-accent accent-amber"></div>
+          <h3>Self-Supervised Learning with Squeeze-and-Excitation Networks for EEG</h3>
+          <h4>The problem</h4>
+          <p>EEG matters for brain-computer interfaces and for diagnosing neurological conditions, but real-world recordings are messy, usually unlabeled, and expensive to process on low-power devices.</p>
+          <h4>What I built</h4>
+          <p>SSL-SE-EEG pairs self-supervised learning, which learns from unlabeled EEG, with lightweight squeeze-and-excitation networks. Turning the raw signals into structured 2D images makes them far easier for the models to read.</p>
+          <h4>How it turned out</h4>
+          <ul>
+            <li><strong>91% on MindBigData</strong> and <strong>85% on TUH-AB</strong> seizure detection.</li>
+            <li>Much less dependence on expensive labeled data, thanks to the self-supervised step.</li>
+            <li>More robust to the noise and artifacts that plague real EEG.</li>
+            <li>Low enough overhead to suit real-time, low-power BCI.</li>
+          </ul>
+          <div class="modal-tags">
+            <span class="tag">SSL</span><span class="tag">SE-Nets</span><span class="tag">EEG Signal Processing</span><span class="tag">PyTorch</span><span class="tag">MNE-Python</span>
+          </div>
+          <div class="modal-links">
+            <a href="https://arxiv.org/pdf/2510.19829" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper Link</a>
+          </div>
+        </div>
+      </div>
 
-                    // Click outside listener
-                    document.addEventListener('click', function (event) {
-                        const clickedTimelineItem = event.target.closest('.timeline-h-item');
-                        if (!clickedTimelineItem) {
-                            closeAllTimelineItems(); // Close if click is outside any item
-                        }
-                    });
-                });
+      <!-- Modal: FlexECG -->
+      <div class="modal-overlay" id="modal-flexecg" hidden>
+        <div class="modal">
+          <button class="modal-close" onclick="closeModal(this)">&times;</button>
+          <div class="modal-accent accent-blue"></div>
+          <h3>Low Power Wearable ECG via Human Body Communication</h3>
+          <h4>The idea</h4>
+          <p>Continuous ECG usually means a bulky device you keep recharging. FlexECG skips the battery entirely: it's a flexible patch that harvests heat from your body and sends the ECG through your body itself using human body communication (HBC).</p>
+          <h4>The hard part</h4>
+          <p>Body heat provides very little power, and not steadily. Early versions kept browning out mid-reading, so most of the work went into getting the system to run reliably inside that budget.</p>
+          <h4>How it turned out</h4>
+          <ul>
+            <li>A custom HBC transmit-and-decode path for ECG signals.</li>
+            <li>Settles at about <strong>20&micro;W</strong> of power.</li>
+            <li>Tested across multiple human subjects.</li>
+            <li>Roughly <strong>4x lower power</strong> than comparable state-of-the-art systems.</li>
+          </ul>
+          <div class="modal-tags">
+            <span class="tag">PSoC</span><span class="tag">HBC</span><span class="tag">Energy Harvesting (TEGs)</span><span class="tag">Analog Front-End</span><span class="tag">MATLAB</span><span class="tag">Python</span>
+          </div>
+        </div>
+      </div>
 
-                function handleTimelineToggle(selectedItem, event) {
-                    const isActive = selectedItem.classList.contains('active');
-                    // Close others *before* toggling the current one
-                    closeAllTimelineItems(selectedItem);
-                    // Now toggle the current item's state
-                    selectedItem.classList.toggle('active');
-                    event.stopPropagation(); // Important: stop click from bubbling to document listener
-                }
+      <!-- Modal: IDD -->
+      <div class="modal-overlay" id="modal-idd" hidden>
+        <div class="modal">
+          <button class="modal-close" onclick="closeModal(this)">&times;</button>
+          <div class="modal-accent accent-purple"></div>
+          <h3>Electric Field-Based Intrathecal Drug Delivery (IDD)</h3>
+          <h4>The problem</h4>
+          <p>Intrathecal drug delivery sends medication straight to the central nervous system for long-term pain relief. The hard part is being sure the catheter actually sits in the cerebrospinal fluid (CSF), not an adjacent layer, without adding cost or complexity.</p>
+          <h4>The approach</h4>
+          <p>CSF conducts electricity better than the tissue around it at certain frequencies (tens of MHz). This system uses a galvanic transmitter and a capacitive receiver at electroquasistatic (EQS) frequencies to read that difference and infer where the catheter tip is.</p>
+          <h4>What the simulations showed</h4>
+          <ul>
+            <li>Modeled in Ansys HFSS on the realistic &ldquo;Neva&rdquo; human-body model.</li>
+            <li>A clear difference in field strength when the transmitter sits in the CSF versus neighboring layers.</li>
+            <li>A way to verify catheter placement for more precise delivery.</li>
+            <li>As far as we know, the <strong>first electric-field approach</strong> proposed for IDD.</li>
+          </ul>
+          <div class="modal-tags">
+            <span class="tag">Ansys HFSS</span><span class="tag">FEM</span><span class="tag">Neva Body Model</span><span class="tag">EQS Fields</span><span class="tag">Bioimpedance</span>
+          </div>
+        </div>
+      </div>
 
-                function closeAllTimelineItems(excludeItem = null) {
-                    document.querySelectorAll('.timeline-h-item.active').forEach(item => { // Only query active items
-                        if (item !== excludeItem) {
-                            item.classList.remove('active');
-                        }
-                    });
-                }
+      <!-- Modal: Depth of Anesthesia -->
+      <div class="modal-overlay" id="modal-doa" hidden>
+        <div class="modal">
+          <button class="modal-close" onclick="closeModal(this)">&times;</button>
+          <div class="modal-accent accent-pink"></div>
+          <h3>AI for Safer Surgery: Predicting Anesthesia Depth</h3>
+          <h4>The problem</h4>
+          <p>During surgery, knowing exactly how deeply someone is anesthetized keeps them safe and comfortable, and the usual monitors have limits. The question was whether AI could read it from signals you're already recording.</p>
+          <h4>The approach</h4>
+          <p>Using ECG and PPG recorded from real surgical patients, I trained deep models (CNNs and LSTMs) to estimate anesthetic depth in real time.</p>
+          <h4>How it turned out</h4>
+          <ul>
+            <li>Processed messy surgical ECG/PPG in MATLAB and built the models in Python (TensorFlow/Keras).</li>
+            <li>About <strong>82% accuracy</strong> predicting clinical anesthesia depth from ECG features alone.</li>
+            <li>Published in the BSPC journal.</li>
+            <li>This was my first real paper, from my time at Yuan Ze in Taiwan, and the one that got me hooked on health AI.</li>
+          </ul>
+          <div class="modal-tags">
+            <span class="tag">Deep Learning</span><span class="tag">CNN</span><span class="tag">LSTM</span><span class="tag">TensorFlow/Keras</span><span class="tag">MATLAB</span><span class="tag">ECG/PPG</span>
+          </div>
+          <div class="modal-links">
+            <a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper Link</a>
+          </div>
+        </div>
+      </div>
 
+      <!-- Publications -->
+      <div class="publications-list reveal-up">
+        <h3 class="sub-section-title">Selected Publications</h3>
+        <p class="pub-subtitle">The ones I'm most proud of &mdash; for the full collection, see <a href="https://scholar.google.com/citations?user=YwhkKf4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
 
+        <div class="pub-filter-bar">
+          <button class="pub-filter-btn active" data-cat="bioml"><i class="fa-solid fa-brain"></i> Bio ML</button>
+          <button class="pub-filter-btn" data-cat="wearable"><i class="fa-solid fa-heart-pulse"></i> Wearable AI</button>
+          <button class="pub-filter-btn" data-cat="security"><i class="fa-solid fa-shield-halved"></i> EM Security</button>
+        </div>
 
+        <!-- ── Bio ML ── -->
+        <div class="pub-category active" data-cat="bioml">
+          <ol class="pub-list">
+            <li class="pub-item">
+              <span class="pub-number">01</span>
+              <div class="pub-content">
+                <p><strong>Chowdhury, M. R.</strong>, Ding, Y., &amp; Sen, S. (2025). &lsquo;SSL-SE-EEG: A Framework for Robust Learning from Unlabeled EEG Data with Self-Supervised Learning and Squeeze-Excitation Networks&rsquo;. <em>IEEE EMBC</em>. (<a href="https://arxiv.org/pdf/2510.19829" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-number">02</span>
+              <div class="pub-content">
+                <p><strong>Chowdhury, M. R.</strong>, Xuan, W., Sen, S., Zhao, Y. &amp; Ding, Y. (2025). &lsquo;Predicting and Understanding College Student Mental Health with Interpretable Machine Learning&rsquo;. <em>IEEE/ACM CHASE</em>. (<a href="https://dl.acm.org/doi/pdf/10.1145/3721201.3721372" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-number">03</span>
+              <div class="pub-content">
+                <p><strong>Chowdhury, M. R.</strong>, Sen, S., &amp; Ding, Y. (2025). &lsquo;From Muscle to Text with MyoText: sEMG to Text via Finger Classification and Transformer-Based Decoding&rsquo;. <em>Under Review</em>. (<a href="https://arxiv.org/pdf/2601.03098" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+          </ol>
+          <div class="pub-more" id="pubMoreBioml" hidden>
+            <ol class="pub-list">
+              <li class="pub-item">
+                <span class="pub-number">04</span>
+                <div class="pub-content">
+                  <p>Xuan, W., <strong>Chowdhury, M. R.</strong>, Ding, Y., &amp; Zhao, Y. (2025). &lsquo;Unlocking Mental Health: Exploring College Students&rsquo; Well-being through Smartphone Behaviors&rsquo;. <em>IEEE/ACM MOBILESoft</em>. (<a href="https://ieeexplore.ieee.org/abstract/document/11024500" target="_blank" rel="noopener">Link</a>)</p>
+                </div>
+              </li>
+              <li class="pub-item">
+                <span class="pub-number">05</span>
+                <div class="pub-content">
+                  <p><strong>Chowdhury, M. R.</strong>, Madanu, R., Abbod, M. F., Fan, S. Z., &amp; Shieh, J. S. (2021). &lsquo;Deep learning via ECG and PPG signals for prediction of depth of anesthesia&rsquo;. <em>Biomedical Signal Processing and Control</em>, 68. (<a href="https://doi.org/10.1016/j.bspc.2021.102663" target="_blank" rel="noopener">Link</a>)</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <button class="btn-pub-more" onclick="togglePubMore('pubMoreBioml', this)">Show More <i class="fa-solid fa-chevron-down"></i></button>
+        </div>
 
-                // --- Modal Window Logic ---
-                document.addEventListener('DOMContentLoaded', () => {
-                    const modalTriggers = document.querySelectorAll('.modal-trigger');
-                    const modalCloseTriggers = document.querySelectorAll('.modal-close-trigger'); // Includes overlay & close button
+        <!-- ── Wearable AI for Biosignals ── -->
+        <div class="pub-category" data-cat="wearable">
+          <ol class="pub-list">
+            <li class="pub-item">
+              <span class="pub-number">01</span>
+              <div class="pub-content">
+                <p><strong>Chowdhury, M. R.</strong>, &amp; Sen, S. (2025). &lsquo;Measurement and Analysis of System Parameter Effects on Noise in EEG Systems&rsquo;. <em>IEEE ISCAS</em>. (<a href="https://ieeexplore.ieee.org/abstract/document/11044252" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-number">02</span>
+              <div class="pub-content">
+                <p><strong>Chowdhury, M. R.</strong>, Ghosh, A., Bari, M. F., &amp; Sen, S. (2024). &lsquo;Leveraging Ultra-Low-Power Wearables Using Distributed Neural Networks&rsquo;. <em>IEEE BSN</em>. (<a href="https://ieeexplore.ieee.org/document/10780857" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-number">03</span>
+              <div class="pub-content">
+                <p><strong>Chowdhury, M. R.</strong>, Li, M., Ghosh, A., Bari, M. F., &amp; Sen, S. (2025). &lsquo;Design-Space Exploration of Distributed Neural Networks in Low-Power Wearable Nodes&rsquo;. <em>Under Review</em>. (<a href="https://arxiv.org/pdf/2509.14540" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+          </ol>
+        </div>
 
-                    // Open Modal
-                    modalTriggers.forEach(trigger => {
-                        trigger.addEventListener('click', () => {
-                            const modalId = trigger.getAttribute('data-modal-target');
-                            const modal = document.querySelector(modalId); // Use querySelector for ID
-                            if (modal) {
-                                openModal(modal);
-                            } else {
-                                console.error("Modal not found for target:", modalId);
-                            }
-                        });
-                    });
+        <!-- ── EM Security & Side-Channel Analysis ── -->
+        <div class="pub-category" data-cat="security">
+          <ol class="pub-list">
+            <li class="pub-item">
+              <span class="pub-number">01</span>
+              <div class="pub-content">
+                <p>Bari, M. F., <strong>Chowdhury, M. R.</strong>, &amp; Sen, S. (2025). &lsquo;A Computational Harmonic Detection Algorithm to Detect Data Leakage through EM Emanation&rsquo;. <em>IEEE Internet of Things Journal</em>. (<a href="https://ieeexplore.ieee.org/abstract/document/11029453" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-number">02</span>
+              <div class="pub-content">
+                <p>Bari, M. F., <strong>Chowdhury, M. R.</strong>, &amp; Sen, S. (2023). &lsquo;Long Range Detection of Emanation from HDMI Cables Using CNN and Transfer Learning&rsquo;. <em>DATE 2023</em>. (<a href="https://ieeexplore.ieee.org/document/10137115" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-number">03</span>
+              <div class="pub-content">
+                <p>Bari, M. F., <strong>Chowdhury, M. R.</strong>, &amp; Sen, S. (2023). &lsquo;Is Broken Cable Breaking Your Security?&rsquo;. <em>IEEE ISCAS 2023</em>. (<a href="https://ieeexplore.ieee.org/abstract/document/10181751" target="_blank" rel="noopener">Link</a>)</p>
+              </div>
+            </li>
+          </ol>
+          <div class="pub-more" id="pubMoreSecurity" hidden>
+            <ol class="pub-list">
+              <li class="pub-item">
+                <span class="pub-number">04</span>
+                <div class="pub-content">
+                  <p>Bari, M. F., <strong>Chowdhury, M. R.</strong>, Chatterjee, B., &amp; Sen, S. (2022). &lsquo;Detection of Rogue Devices using Unintended Near and Far-field Emanations with Spectral and Temporal Signatures&rsquo;. <em>IEEE IMS 2022</em>. (<a href="https://ieeexplore.ieee.org/document/9865574" target="_blank" rel="noopener">Link</a>)</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <button class="btn-pub-more" onclick="togglePubMore('pubMoreSecurity', this)">Show More <i class="fa-solid fa-chevron-down"></i></button>
+        </div>
 
-                    // Close Modal (using overlay or close button)
-                    modalCloseTriggers.forEach(trigger => {
-                        trigger.addEventListener('click', (event) => {
-                            // Find the closest parent modal IF the click was on overlay/button itself
-                            // Prevents closing when clicking inside modal content area that bubbles up
-                            if (event.target === trigger) {
-                                const modal = trigger.closest('.modal');
-                                if (modal) {
-                                    closeModal(modal);
-                                }
-                            }
-                        });
-                    });
+        <!-- <div class="pub-scholar-btn">
+          <a href="https://scholar.google.com/citations?user=YwhkKf4AAAAJ" target="_blank" rel="noopener" class="btn-scholar">
+            <i class="fa-brands fa-google-scholar"></i> More on Google Scholar
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </section>
 
-                    // Optional: Close modal with Escape key
-                    window.addEventListener('keydown', (event) => {
-                        if (event.key === 'Escape') {
-                            const activeModal = document.querySelector('.modal.active');
-                            if (activeModal) {
-                                closeModal(activeModal);
-                            }
-                        }
-                    });
-                });
+  <!-- ═══════════ EDUCATION SECTION ═══════════ -->
+  <section id="education" class="section section-alt-rose">
+    <div class="container">
+      <h2 class="section-title reveal-up">
+        <span class="title-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+        <span class="gradient-text">Education</span>
+      </h2>
+      <p class="section-subtitle reveal-up">Bangalore, Mumbai, Vellore, and now West Lafayette. <span class="click-hint"><i class="fa-solid fa-hand-pointer"></i> Hover over each for details!</span></p>
 
-                function openModal(modal) {
-                    if (modal == null) return;
-                    modal.classList.add('active');
-                    // Optional: Add class to body to prevent scrolling background
-                    // document.body.classList.add('modal-open');
-                }
+      <div class="edu-path reveal-up">
+        <div class="edu-track"></div>
 
-                function closeModal(modal) {
-                    if (modal == null) return;
-                    modal.classList.remove('active');
-                    // Optional: Remove class from body
-                    // document.body.classList.remove('modal-open');
-                }
+        <div class="edu-node" tabindex="0">
+          <div class="edu-marker edu-marker-1">
+            <img src="images/icse.png" alt="ICSE" class="edu-logo">
+          </div>
+          <div class="edu-year-label">2014</div>
+          <div class="edu-info">
+            <h4>Grade X (ICSE)</h4>
+            <p class="edu-institution">Ebenezer International School</p>
+            <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Bangalore, India</p>
+            <p class="edu-score">Score: 96%</p>
+          </div>
+        </div>
 
-                // --- Show More/Less Projects ---
-                function toggleProjects() {
-                    var moreProjectsDiv = document.getElementById("more-projects");
-                    var toggleBtn = document.getElementById("projectToggleBtn");
+        <div class="edu-node" tabindex="0">
+          <div class="edu-marker edu-marker-2">
+            <img src="images/cbse.png" alt="CBSE" class="edu-logo">
+          </div>
+          <div class="edu-year-label">2016</div>
+          <div class="edu-info">
+            <h4>Grade XII (CBSE)</h4>
+            <p class="edu-institution">Jaipuriar School</p>
+            <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Mumbai, India</p>
+            <p class="edu-score">Score: 92%</p>
+          </div>
+        </div>
 
-                    if (!moreProjectsDiv || !toggleBtn) return; // Exit if elements not found
+        <div class="edu-node" tabindex="0">
+          <div class="edu-marker edu-marker-3">
+            <img src="images/vit.jpg" alt="VIT" class="edu-logo">
+          </div>
+          <div class="edu-year-label">2016&ndash;20</div>
+          <div class="edu-info">
+            <h4>B.Tech, ECE</h4>
+            <p class="edu-institution">VIT Vellore</p>
+            <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Vellore, India</p>
+            <p class="edu-score">CGPA: 9.24 / 10.0</p>
+          </div>
+        </div>
 
-                    // Check current state based on display style
-                    if (moreProjectsDiv.style.display === "none") {
-                        moreProjectsDiv.style.display = "contents"; // Show hidden projects
-                        toggleBtn.textContent = "Show Fewer Projects"; // Update button text
-                    } else {
-                        moreProjectsDiv.style.display = "none"; // Hide the extra projects
-                        toggleBtn.textContent = "Show More Projects"; // Reset button text
-                    }
-                }
+        <div class="edu-node edu-node-current" tabindex="0">
+          <div class="edu-marker edu-marker-4">
+            <img src="images/P_purdue.jpeg" alt="Purdue" class="edu-logo">
+          </div>
+          <div class="edu-year-label">2021&ndash;</div>
+          <div class="edu-info">
+            <h4>PhD, ECE</h4>
+            <p class="edu-institution">Purdue University</p>
+            <p class="edu-location"><i class="fa-solid fa-location-dot"></i> West Lafayette, IN</p>
+            <p class="edu-score edu-current">In Progress</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ═══════════ BEYOND THE LAB / GALLERY ═══════════ -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title reveal-up">
+        <span class="title-icon"><i class="fa-solid fa-palette"></i></span>
+        <span class="gradient-text">Beyond the Lab</span>
+      </h2>
+      <p class="section-subtitle reveal-up">Fun things I do outside the lab <span class="click-hint"><i class="fa-solid fa-hand-pointer"></i> Click a category to explore!</span></p>
 
+      <!-- Activity Pills -->
+      <div class="activity-pills reveal-up">
+        <span class="activity-pill">📸 Photography</span>
+        <span class="activity-pill">🏊 Swimming</span>
+        <span class="activity-pill">🥾 Hiking</span>
+        <span class="activity-pill">🧗 Bouldering</span>
+        <span class="activity-pill">🏸 Badminton</span>
+        <span class="activity-pill">✈️ Travel Bug</span>
+      </div>
 
-            </script>
+      <!-- Category Cards -->
+      <div class="gallery-categories reveal-up">
+        <!-- Glimpses through my lens -->
+        <div class="gallery-cat-card" data-category="lens" onclick="openGalleryModal('lens')">
+          <div class="cat-preview">
+            <img src="images/pic/6.jpg" alt="Photography" loading="lazy">
+            <img src="images/pic/0.jpg" alt="Photography" loading="lazy">
+            <img src="images/pic/11.jpg" alt="Photography" loading="lazy">
+          </div>
+          <div class="cat-label">
+            <span>📸 Glimpses Through My Lens</span>
+          </div>
+        </div>
 
+        <!-- Travel -->
+        <div class="gallery-cat-card" data-category="travel" onclick="openGalleryModal('travel')">
+          <div class="cat-preview">
+            <img src="images/pic/8.jpg" alt="Travel" loading="lazy">
+            <img src="images/pic/4.jpg" alt="Travel" loading="lazy">
+            <img src="images/pic/2.jpg" alt="Travel" loading="lazy">
+          </div>
+          <div class="cat-label">
+            <span>✈️ Travel</span>
+          </div>
+        </div>
+
+        <!-- Bouldering -->
+        <div class="gallery-cat-card" data-category="bouldering" onclick="openGalleryModal('bouldering')">
+          <div class="cat-preview cat-preview-placeholder">
+            <span style="font-size:1.8rem">🧗</span>
+            <span>Coming Soon!</span>
+          </div>
+          <div class="cat-label">
+            <span>🧗 Bouldering</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Family / the home team -->
+      <!-- <div class="family-note reveal-up">
+        <div class="family-photo"> -->
+          <!-- To use a real photo: save it as images/family.jpg and it appears automatically (or change the src below). -->
+          <!-- <img src="images/family.jpg" alt="Meghna with her Mom and Dad" loading="lazy" onerror="this.remove()">
+          <div class="family-photo-ph" aria-hidden="true">
+            <i class="fa-solid fa-heart"></i>
+            <span>Mom &amp; Dad</span>
+          </div>
+        </div>
+        <div class="family-text">
+          <h3>The home team</h3>
+          <p>Mom &amp; Dad. None of the rest of this page happens without these two, my foundation and the people I most want to make proud.</p>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+  <!-- Gallery Modal (opens when clicking a category card) -->
+  <div class="gallery-modal-overlay" id="galleryModal" hidden>
+    <div class="gallery-modal">
+      <div class="gallery-modal-header">
+        <h3 id="galleryModalTitle"></h3>
+        <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+      </div>
+      <div class="gallery-modal-grid" id="galleryModalGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox (single photo view with caption) -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" onclick="prevPhoto()" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-center">
+      <img id="lightboxImg" src="" alt="Full size photo">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-next" onclick="nextPhoto()" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- ═══════════ CONTACT SECTION ═══════════ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal-up">
+        <span class="title-icon"><i class="fa-solid fa-paper-plane"></i></span>
+        <span class="gradient-text">Get In Touch</span>
+      </h2>
+      <p class="section-subtitle reveal-up">If you read this far, we should probably talk.</p>
+
+      <div class="contact-content reveal-up">
+        <p class="contact-text">
+          <!-- Questions, ideas for collaborating in low-power tech or health AI, or just wanting to talk shop (or photography): I'm always glad to hear from people. -->
+        
+        Have a question, a collaboration idea in low-power technology or health AI, or just want to chat about research (or photography)? Drop me a note.
+
+        </p>
+
+        <div class="contact-icons">
+          <a href="mailto:royc.meghna@gmail.com" class="contact-icon contact-email" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/meghnaroychowdhury/" target="_blank" rel="noopener" class="contact-icon contact-linkedin" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/roycmeghna" target="_blank" rel="noopener" class="contact-icon contact-github" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?user=YwhkKf4AAAAJ" target="_blank" rel="noopener" class="contact-icon contact-scholar" title="Google Scholar">
+            <i class="fa-brands fa-google-scholar"></i>
+          </a>
+          <!-- <a href="https://www.instagram.com/meghna_rc/" target="_blank" rel="noopener" class="contact-icon contact-instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a> -->
+        </div>
+
+        <div class="contact-calendly">
+          <p>Want to have a quick chat?</p>
+          <a href="https://calendly.com/meghna_rc/30-min" target="_blank" rel="noopener" class="btn-calendly">
+            <i class="fa-solid fa-calendar-check"></i> Schedule a 30-min Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer id="footer">
+    <div class="footer-content">
+      <p class="footer-logo">
+        <span class="logo-bracket">&lt;</span>MRC<span class="logo-bracket">/&gt;</span>
+      </p>
+      <p class="footer-copy">&copy; <span id="footerYear"></span> Meghna Roy Chowdhury. Crafted with &#x231A; &amp; &#x1F4BB;</p>
+      <div class="footer-visitors">
+        <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=150&t=n&d=M0CCdlm-TJ5zt_iKKMdWBp70n1R6yBfFdHIq68JPsMY&co=0b59f0&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calendly JS -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
 </body>
-
 </html>
