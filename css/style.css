@@ -1650,6 +1650,36 @@ body.dark-mode .dark-toggle:hover {
   gap: 6px;
 }
 
+/* Certificate / report links in the experience popup */
+.exp-modal-docs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+.exp-modal-docs[hidden] {
+  display: none;
+}
+.exp-doc {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--purple);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+.exp-doc:hover {
+  border-color: var(--purple-light);
+  background: var(--purple-bg);
+}
+
 /* ═══════════ PROJECTS SECTION ═══════════ */
 .projects-grid {
   display: grid;
@@ -2920,13 +2950,62 @@ body.dark-mode .dark-toggle:hover {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Education */
+  /* Education: stacked cards, logo left, all details visible (no hover on touch) */
   .edu-path {
     flex-direction: column;
-    align-items: center;
-    gap: var(--space-xl);
+    align-items: stretch;
+    gap: var(--space-sm);
+    padding: 0;
+    overflow-x: visible;
   }
   .edu-track {
+    display: none;
+  }
+  .edu-node {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--space-md);
+    align-items: center;
+    text-align: left;
+    padding: 14px 16px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    cursor: default;
+  }
+  .edu-marker {
+    grid-row: 1 / span 2;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0;
+  }
+  .edu-logo {
+    width: 32px;
+    height: 32px;
+  }
+  .edu-year-label {
+    align-self: end;
+    margin-bottom: 0;
+  }
+  .edu-info {
+    align-self: start;
+    max-width: none;
+    text-align: left;
+  }
+  .edu-institution,
+  .edu-location,
+  .edu-score {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .edu-node:hover .edu-marker,
+  .edu-node:focus .edu-marker {
+    transform: none;
+    box-shadow: none;
+  }
+  #education .click-hint {
     display: none;
   }
 
