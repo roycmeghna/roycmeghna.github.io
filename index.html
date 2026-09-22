@@ -388,6 +388,7 @@
         <p class="exp-modal-summary" id="expModalSummary"></p>
         <ul class="exp-modal-details" id="expModalDetails"></ul>
         <div class="exp-modal-tags" id="expModalTags"></div>
+        <div class="exp-modal-docs" id="expModalDocs" hidden></div>
       </div>
     </div>
   </div>
@@ -592,19 +593,18 @@
         <!-- MyoText -->
         <div class="project-card reveal-up tilt-card" data-delay="0">
           <div class="card-accent accent-purple"></div>
-          <span class="featured-badge">Featured</span>
           <div class="project-img">
             <img src="projects/myotext.png" alt="MyoText Concept Diagram">
           </div>
           <div class="project-body">
             <h3>MyoText</h3>
-            <p>Type sentences from muscle signals using Meta's <code>emg2qwerty</code> dataset, achieving 4x better accuracy without user calibration.</p>
+            <p>A hierarchical sEMG-to-text framework: it predicts which finger pressed each key, constrains the letters with typing ergonomics, and decodes the sentence with a T5 transformer, with no per-user calibration.</p>
             <div class="project-stats">
-              <span class="stat"><strong>1.6%</strong> CER</span>
-              <span class="stat"><strong>1.8%</strong> WER</span>
+              <span class="stat"><strong>85.4%</strong> finger acc.</span>
+              <span class="stat"><strong>5.4%</strong> CER</span>
             </div>
             <div class="card-tags">
-              <span class="tag">sEMG</span><span class="tag">BiLSTM</span><span class="tag">Transformers</span><span class="tag">T5</span>
+              <span class="tag">sEMG</span><span class="tag">CNN&ndash;BiLSTM</span><span class="tag">Attention</span><span class="tag">T5</span>
             </div>
             <button class="btn-learn-more" data-modal="modal-neurotype">Learn More <i class="fa-solid fa-arrow-right"></i></button>
           </div>
@@ -741,31 +741,34 @@
         <div class="modal">
           <button class="modal-close" onclick="closeModal(this)">&times;</button>
           <div class="modal-accent accent-purple"></div>
-          <h3>MyoText: EMG-Based Typing via Finger Classification &amp; Transformer Decoding</h3>
-          <h4>The idea</h4>
-          <p>Typing from muscle signals (sEMG) could let people type without a keyboard at all. The catch: EMG is noisy and looks different on every person, so most systems have to be retrained for each new user.</p>
+          <h3>MyoText: Hierarchical sEMG-to-Text Decoding via Finger-Intent Modeling</h3>
+          <h4>The problem</h4>
+          <p>Wrist-worn sEMG could make keyboard-free typing possible, but the signal records which <em>finger</em> moved, not which <em>key</em> it pressed. Decoding characters directly forces a model to separate keys typed by the same finger (r, t and g are all left index), which sEMG barely distinguishes.</p>
           <h4>How MyoText works</h4>
-          <p>MyoText turns raw wrist sEMG into full sentences with no per-user training. It builds on Meta Reality Labs' <code>emg2qwerty</code> dataset (over 346 hours of typing from 108 people) and mimics how typing actually happens:</p>
+          <p>MyoText is a hierarchical framework that adds finger intent as a step between muscle signal and text. It is trained and tested on Meta's <code>emg2qwerty</code> dataset (108 participants, over 346 hours of 32-channel wrist sEMG).</p>
           <ol>
-            <li><strong>Predict the fingers</strong> that fired, with a BiLSTM + attention model.</li>
-            <li><strong>Narrow the letters</strong> using keyboard ergonomics.</li>
-            <li><strong>Rebuild the sentence</strong> with a T5 language model.</li>
+            <li><strong>Predict the finger:</strong> a CNN&ndash;BiLSTM&ndash;Attention classifier maps each 2&nbsp;s window of 32-channel sEMG to one of eight fingers.</li>
+            <li><strong>Constrain the letter pool:</strong> QWERTY touch-typing rules turn each finger into a small letter pool, and dictionary filtering keeps real words. For &ldquo;this&rdquo;, 216 letter combinations shrink to 3 candidates.</li>
+            <li><strong>Decode the sentence:</strong> a fine-tuned T5 transformer picks one word per position using sentence context.</li>
           </ol>
-          <p>Because it never sees a specific user during training, it works on new people straight out of the box.</p>
-          <h4>How it turned out</h4>
+          <h4>What it shows</h4>
           <ul>
-            <li><strong>1.6% character error rate</strong> and <strong>1.8% word error rate</strong>.</li>
-            <li>Over 4x better than earlier personalized baselines, with no calibration for new users.</li>
-            <li>First detailed look at the structured, finger-level EMG patterns hiding in <code>emg2qwerty</code>.</li>
-            <li>A step toward silent, hands-free text input for wearables, AR/VR, and assistive tech.</li>
+            <li><strong>Finger is the better target:</strong> 85.4% finger accuracy, against 51.2% when the same model predicts the 26 letters directly.</li>
+            <li><strong>New users without calibration:</strong> 5.4% CER and 6.5% WER on 4 held-out users. The standard CTC + 6-gram baseline, retrained on the same 30 users, reaches 64% CER. Training on 65 users lowers CER further, to 2.73%.</li>
+            <li><strong>Tolerates non-standard typing:</strong> letting letters map to neighboring fingers lowers CER to 3.7% instead of raising it.</li>
+          </ul>
+          <h4>What's next</h4>
+          <p>All results so far are offline on <code>emg2qwerty</code>. Next:</p>
+          <ul>
+            <li>A real-time, human-in-the-loop study on a physical wrist-worn device.</li>
+            <li>Lower latency: the 2&nbsp;s window adds 1&nbsp;s of look-ahead, so a sentence is ready 1.155&nbsp;s after the last keystroke. A shorter window could cut that.</li>
+            <li>Other languages and typing styles (for example hunt-and-peck or thumb typing), by swapping the key mapping and decoder while keeping the finger classifier.</li>
           </ul>
           <div class="modal-tags">
-            <span class="tag">sEMG</span><span class="tag">BiLSTM-Attention</span><span class="tag">Transformers (T5)</span><span class="tag">Zero-Shot</span><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Hugging Face</span>
+            <span class="tag">sEMG</span><span class="tag">CNN&ndash;BiLSTM&ndash;Attention</span><span class="tag">Transformers (T5)</span><span class="tag">Cross-user</span><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Hugging Face</span>
           </div>
           <div class="modal-links">
-            <a href="https://arxiv.org/pdf/2601.03098" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper Link</a>
-            <a href="https://github.com/roycmeghna/MyoText" target="_blank" rel="noopener" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
-          </div>
+            <a href="https://arxiv.org/pdf/2601.03098" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper Link</a>          </div>
         </div>
       </div>
 
@@ -948,7 +951,7 @@
             <li class="pub-item">
               <span class="pub-number">03</span>
               <div class="pub-content">
-                <p><strong>Chowdhury, M. R.</strong>, Sen, S., &amp; Ding, Y. (2025). &lsquo;From Muscle to Text with MyoText: sEMG to Text via Finger Classification and Transformer-Based Decoding&rsquo;. <em>Under Review</em>. (<a href="https://arxiv.org/pdf/2601.03098" target="_blank" rel="noopener">Link</a>)</p>
+                <p><strong>Chowdhury, M. R.</strong>, Ding, Y., &amp; Sen, S. (2025). &lsquo;MyoText: Hierarchical sEMG-to-Text Decoding via Finger-Intent Modeling&rsquo;. <em>Under Review</em>. (<a href="https://arxiv.org/pdf/2601.03098" target="_blank" rel="noopener">Link</a>)</p>
               </div>
             </li>
           </ol>
